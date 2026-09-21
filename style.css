@@ -1,0 +1,130 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-image: url('assets/illustrations/background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#book {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0;
+}
+
+#page-container {
+  position: relative;
+  width: 65vw;
+  max-width: 1200px;
+  aspect-ratio: 8.5 / 11;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border: 6px solid #1a1a1a;
+  border-radius: 28px;
+  padding: 14px;
+  overflow: hidden;
+}
+
+#page-content.page-blocks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 24px 20px;
+  overflow-y: auto;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+.block-heading,
+.block-paragraph {
+  margin: 0;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.block-image {
+  max-width: 80%;
+  height: auto;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.block-click-regions {
+  position: relative;
+  width: 90%;
+}
+
+.click-regions-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.hotspot {
+  position: absolute;
+  cursor: pointer;
+  background-color: rgba(255, 0, 0, 0.3);
+  border: 2px solid red;
+  box-sizing: border-box;
+}
+
+.hotspot.circled {
+  border-color: red;
+  border-radius: 50%;
+}
+
+.block-text-image {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.block-text-image h2 {
+  margin-top: 0;
+}
+
+.block-text-image .flow-image {
+  max-width: 40%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.block-text-image .flow-right {
+  float: right;
+  margin-left: 20px;
+}
+
+.block-text-image .flow-left {
+  float: left;
+  margin-right: 20px;
+}
+
+.block-text-image p {
+  margin: 0 0 10px 0;
+}
+
+.block-text-image::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.nav-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  margin-top: 16px;
+  flex-shrink: 0;
+}
+
+.nav-buttons button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}

@@ -1,0 +1,41 @@
+[
+  {
+    "page": 1,
+    "blocks": [
+      {
+        "type": "text-with-image",
+        "heading": "Water Safety Tips",
+        "image": "assets/illustrations/water_safety_illustration.png",
+        "imagePosition": "right",
+        "imageAfterParagraph": 6,
+        "paragraphs": [
+          "Safe Swimming Tips:",
+          "1. Learn to swim, float, and tread water well. Know your limitations, respect the water and avoid unsafe behaviors.",
+          "2. Always swim with a buddy.",
+          "3. Swim in designated swimming areas and make sure an adult is watching you.",
+          "4. Swimming in a lake and river is different than swimming in a pool. Always wear a life jacket when at a lake or river and at a pool if you can't swim or if you are just learning to swim.",
+          "5. Inflatable toys and arm floaties should not replace a life jacket.",
+          "6. Never dive or jump into unknown waters.",
+          "Boating Safety Tips:",
+          "1. Know your boat – each boat has its own purpose.",
+          "2. Take a boater safety course when you are old enough to take one.",
+          "3. Know your state's boating laws.",
+          "4. Everyone should always wear a life jacket while boating, canoeing, kayaking, paddle boarding, riding a personal watercraft (PWC), and while swimming or floating around a boat. When paddle boarding, also wear a leash appropriate for the type of water you are in.",
+          "5. Make sure a responsible adult is operating the boat.",
+          "6. Don't go on a boat if the operator has been drinking alcohol.",
+          "7. Don't sit on the gunwales (upper edge of a boat's sides) or bow (front) of a moving boat.",
+          "8. If you are old enough to operate a PWC, learn to operate it safely. Don't cut in front of others, and always be aware of your surroundings and those around you."
+        ]
+      },
+      {
+        "type": "click-regions",
+        "image": "assets/pages/kayak_circling_activity.png",
+        "targets": [
+          { "id": "oar", "x": 20, "y": 45, "width": 12, "height": 15, "correct": true },
+          { "id": "life jacket", "x": 60, "y": 30, "width": 10, "height": 10, "correct": true },
+          { "id": "pillow", "x": 40, "y": 70, "width": 15, "height": 10, "correct": false }
+        ]
+      }
+    ]
+  }
+]
