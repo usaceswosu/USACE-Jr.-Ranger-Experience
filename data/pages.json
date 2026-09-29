@@ -37,5 +37,80 @@
         ]
       }
     ]
+  },
+  {
+    "page": 2,
+    "blocks": [
+      {
+        "type": "text-with-image",
+        "heading": "Bicycle Safety",
+        "image": "assets/illustrations/bicycle_safety_family.png",
+        "imagePosition": "right",
+        "bulletIcon": "assets/illustrations/bicycle_bullet.png",
+        "bulletStartIndex": 1,
+        "paragraphs": [
+          "Here are some helpful tips that will keep you safe while riding a bicycle.",
+          "Always wear a properly fitted bicycle helmet.",
+          "Check your equipment, control your bike, and don't ride your bike at night.",
+          "Go with the traffic flow, not against it. Ride on the right side of the road in the same direction as other vehicles.",
+          "Obey all traffic laws, stop at STOP signs and traffic lights, yield to traffic, stay alert at all times, and look before turning.",
+          "If you need to cross a street, walk your bike across; don't ride across it."
+        ]
+      },
+      {
+        "type": "path-graph",
+        "image": "assets/pages/bicycle_maze.png",
+        "startNode": "start",
+        "showAllNodes": true,
+        "nodes": [
+          { "id": "start", "x": 37, "y": 37 },
+          { "id": "stop-1", "x": 51, "y": 24 },
+          { "id": "stop-2", "x": 84.75, "y": 22.5 },
+          { "id": "stop-3", "x": 74.5, "y": 37.25 },
+          { "id": "stop-4", "x": 54, "y": 41.5 },
+          { "id": "stop-5", "x": 61.75, "y": 47.75 },
+          { "id": "stop-6", "x": 88, "y": 54.25 },
+          { "id": "stop-7", "x": 43.5, "y": 65.5 },
+          { "id": "stop-8", "x": 33, "y": 72.5 },
+          { "id": "dead-1", "x": 90.5, "y": 51.95 },
+          { "id": "dead-2", "x": 62.25, "y": 62 },
+          { "id": "dead-3", "x": 50, "y": 73.25 },
+          { "id": "dead-4", "x": 49, "y": 92.75 },
+          { "id": "finish", "x": 76, "y": 90.5 }
+        ],
+  
+        "edges": [
+          { "from": "start", "to": "stop-1", "label": "Left" },
+          { "from": "start", "to": "stop-8", "label": "Right" },
+          { "from": "stop-1", "to": "stop-2", "label": "Straight", "cx": 68, "cy": 15 },
+          { "from": "stop-1", "to": "start", "label": "Back" },
+          { "from": "stop-1", "to": "stop-4", "label": "Right" },
+          { "from": "stop-2", "to": "stop-1", "label": "Back" },
+          { "from": "stop-2", "to": "stop-3", "label": "Right" },
+          { "from": "stop-2", "to": "dead-1", "label": "Straight" },
+          { "from": "dead-1", "to": "stop-2", "label": "Back" },
+          { "from": "stop-3", "to": "stop-2", "label": "Back" },
+          { "from": "stop-3", "to": "stop-5", "label": "Straight" },
+          { "from": "stop-3", "to": "stop-6", "label": "Left" },
+          { "from": "stop-4", "to": "stop-1", "label": "Back" },
+          { "from": "stop-4", "to": "stop-5", "label": "Straight" },
+          { "from": "stop-4", "to": "stop-7", "label": "Straight" },
+          { "from": "stop-5", "to": "stop-3", "label": "Back" },
+          { "from": "stop-5", "to": "stop-4", "label": "Right" },
+          { "from": "dead-2", "to": "stop-5", "label": "Back" },
+          { "from": "stop-5", "to": "dead-2", "label": "Left" },
+          { "from": "stop-6", "to": "stop-3", "label": "Back" },
+          { "from": "stop-6", "to": "finish", "label": "Right" },
+          { "from": "stop-7", "to": "stop-4", "label": "Back" },
+          { "from": "stop-7", "to": "dead-3", "label": "Straight" },
+          { "from": "stop-7", "to": "stop-8", "label": "Right" },
+          { "from": "dead-3", "to": "stop-7", "label": "Straight" },
+          { "from": "stop-8", "to": "start", "label": "Back" },
+          { "from": "stop-8", "to": "stop-7", "label": "Back" },
+          { "from": "stop-8", "to": "dead-4", "label": "Left" },
+          { "from": "dead-4", "to": "stop-8", "label": "Back" }
+        ]
+      }
+    ]
   }
 ]

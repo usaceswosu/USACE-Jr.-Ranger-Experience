@@ -32,6 +32,8 @@ function renderBlock(block) {
       return renderClickRegionsBlock(block);
     case 'text-with-image':
       return renderTextWithImageBlock(block);
+    case 'path-graph':
+      return renderPathGraphBlock(block);
     default:
       console.warn('Unknown block type:', block.type);
       return null;

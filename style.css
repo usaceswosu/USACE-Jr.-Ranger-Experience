@@ -128,3 +128,100 @@ body {
   font-size: 16px;
   cursor: pointer;
 }
+
+.bullet-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 0 0 10px 0;
+}
+
+.bullet-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.block-path-graph {
+  position: relative;
+  width: 98%;
+}
+
+.path-graph-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.maze-token {
+  position: absolute;
+  width:1.75%;
+  aspect-ratio: 1;
+  background-color: #2b7cd3;
+  border: 2px solid white;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: left 0.4s ease, top 0.4s ease;
+  z-index: 3;
+}
+
+.maze-choice-btn {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 1.5%;
+  aspect-ratio: 1;
+  background-color: rgba(255, 220, 0, 0.9);
+  border: 2px solid #333;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 4;
+}
+
+.maze-arrow-icon {
+  width: 70%;
+  height: 70%;
+  overflow: visible;
+}
+
+.maze-arrow-icon path {
+  stroke: #333;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+.maze-message {
+  position: absolute;
+  bottom: 3%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: bold;
+  padding: 6px 14px;
+  border-radius: 8px;
+  background: white;
+  z-index: 5;
+}
+
+.maze-message-success { color: #0a6b1a; border: 2px solid #0a6b1a; }
+.maze-message:empty {
+  display: none;
+}
+
+.maze-debug-node {
+  position: absolute;
+  width: 0.90%;
+  aspect-ratio: 1;
+  background-color: rgba(0, 200, 255, 0.5);
+  border: 1px solid #007b9e;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  pointer-events: none;
+}
