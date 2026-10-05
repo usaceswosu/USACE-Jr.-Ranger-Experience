@@ -97,6 +97,43 @@ function renderTextWithImageBlock(block) {
   return wrapper;
 }
 
+function midpoint(a, b) {
+  return { x: (a.x + b.x) / 2, y: (a.y + b.y) / 2 };
+}
+
+function buildGuidePoints(edge, fromNode, toNode) {
+  const points = [];
+
+  if (edge.controlPoints && edge.controlPoints.length) {
+    edge.controlPoints.forEach(p => points.push(p));
+  } else if (edge.cx !== undefined && edge.cy !== undefined) {
+    points.push({ x: edge.cx, y: edge.cy });
+  }
+
+  return [{ x: fromNode.x, y: fromNode.y }, ...points, { x: toNode.x, y: toNode.y }];
+}
+
+function buildSegments(guidePoints) {
+  const n = guidePoints.length;
+
+  if (n === 2) {
+    const [p0, p1] = guidePoints;
+    return [{ start: p0, control: midpoint(p0, p1), end: p1 }];
+  }
+
+  if (n === 3) {
+    return [{ start: guidePoints[0], control: guidePoints[1], end: guidePoints[2] }];
+  }
+
+  const segments = [];
+  for (let i = 1; i < n - 1; i++) {
+    const start = i === 1 ? guidePoints[0] : midpoint(guidePoints[i - 1], guidePoints[i]);
+    const end = i === n - 2 ? guidePoints[n - 1] : midpoint(guidePoints[i], guidePoints[i + 1]);
+    segments.push({ start, control: guidePoints[i], end });
+  }
+  return segments;
+}
+
 function renderPathGraphBlock(block) {
   const wrapper = document.createElement('div');
   wrapper.className = 'block-path-graph';
@@ -109,26 +146,6 @@ function renderPathGraphBlock(block) {
   const nodesById = {};
   block.nodes.forEach(node => { nodesById[node.id] = node; });
 
-  if (block.showAllNodes) {
-    block.nodes.forEach(node => {
-      const marker = document.createElement('div');
-      marker.className = 'maze-debug-node';
-      marker.style.left = node.x + '%';
-      marker.style.top = node.y + '%';
-      marker.title = node.id;
-      wrapper.appendChild(marker);
-    });
-  }
-
-  const token = document.createElement('div');
-  token.className = 'maze-token';
-  wrapper.appendChild(token);
-
-  const message = document.createElement('div');
-  message.className = 'maze-message';
-  wrapper.appendChild(message);
-
-  let currentNodeId = block.startNode;
   let imageRatio = 1;
 
   function updateImageRatio() {
@@ -141,29 +158,132 @@ function renderPathGraphBlock(block) {
     return block.edges.filter(edge => edge.from === nodeId);
   }
 
-  function positionToken(nodeId) {
-    const node = nodesById[nodeId];
-    token.style.left = node.x + '%';
-    token.style.top = node.y + '%';
-  }
-
-  function angleBetween(fromNode, toNode) {
-    const dx = (toNode.x - fromNode.x) * imageRatio;
-    const dy = toNode.y - fromNode.y;
+  function angleBetween(fromPoint, toPoint) {
+    const dx = (toPoint.x - fromPoint.x) * imageRatio;
+    const dy = toPoint.y - fromPoint.y;
     return Math.atan2(dy, dx) * (180 / Math.PI);
   }
 
-  function createArrowIcon(angleDeg) {
+  function getArrowAngle(edge, fromNode, guidePoints) {
+    if (edge.arrowRotation !== undefined) {
+      return edge.arrowRotation;
+    }
+    return angleBetween(fromNode, guidePoints[1]);
+  }
+
+  function createArrowIcon(angleDeg, debugStyle) {
     const svgNS = 'http://www.w3.org/2000/svg';
     const svg = document.createElementNS(svgNS, 'svg');
     svg.setAttribute('viewBox', '0 0 24 24');
-    svg.classList.add('maze-arrow-icon');
+    svg.classList.add('maze-arrow-floating');
+    if (debugStyle) svg.classList.add('maze-arrow-floating-debug');
     svg.style.transform = `rotate(${angleDeg}deg)`;
 
     const path = document.createElementNS(svgNS, 'path');
     path.setAttribute('d', 'M2 12 L18 12 M12 6 L18 12 L12 18');
     svg.appendChild(path);
     return svg;
+  }
+
+  if (block.showAllNodes) {
+    block.nodes.forEach(node => {
+      const marker = document.createElement('div');
+      marker.className = 'maze-debug-node';
+      marker.style.left = node.x + '%';
+      marker.style.top = node.y + '%';
+      marker.title = node.id;
+      wrapper.appendChild(marker);
+    });
+  }
+
+  if (block.showAllEdges) {
+    const svgNS = 'http://www.w3.org/2000/svg';
+    const svg = document.createElementNS(svgNS, 'svg');
+    svg.setAttribute('viewBox', '0 0 100 100');
+    svg.setAttribute('preserveAspectRatio', 'none');
+    svg.classList.add('maze-debug-edges');
+
+    block.edges.forEach(edge => {
+      const from = nodesById[edge.from];
+      const to = nodesById[edge.to];
+      if (!from || !to) return;
+
+      const guidePoints = buildGuidePoints(edge, from, to);
+      const segments = buildSegments(guidePoints);
+
+      segments.forEach(seg => {
+        const path = document.createElementNS(svgNS, 'path');
+        path.setAttribute('d', `M ${seg.start.x} ${seg.start.y} Q ${seg.control.x} ${seg.control.y}, ${seg.end.x} ${seg.end.y}`);
+        svg.appendChild(path);
+      });
+
+      guidePoints.slice(1, -1).forEach(cp => {
+        const dot = document.createElementNS(svgNS, 'circle');
+        dot.setAttribute('cx', cp.x);
+        dot.setAttribute('cy', cp.y);
+        dot.setAttribute('r', 0.6);
+        dot.classList.add('maze-debug-control-dot');
+        svg.appendChild(dot);
+      });
+    });
+
+    wrapper.appendChild(svg);
+  }
+
+  if (block.showAllChoiceArrows) {
+    block.nodes.forEach(node => {
+      getEdgesFrom(node.id).forEach(edge => {
+        const toNode = nodesById[edge.to];
+        const guidePoints = buildGuidePoints(edge, node, toNode);
+        const angle = getArrowAngle(edge, node, guidePoints);
+        const posX = edge.arrowX ?? node.x;
+        const posY = edge.arrowY ?? node.y;
+
+        const marker = document.createElement('div');
+        marker.className = 'maze-arrow-debug-marker';
+        marker.style.left = posX + '%';
+        marker.style.top = posY + '%';
+        marker.title = `${edge.from} -> ${edge.to} (${edge.label || ''})`;
+        marker.appendChild(createArrowIcon(angle, true));
+        wrapper.appendChild(marker);
+      });
+    });
+  }
+
+  if (block.previewAllArrows) {
+  block.nodes.forEach(node => {
+    getEdgesFrom(node.id).forEach(edge => {
+      const toNode = nodesById[edge.to];
+      const guidePoints = buildGuidePoints(edge, node, toNode);
+      const angle = getArrowAngle(edge, node, guidePoints);
+      const posX = edge.arrowX ?? node.x;
+      const posY = edge.arrowY ?? node.y;
+
+      const marker = document.createElement('div');
+      marker.className = 'maze-arrow-preview-marker';
+      marker.style.left = posX + '%';
+      marker.style.top = posY + '%';
+      marker.title = `${edge.from} -> ${edge.to} (${edge.label || ''})`;
+      marker.appendChild(createArrowIcon(angle, false));
+      wrapper.appendChild(marker);
+    });
+  });
+}
+
+  const token = document.createElement('div');
+  token.className = 'maze-token';
+  wrapper.appendChild(token);
+
+  const message = document.createElement('div');
+  message.className = 'maze-message';
+  wrapper.appendChild(message);
+
+  let currentNodeId = block.startNode;
+
+  function positionToken(nodeId) {
+    const node = nodesById[nodeId];
+    token.style.left = node.x + '%';
+    token.style.top = node.y + '%';
   }
 
   function clearChoices() {
@@ -175,21 +295,24 @@ function renderPathGraphBlock(block) {
     const fromNode = nodesById[nodeId];
 
     getEdgesFrom(nodeId).forEach(edge => {
-      const target = nodesById[edge.to];
-      const angle = angleBetween(fromNode, target);
+      const toNode = nodesById[edge.to];
+      const guidePoints = buildGuidePoints(edge, fromNode, toNode);
+      const angle = getArrowAngle(edge, fromNode, guidePoints);
+      const posX = edge.arrowX ?? fromNode.x;
+      const posY = edge.arrowY ?? fromNode.y;
 
-      const btn = document.createElement('button');
+      const btn = document.createElement('div');
       btn.className = 'maze-choice-btn';
-      btn.style.left = target.x + '%';
-      btn.style.top = target.y + '%';
+      btn.style.left = posX + '%';
+      btn.style.top = posY + '%';
       btn.title = edge.label || '';
-      btn.appendChild(createArrowIcon(angle));
+      btn.appendChild(createArrowIcon(angle, false));
       btn.addEventListener('click', () => moveTo(edge));
       wrapper.appendChild(btn);
     });
   }
 
-  function animateTokenTo(fromNode, toNode, controlNode, onComplete, duration = 1000) {
+  function animateSegment(fromPoint, controlPoint, toPoint, onComplete, duration) {
     const startTime = performance.now();
 
     function step(now) {
@@ -197,12 +320,12 @@ function renderPathGraphBlock(block) {
       const t = Math.min(elapsed / duration, 1);
       const oneMinusT = 1 - t;
 
-      const x = oneMinusT * oneMinusT * fromNode.x
-              + 2 * oneMinusT * t * controlNode.x
-              + t * t * toNode.x;
-      const y = oneMinusT * oneMinusT * fromNode.y
-              + 2 * oneMinusT * t * controlNode.y
-              + t * t * toNode.y;
+      const x = oneMinusT * oneMinusT * fromPoint.x
+              + 2 * oneMinusT * t * controlPoint.x
+              + t * t * toPoint.x;
+      const y = oneMinusT * oneMinusT * fromPoint.y
+              + 2 * oneMinusT * t * controlPoint.y
+              + t * t * toPoint.y;
 
       token.style.left = x + '%';
       token.style.top = y + '%';
@@ -217,19 +340,36 @@ function renderPathGraphBlock(block) {
     requestAnimationFrame(step);
   }
 
+  function animateAlongSegments(segments, onComplete, totalDuration = 1200) {
+    const segDuration = totalDuration / segments.length;
+    let index = 0;
+
+    function runSegment() {
+      const seg = segments[index];
+      animateSegment(seg.start, seg.control, seg.end, () => {
+        index++;
+        if (index < segments.length) {
+          runSegment();
+        } else if (onComplete) {
+          onComplete();
+        }
+      }, segDuration);
+    }
+
+    runSegment();
+  }
+
   function moveTo(edge) {
     const fromNode = nodesById[currentNodeId];
     const toNode = nodesById[edge.to];
-    const controlNode = {
-      x: edge.cx ?? (fromNode.x + toNode.x) / 2,
-      y: edge.cy ?? (fromNode.y + toNode.y) / 2
-    };
+    const guidePoints = buildGuidePoints(edge, fromNode, toNode);
+    const segments = buildSegments(guidePoints);
 
     clearChoices();
     message.textContent = '';
     message.className = 'maze-message';
 
-    animateTokenTo(fromNode, toNode, controlNode, () => {
+    animateAlongSegments(segments, () => {
       currentNodeId = edge.to;
 
       if (toNode.finish) {
