@@ -24,12 +24,16 @@ function renderBlock(block) {
   switch (block.type) {
     case 'heading':
       return renderHeadingBlock(block);
+    case 'subheading':
+      return renderSubheadingBlock(block);
     case 'paragraph':
       return renderParagraphBlock(block);
     case 'image':
       return renderImageBlock(block);
     case 'click-regions':
       return renderClickRegionsBlock(block);
+    case 'true-false':
+      return renderTrueFalseBlock(block);
     case 'text-with-image':
       return renderTextWithImageBlock(block);
     case 'path-graph':

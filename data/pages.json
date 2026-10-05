@@ -115,5 +115,56 @@
         ]
       }
     ]
-  }
+  },
+
+  {
+    "page": 3,
+    "blocks": [
+      { "type": "heading", "text": "How to Properly Fit a Life Jacket" },
+      { "type": "paragraph", "text": "Life jackets are designed to help you float while in the water and can save your life, so make sure that your life jacket fits you properly. They come in many styles and colors so choose the right one for you and your water activity." },
+      { "type": "subheading", "text": "1. Check the Label" },
+      { "type": "paragraph", "text": "The label will tell you if the life jacket is Coast Guard approved, size of the life jacket, and what activities the life jacket can be used for. Sizes range from infant to extra extra large. Adult life jackets will not work for children and should not be worn by them until they weigh about 90 pounds." },
+      { "type": "subheading", "text": "2. Check for Damage" },
+      { "type": "paragraph", "text": "Check for broken parts, mold, and rips in the fabric." },
+      { "type": "subheading", "text": "3. Put Life Jacket On and Fasten It Up" },
+      { "type": "paragraph", "text": "Fasten up all buckles, zippers, and straps. Adjust straps so that the life jacket fits snugly." },
+      { "type": "subheading", "text": "4. Check for Proper Fit" },
+      { "type": "paragraph", "text": "Lift up on the shoulders of the life jacket. Make sure it does not come up above your chin or ears. It should feel snug, yet comfortable. A properly fitted life jacket keeps your head and shoulders above water. You will be able to swim with it on too. It is recommended that you perform a test wearing your life jacket in shallow water with an adult within arm's reach." },
+      { "type": "subheading", "text": "5. Please Wear It" },
+      { "type": "paragraph", "text": "A life jacket only works if it is worn properly. Take the time to be prepared. Make sure you have and wear a life jacket that fits you properly when in, on, or near the water." },
+      { "type": "image", "src": "assets/pages/lifejacket_instructions.png" }
+    ]
+  },
+  {
+    "page": 4,
+    "blocks": [
+      {
+        "type": "text-with-image",
+        "heading": "History of the U.S. Army Corps of Engineers",
+        "image": "assets/illustrations/USACE_history_illustration.png",
+        "imagePosition": "right",
+        "imageAfterParagraph": 4,
+        "paragraphs": [
+          "The history of U.S. Army Corps of Engineers (USACE) goes back to June 16, 1775, when the Continental Congress organized an army with a chief engineer and two assistants; however, it was not until 1779 that Congress created a separate Corps of Engineers. At the end of the Revolutionary War, the engineers were released from service. Later in 1802 Congress created a separate, permanent Corps of Engineers.",
+          "From the beginning, the USACE worked on both military construction and works \"of a civil nature.\" During the 19th century, the USACE supervised the building of forts and mapped much of the American West. They also built lighthouses, developed jetties and piers for harbors, mapped navigation channels and built roads and canals.",
+          "The most famous road project for the USACE is the Cumberland or National Road built between 1811 and 1841. The road went from Cumberland, Maryland to Vandalia, Illinois. They also surveyed the Great Lakes and the Mississippi Delta. The USACE also helped with planning and constructing public buildings and monuments in Washington, D.C.",
+          "During the last half of the 19th century, they improved navigation on the Potomac River; finished the Washington Monument; helped design and build structures like the Lincoln Memorial and the Library of Congress; worked on swamp reclamation which created the Tidal Basin; and developed Rock Creek Park as a major urban recreation area.",
+          "The USACE began working on flood control after the Civil War on large rivers like the Mississippi. Neglected waterways, demands for hydropower across the country, and calls for irrigation projects in the West drew attention to the nation's water resources at the beginning of the 20th century. Following World War II, the USACE built several dams on our nation's waterways that provide flood control, navigation, water supply for irrigation and drinking water, hydropower, and recreation.",
+          "By the 1980s the USACE mission had grown from flood fighting to other hazards. They work closely with the Federal Emergency Management Agency (FEMA) during natural disasters such as hurricanes, earthquakes, and fires.",
+          "The work of the USACE has proven invaluable and will continue to develop as they prepare to meet the challenges of the future."
+        ]
+      },
+      {
+        "type": "true-false",
+        "heading": "What did you learn?",
+        "columnLabel": "True or False",
+        "questions": [
+          { "text": "The history of the USACE can be traced back to July 4, 1776.", "answer": false },
+          { "text": "The most famous road project for the USACE is the Cumberland or National Road.", "answer": true },
+          { "text": "The USACE became involved in flood control after World War I.", "answer": false },
+          { "text": "The USACE has built several dams on our nation's waterways that provide flood control, irrigation, navigation, drinking water, hydropower, and recreation.", "answer": true }
+        ]
+      }
+  ]
+}
 ]

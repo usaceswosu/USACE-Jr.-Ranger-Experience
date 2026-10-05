@@ -32,7 +32,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: 0;
   padding: 24px 20px;
   overflow-y: auto;
   box-sizing: border-box;
@@ -40,9 +40,25 @@ body {
   height: 100%;
 }
 
-.block-heading,
-.block-paragraph {
+.block-heading {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 0 14px 0;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.block-subheading {
+  font-size: 0.75rem;
+  font-weight: 700;
   margin: 0;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.block-paragraph {
+  font-size: 0.6rem;
+  margin: 0 0 14px 0;
   width: 100%;
   flex-shrink: 0;
 }
@@ -82,6 +98,7 @@ body {
 .block-text-image {
   width: 100%;
   flex-shrink: 0;
+  margin-bottom: 16px;
 }
 
 .block-text-image h2 {
@@ -157,10 +174,10 @@ body {
 
 .maze-token {
   position: absolute;
-  width: 1.25%;
+  width: 1.75%;
   aspect-ratio: 1;
   background-color: #2b7cd3;
-  border: 1px solid white;
+  border: 2px solid white;
   border-radius: 50%;
   transform: translate(-50%, -50%);
   z-index: 3;
@@ -213,6 +230,15 @@ body {
 .maze-arrow-floating-debug {
   animation: none;
   opacity: 0.45;
+}
+
+.maze-arrow-preview-marker {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 3%;
+  aspect-ratio: 1;
+  z-index: 1;
+  pointer-events: none;
 }
 
 .maze-message {
@@ -274,11 +300,67 @@ body {
   fill: rgba(0, 150, 255, 0.85);
 }
 
-.maze-arrow-preview-marker {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  width: 3%;
-  aspect-ratio: 1;
-  z-index: 1;
-  pointer-events: none;
+.block-true-false {
+  width: 100%;
+  background-color: #3fa9a4;
+  border-radius: 14px;
+  padding: 18px 20px;
+  color: white;
+  flex-shrink: 0;
+}
+
+.tf-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.tf-heading {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.tf-column-label {
+  font-size: 0.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.tf-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.tf-number {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: white;
+  color: #3fa9a4;
+  font-weight: 700;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tf-text {
+  flex: 1;
+  font-size: 0.6rem;
+}
+
+.tf-choices {
+  display: flex;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.tf-checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
 }

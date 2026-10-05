@@ -5,6 +5,13 @@ function renderHeadingBlock(block) {
   return h2;
 }
 
+function renderSubheadingBlock(block) {
+  const h3 = document.createElement('h3');
+  h3.textContent = block.text;
+  h3.className = 'block-subheading';
+  return h3;
+}
+
 function renderParagraphBlock(block) {
   const p = document.createElement('p');
   p.textContent = block.text;
@@ -41,6 +48,69 @@ function renderClickRegionsBlock(block) {
     });
 
     wrapper.appendChild(hotspot);
+  });
+
+  return wrapper;
+}
+
+function renderTrueFalseBlock(block) {
+  const wrapper = document.createElement('div');
+  wrapper.className = 'block-true-false';
+
+  const header = document.createElement('div');
+  header.className = 'tf-header';
+
+  const heading = document.createElement('h2');
+  heading.textContent = block.heading;
+  heading.className = 'tf-heading';
+  header.appendChild(heading);
+
+  if (block.columnLabel) {
+    const label = document.createElement('div');
+    label.className = 'tf-column-label';
+    label.textContent = block.columnLabel;
+    header.appendChild(label);
+  }
+
+  wrapper.appendChild(header);
+
+  block.questions.forEach((q, index) => {
+    const row = document.createElement('div');
+    row.className = 'tf-row';
+
+    const number = document.createElement('div');
+    number.className = 'tf-number';
+    number.textContent = index + 1;
+    row.appendChild(number);
+
+    const text = document.createElement('div');
+    text.className = 'tf-text';
+    text.textContent = q.text;
+    row.appendChild(text);
+
+    const choices = document.createElement('div');
+    choices.className = 'tf-choices';
+
+    const trueBox = document.createElement('input');
+    trueBox.type = 'checkbox';
+    trueBox.className = 'tf-checkbox';
+
+    const falseBox = document.createElement('input');
+    falseBox.type = 'checkbox';
+    falseBox.className = 'tf-checkbox';
+
+    trueBox.addEventListener('change', () => {
+      if (trueBox.checked) falseBox.checked = false;
+    });
+    falseBox.addEventListener('change', () => {
+      if (falseBox.checked) trueBox.checked = false;
+    });
+
+    choices.appendChild(trueBox);
+    choices.appendChild(falseBox);
+    row.appendChild(choices);
+
+    wrapper.appendChild(row);
   });
 
   return wrapper;
