@@ -217,21 +217,30 @@ body {
 
 .maze-message {
   position: absolute;
-  bottom: 3%;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.4rem;
   font-weight: bold;
-  padding: 6px 14px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  z-index: 10;
   border-radius: 8px;
-  background: white;
-  z-index: 5;
 }
 
 .maze-message:empty {
   display: none;
 }
 
-.maze-message-success { color: #0a6b1a; border: 2px solid #0a6b1a; }
+.maze-message-success {
+  color: #7CFC9A;
+}
 
 .maze-debug-node {
   position: absolute;

@@ -79,7 +79,7 @@
           { "id": "dead-2", "x": 62.25, "y": 62 },
           { "id": "dead-3", "x": 50, "y": 73.25 },
           { "id": "dead-4", "x": 49, "y": 92.75 },
-          { "id": "finish", "x": 76, "y": 90.5 }
+          { "id": "finish", "x": 76, "y": 90.5, "finish": true }
         ],
   
         "edges": [
@@ -102,16 +102,16 @@
           { "from": "stop-5", "to": "stop-4", "label": "Right", "arrowX": 58, "arrowY": 45.25, "arrowRotation": -145 },
           { "from": "dead-2", "to": "stop-5", "label": "Back", "controlPoints": [{ "x": 60, "y": 55 }], "arrowX": 61.15, "arrowY": 57, "arrowRotation": -100 },
           { "from": "stop-5", "to": "dead-2", "label": "Left", "controlPoints": [{ "x": 60, "y": 55 }], "arrowX": 61, "arrowY": 53.5, "arrowRotation": 98 },
-          { "from": "stop-6", "to": "stop-3", "label": "Back", "controlPoints":[{ "x": 84, "y": 45}] },
-          { "from": "stop-6", "to": "finish", "label": "Right", "controlPoints":[{ "x": 85, "y": 59.75}, { "x": 52.75, "y": 68}, { "x": 49.25, "y": 96.25}, { "x": 76, "y": 98}] },
-          { "from": "stop-7", "to": "stop-4", "label": "Back", "controlPoints": [{ "x": 38, "y": 52}] },
-          { "from": "stop-7", "to": "dead-3", "label": "Straight" },
-          { "from": "stop-7", "to": "stop-8", "label": "Right" },
-          { "from": "dead-3", "to": "stop-7", "label": "Straight" },
+          { "from": "stop-6", "to": "stop-3", "label": "Back", "controlPoints":[{ "x": 84, "y": 45}], "arrowX": 85.85, "arrowY": 50, "arrowRotation": -125 },
+          { "from": "stop-6", "to": "finish", "label": "Right", "controlPoints":[{ "x": 85, "y": 59.75}, { "x": 52.75, "y": 68}, { "x": 49.25, "y": 96.25}, { "x": 76, "y": 98}], "arrowX": 84.25, "arrowY": 57.75, "arrowRotation": -210 },
+          { "from": "stop-7", "to": "stop-4", "label": "Back", "controlPoints": [{ "x": 38, "y": 52}], "arrowX": 42.35, "arrowY": 60.1, "arrowRotation": -105 },
+          { "from": "stop-7", "to": "dead-3", "label": "Straight", "arrowX": 46.25, "arrowY": 69.5, "arrowRotation": 50 },
+          { "from": "stop-7", "to": "stop-8", "label": "Right", "arrowX": 40, "arrowY": 67.15, "arrowRotation": -205 },
+          { "from": "dead-3", "to": "stop-7", "label": "Straight", "arrowX": 46.85, "arrowY": 70, "arrowRotation": -140 },
           { "from": "stop-8", "to": "start", "label": "Back", "controlPoints":[ { "x": 29, "y": 69 }, { "x": 18, "y": 73.5 }, { "x": 5, "y": 70.5 }, { "x": 9, "y": 50.5 }, { "x": 34, "y": 54 }, { "x": 40, "y": 43.5 }, { "x": 35, "y": 39.5 } ], "arrowX": 30, "arrowY": 70.5, "arrowRotation": -165 },
-          { "from": "stop-8", "to": "stop-7", "label": "Back", "arrowX": 35.5, "arrowY": 70.25, "arrowRotation": -30 },
+          { "from": "stop-8", "to": "stop-7", "label": "Back", "arrowX": 35.75, "arrowY": 70.15, "arrowRotation": -30 },
           { "from": "stop-8", "to": "dead-4", "label": "Left", "controlPoints": [{ "x": 34.5, "y": 80 }, { "x": 25, "y": 85 }, { "x": 8, "y": 79 }, { "x": 9, "y": 96 }, { "x": 37, "y": 99 }], "arrowX": 33.5, "arrowY": 76.5, "arrowRotation": 90 },
-          { "from": "dead-4", "to": "stop-8", "label": "Back", "controlPoints": [{ "x": 37, "y": 99 }, { "x": 9, "y": 96 }, { "x": 8, "y": 79 }, { "x": 25, "y": 85 }, { "x": 34.5, "y": 80 }] }
+          { "from": "dead-4", "to": "stop-8", "label": "Back", "controlPoints": [{ "x": 37, "y": 99 }, { "x": 9, "y": 96 }, { "x": 8, "y": 79 }, { "x": 25, "y": 85 }, { "x": 34.5, "y": 80 }], "arrowX": 46, "arrowY": 94.25, "arrowRotation": -200 }
         ]
       }
     ]
