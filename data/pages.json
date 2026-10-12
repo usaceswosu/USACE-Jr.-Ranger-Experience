@@ -119,6 +119,7 @@
 
   {
     "page": 3,
+    "textScale": 1.5,
     "blocks": [
       { "type": "heading", "text": "How to Properly Fit a Life Jacket" },
       { "type": "paragraph", "text": "Life jackets are designed to help you float while in the water and can save your life, so make sure that your life jacket fits you properly. They come in many styles and colors so choose the right one for you and your water activity." },
@@ -165,6 +166,188 @@
           { "text": "The USACE has built several dams on our nation's waterways that provide flood control, irrigation, navigation, drinking water, hydropower, and recreation.", "answer": true }
         ]
       }
+  ]
+},
+
+{
+  "page": 5,
+  "textScale": 1.3,
+  "blocks": [
+    { "type": "heading", "text": "Water Rescue Tips" },
+    {
+      "type": "columns",
+      "columns": [
+        [
+          { "type": "paragraph", "lead": "REACH:", "text": "Hold on to the dock or your boat, then reach your hand, a boat oar, a fishing pole, or whatever you have nearby to the person in the water." },
+          { "type": "image", "src": "assets/illustrations/rescue_reach.png" },
+          { "type": "paragraph", "lead": "ROW:", "text": "If in a boat, use the oars to move the boat closer to the person in the water, or call out to a nearby boat for help. Don't use the boat's motor close to a person in the water; the propeller could injure them." },
+          { "type": "image", "src": "assets/illustrations/rescue_row.png" }
+        ],
+        [
+          { "type": "paragraph", "lead": "THROW:", "text": "If you can't reach far enough, toss things that float for the person to grab such as a life ring, life jacket, cooler, tackle box, etc." },
+          { "type": "image", "src": "assets/illustrations/rescue_throw.png" },
+          { "type": "paragraph", "lead": "DON'T GO:", "text": "Don't go into the water to save someone unless you are a trained lifeguard. The person that is drowning could hold you under water, and you could drown too. Yell, call 911, or go for help." },
+          { "type": "image", "src": "assets/illustrations/rescue_dont_go.png" }
+        ]
+      ]
+    },
+    { "type": "paragraph", "lead": "Learn First Aid and CPR.", "text": "When giving CPR to a drowning patient, remember to give them rescue breaths and compressions. Giving them breaths provides them some oxygen, which they are lacking." },
+    {
+      "type": "columns",
+      "columns": [
+        [
+          { "type": "text-input", "prompt": "Why is it important to wear a life jacket while in, on, or near the water?" },
+          {
+            "type": "letter-fill",
+            "prompt": "If someone in the water needs help, what should you do?",
+            "words": [
+              { "pattern": "R__CH,", "answer": "REACH" },
+              { "pattern": "_H__W,", "answer": "THROW" },
+              { "pattern": "_O_,", "answer": "ROW" },
+              { "pattern": "D_N'_ G_,", "answer": "DON'T GO" }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "Scan the QR code below to watch \"Safe Passage\". The award-winning, 36-minute video for kids grades K-6 provides water safety lessons in an entertaining way.",
+            "links": [{ "text": "Safe Passage", "url": "https://youtu.be/pB4IkVfM-7w" }]
+          },
+          {
+            "type": "columns",
+            "weights": [3, 1],
+            "columns": [
+              [ { "type": "image", "src": "assets/illustrations/safe_passage_video.png" } ],
+              [ { "type": "image", "src": "assets/illustrations/safe_passage_qr.png" } ]
+            ]
+          }
+        ],
+        [
+          { "type": "image", "src": "assets/illustrations/shallow_water_blackout.png" }
+        ]
+      ]
+    }
+  ]
+},
+
+{
+  "page": 6,
+  "blocks": [
+    { "type": "heading", "text": "Paper Boat/Life Jacket Activity Story" },
+    { "type": "paragraph", "text": "First make a boat using a 8.5 x 11 sheet of paper. Here's how to do it in 10 easy steps." },
+    {
+      "type": "columns",
+      "columns": [
+        [ { "type": "image", "src": "assets/pages/lifejacket_paper_step1.png" } ],
+        [ { "type": "image", "src": "assets/pages/lifejacket_paper_step2.png" } ]
+      ]
+    },
+    {
+      "type": "columns",
+      "columns": [
+        [ { "type": "image", "src": "assets/pages/lifejacket_paper_step3.png" } ],
+        [ { "type": "image", "src": "assets/pages/lifejacket_paper_step4.png" } ]
+      ]
+    },
+    {
+      "type": "columns",
+      "columns": [
+        [ { "type": "image", "src": "assets/pages/lifejacket_paper_step5.png" } ],
+        [ { "type": "image", "src": "assets/pages/lifejacket_paper_step6.png" } ]
+      ]
+    },
+    {
+      "type": "columns",
+      "columns": [
+        [ { "type": "image", "src": "assets/pages/lifejacket_paper_step7.png" } ],
+        [ { "type": "image", "src": "assets/pages/lifejacket_paper_step8.png" } ]
+      ]
+    }
+  ]
+},
+{
+  "page": 7,
+  "blocks": [
+    {
+      "type": "columns",
+      "columns": [
+        [ { "type": "image", "src": "assets/pages/lifejacket_paper_step9.png" } ],
+        [ { "type": "image", "src": "assets/pages/lifejacket_paper_step10.png" } ]
+      ]
+    },
+    { "type": "subheading", "text": "Now for the story..." },
+    { "type": "paragraph", "text": "One day John heard the fish were biting so he decided he would go fishing. He told his family where he was going and when he planned on returning home. He grabbed his favorite fishing gear, hooked up his boat to his truck, and headed to the lake. After he got to the lake, he put his boat in the water and headed to his favorite fishing spot. The fish were biting and John was having a good time just relaxing and enjoying the day." },
+    { "type": "paragraph", "text": "Then John noticed that the sky was getting darker, and it started to rain so he packed up his fishing gear and headed back to the boat ramp. On his way back, the wind started blowing very hard so he decided to pull into a cove." },
+    {
+      "type": "columns",
+      "columns": [
+        [ { "type": "image", "src": "assets/pages/lifejacket_paper_step11.png" } ],
+        [ { "type": "image", "src": "assets/pages/lifejacket_paper_step12.png" } ]
+      ]
+    },
+    {
+      "type": "columns",
+      "columns": [
+        [ { "type": "image", "src": "assets/pages/lifejacket_paper_step13.png" } ],
+        [ { "type": "image", "src": "assets/pages/lifejacket_paper_step14.png" } ]
+      ]
+    }
+  ]
+},
+
+{
+  "page": 8,
+  "textScale": 1.4,
+  "blocks": [
+    { "type": "heading", "text": "Doing Your Part" },
+    { "type": "paragraph", "text": "Here are some things that you can do to help make your visit more enjoyable, and to help parks so that others may enjoy them too." },
+    {
+      "type": "columns",
+      "weights": [3, 2],
+      "columns": [
+        [
+          { "type": "subheading", "text": "Follow the Rules" },
+          { "type": "paragraph", "text": "Know the rules and learn about the area you are visiting. Stop by a visitor center, office, or campground entrance station to get a copy of the rules and regulations. Ask someone like a park ranger if there is anything you should be aware of during your visit." },
+          { "type": "subheading", "text": "Leave It Better Than You Found It" },
+          { "type": "paragraph", "text": "Whether it's at your campsite, along a trail, at a beach, or boat ramp, if you see trash, even if it's not yours, please pick it up and dispose of it." }
+        ],
+        [ { "type": "image", "src": "assets/illustrations/doing_part_visitor_center.png" } ]
+      ]
+    },
+    {
+      "type": "columns",
+      "weights": [2, 3],
+      "align": "center",
+      "columns": [
+        [ { "type": "image", "src": "assets/illustrations/doing_part_campfire.png" } ],
+        [
+          { "type": "subheading", "text": "Be Careful With Fire" },
+          { "type": "paragraph", "text": "Where fires are allowed, use fire rings and grills that are already there and keep your fires small. Be sure to put out campfires and grill fires completely. Adults should always be involved in building, burning, and putting out fires at your campsite or picnic site." },
+          { "type": "subheading", "text": "Remember Your Best Friend" },
+          { "type": "paragraph", "text": "If you bring your dog along on your visit, remember that they might not act the same as they do at home because they are in a new environment. While in the parks, your dog must be on a leash and is not allowed on the sand portion of a swimming beach. Remember to pick up after your pet and dispose of it properly. Not all dogs are natural swimmers. They need a life jacket too." }
+        ]
+      ]
+    },
+    {
+      "type": "columns",
+      "weights": [3, 2],
+      "align": "center",
+      "columns": [
+        [
+          { "type": "subheading", "text": "Be Kind to Others" },
+          { "type": "paragraph", "text": "Be kind and respectful to other visitors and remember that they are in the parks to enjoy the outdoors too." },
+          { "type": "subheading", "text": "Have Fun and Play It Safe" },
+          { "type": "paragraph", "text": "When on, in, or near the water having fun, make sure an adult is watching you. Remember to wear a properly fitted life jacket and encourage others to do so too." }
+        ],
+        [ { "type": "image", "src": "assets/illustrations/doing_part_lifejacket.png" } ]
+      ]
+    },
+    { "type": "heading", "text": "Want to Volunteer?" },
+    {
+      "type": "paragraph",
+      "text": "If you would like to volunteer at a U.S. Army Corps of Engineers lake or river, visit www.volunteer.gov.",
+      "links": [{ "text": "www.volunteer.gov", "url": "https://www.volunteer.gov" }]
+    },
+    { "type": "text-input", "prompt": "What would you like to do at this lake or river?", "rows": 2 }
   ]
 }
 ]

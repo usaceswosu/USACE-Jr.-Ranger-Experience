@@ -13,6 +13,7 @@ function renderPage() {
 
   container.innerHTML = '';
   container.className = 'page-blocks';
+  container.style.setProperty('--text-scale', page.textScale ?? 1);
 
   page.blocks.forEach(block => {
     const el = renderBlock(block);
@@ -32,6 +33,12 @@ function renderBlock(block) {
       return renderImageBlock(block);
     case 'click-regions':
       return renderClickRegionsBlock(block);
+    case 'columns':
+      return renderColumnsBlock(block);
+    case 'text-input':
+      return renderTextInputBlock(block);
+    case 'letter-fill':
+      return renderLetterFillBlock(block);
     case 'true-false':
       return renderTrueFalseBlock(block);
     case 'text-with-image':

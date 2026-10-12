@@ -14,9 +14,41 @@ function renderSubheadingBlock(block) {
 
 function renderParagraphBlock(block) {
   const p = document.createElement('p');
-  p.textContent = block.text;
   p.className = 'block-paragraph';
+
+  if (block.lead) {
+    const strong = document.createElement('strong');
+    strong.textContent = block.lead + ' ';
+    p.appendChild(strong);
+  }
+
+  appendTextWithLinks(p, block.text, block.links || []);
   return p;
+}
+
+function appendTextWithLinks(parent, text, links) {
+  let rest = text;
+
+  links.forEach(link => {
+    const index = rest.indexOf(link.text);
+    if (index === -1) return;
+
+    parent.appendChild(document.createTextNode(rest.slice(0, index)));
+
+    const a = document.createElement('a');
+    a.href = link.url;
+    a.target = '_blank';
+    a.rel = 'noopener noreferrer';
+
+    const strong = document.createElement('strong');
+    strong.textContent = link.text;
+    a.appendChild(strong);
+
+    parent.appendChild(a);
+    rest = rest.slice(index + link.text.length);
+  });
+
+  parent.appendChild(document.createTextNode(rest));
 }
 
 function renderImageBlock(block) {
@@ -464,5 +496,124 @@ function renderPathGraphBlock(block) {
     img.addEventListener('load', init);
   }
 
+  return wrapper;
+}
+
+function renderColumnsBlock(block) {
+  const row = document.createElement('div');
+  row.className = 'block-columns';
+
+  block.columns.forEach((columnBlocks, index) => {
+    const col = document.createElement('div');
+    col.className = 'block-column';
+
+    const weight = block.weights ? block.weights[index] : 1;
+    col.style.flex = `${weight} 1 0%`;
+
+    columnBlocks.forEach(child => {
+      const el = renderBlock(child);
+      if (el) col.appendChild(el);
+    });
+
+    row.appendChild(col);
+  });
+
+  return row;
+}
+
+function renderTextInputBlock(block) {
+  const wrapper = document.createElement('div');
+  wrapper.className = 'block-text-input';
+
+  const prompt = document.createElement('p');
+  prompt.className = 'block-paragraph';
+  prompt.textContent = block.prompt;
+  wrapper.appendChild(prompt);
+
+  let field;
+  if (block.rows && block.rows > 1) {
+    field = document.createElement('textarea');
+    field.rows = block.rows;
+  } else {
+    field = document.createElement('input');
+    field.type = 'text';
+  }
+  field.className = 'ti-field';
+  wrapper.appendChild(field);
+
+  return wrapper;
+}
+
+function checkWord(wordEl, inputs) {
+  const filled = inputs.every(input => input.value !== '');
+  const correct = inputs.every(input => input.value === input.dataset.answer);
+  wordEl.classList.toggle('lf-correct', filled && correct);
+  wordEl.classList.toggle('lf-wrong', filled && !correct);
+}
+
+function renderLetterFillBlock(block) {
+  const wrapper = document.createElement('div');
+  wrapper.className = 'block-letter-fill';
+
+  if (block.prompt) {
+    const prompt = document.createElement('p');
+    prompt.className = 'block-paragraph';
+    prompt.textContent = block.prompt;
+    wrapper.appendChild(prompt);
+  }
+
+  const wordsRow = document.createElement('div');
+  wordsRow.className = 'lf-words';
+  const allInputs = [];
+
+  block.words.forEach(word => {
+    const wordEl = document.createElement('div');
+    wordEl.className = 'lf-word';
+    const wordInputs = [];
+
+    for (let i = 0; i < word.pattern.length; i++) {
+      const ch = word.pattern[i];
+
+      if (ch === '_') {
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.maxLength = 1;
+        input.className = 'lf-input';
+        input.dataset.answer = word.answer[i].toUpperCase();
+        wordInputs.push(input);
+        allInputs.push(input);
+        wordEl.appendChild(input);
+      } else if (ch === ' ') {
+        const gap = document.createElement('span');
+        gap.className = 'lf-gap';
+        wordEl.appendChild(gap);
+      } else {
+        const letter = document.createElement('span');
+        letter.className = 'lf-letter';
+        letter.textContent = ch;
+        wordEl.appendChild(letter);
+      }
+    }
+
+    wordInputs.forEach(input => {
+      input.addEventListener('input', () => {
+        input.value = input.value.toUpperCase();
+        const index = allInputs.indexOf(input);
+        if (input.value && allInputs[index + 1]) allInputs[index + 1].focus();
+        checkWord(wordEl, wordInputs);
+      });
+
+      input.addEventListener('keydown', e => {
+        if (e.key === 'Backspace' && !input.value) {
+          const index = allInputs.indexOf(input);
+          if (allInputs[index - 1]) allInputs[index - 1].focus();
+        }
+      });
+    });
+
+    wordsRow.appendChild(wordEl);
+  });
+
+  wrapper.appendChild(wordsRow);
   return wrapper;
 }
