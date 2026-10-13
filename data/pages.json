@@ -349,5 +349,85 @@
     },
     { "type": "text-input", "prompt": "What would you like to do at this lake or river?", "rows": 2 }
   ]
+},
+
+{
+  "page": 9,
+  "blocks": [
+    { "type": "heading", "text": "Make the Right Choices Maze" },
+    { "type": "paragraph", "text": "Junior Rangers are role models that set good examples for others by playing it safe and respecting the parks, wildlife, and other visitors. Complete the maze by choosing examples that are good behaviors." },
+    {
+      "type": "path-graph",
+      "image": "assets/pages/right_choices_maze.png",
+      "startNode": "q1",
+      "showAllNodes": true,
+      "showAllEdges": true,
+      "showAllChoiceArrows": false,
+      "previewAllArrows": false,
+      "nodes": [
+        { "id": "q1", "x": 10, "y": 7.5 },
+        { "id": "q1-alone", "x": 10.8, "y": 24 },
+        { "id": "q1-adult", "x": 34.7, "y": 24 },
+        { "id": "q2", "x": 76.5, "y": 14 },
+        { "id": "q2-stick", "x": 62.6, "y": 24 },
+        { "id": "q2-leave", "x": 91.1, "y": 24 },
+        { "id": "q3", "x": 23, "y": 47.5 },
+        { "id": "q3-putout", "x": 8.7, "y": 57.4 },
+        { "id": "q3-leaveit", "x": 31.7, "y": 57.4 },
+        { "id": "q4", "x": 76.5, "y": 47.5 },
+        { "id": "q4-leave", "x": 57.2, "y": 49.1 },
+        { "id": "q4-pickup", "x": 90.3, "y": 57.4 },
+        { "id": "q5", "x": 23, "y": 81 },
+        { "id": "q5-leash", "x": 8, "y": 91 },
+        { "id": "q5-free", "x": 36.7, "y": 91 },
+        { "id": "q6", "x": 76.5, "y": 81 },
+        { "id": "q6-jacket", "x": 61.1, "y": 91 },
+        { "id": "q6-floaties", "x": 90.9, "y": 71.3 },
+        { "id": "finish", "x": 73.5, "y": 95, "finish": true }
+      ],
+      "edges": [
+        { "from": "q1", "to": "q1-alone", "label": "Go Alone" },
+        { "from": "q1", "to": "q1-adult", "label": "With Adult" },
+        { "from": "q1-alone", "to": "q1", "label": "Back" },
+        { "from": "q1-adult", "to": "q1", "label": "Back" },
+        { "from": "q1-adult", "to": "q2", "label": "Next" },
+
+        { "from": "q2", "to": "q1-adult", "label": "Back" },
+        { "from": "q2", "to": "q2-stick", "label": "Hit With Stick" },
+        { "from": "q2", "to": "q2-leave", "label": "Leave It Alone" },
+        { "from": "q2-stick", "to": "q2", "label": "Back" },
+        { "from": "q2-leave", "to": "q2", "label": "Back" },
+        { "from": "q2-leave", "to": "q3", "label": "Next" },
+
+        { "from": "q3", "to": "q2-leave", "label": "Back" },
+        { "from": "q3", "to": "q3-putout", "label": "Put Out" },
+        { "from": "q3", "to": "q3-leaveit", "label": "Leave It" },
+        { "from": "q3-putout", "to": "q3", "label": "Back" },
+        { "from": "q3-leaveit", "to": "q3", "label": "Back" },
+        { "from": "q3-putout", "to": "q4", "label": "Next" },
+
+        { "from": "q4", "to": "q3-putout", "label": "Back" },
+        { "from": "q4", "to": "q4-leave", "label": "Leave It" },
+        { "from": "q4", "to": "q4-pickup", "label": "Pick It Up" },
+        { "from": "q4-leave", "to": "q4", "label": "Back" },
+        { "from": "q4-pickup", "to": "q4", "label": "Back" },
+        { "from": "q4-pickup", "to": "q5", "label": "Next" },
+
+        { "from": "q5", "to": "q4-pickup", "label": "Back" },
+        { "from": "q5", "to": "q5-leash", "label": "On Leash" },
+        { "from": "q5", "to": "q5-free", "label": "Run Free" },
+        { "from": "q5-leash", "to": "q5", "label": "Back" },
+        { "from": "q5-free", "to": "q5", "label": "Back" },
+        { "from": "q5-leash", "to": "q6", "label": "Next" },
+
+        { "from": "q6", "to": "q5-leash", "label": "Back" },
+        { "from": "q6", "to": "q6-jacket", "label": "Wear a Life Jacket" },
+        { "from": "q6", "to": "q6-floaties", "label": "Wear Inflatable Floaties" },
+        { "from": "q6-jacket", "to": "q6", "label": "Back" },
+        { "from": "q6-floaties", "to": "q6", "label": "Back" },
+        { "from": "q6-jacket", "to": "finish", "label": "Finish" }
+      ]
+    }
+  ]
 }
 ]
