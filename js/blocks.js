@@ -1,3 +1,5 @@
+const answerStore = {};
+
 function renderHeadingBlock(block) {
   const h2 = document.createElement('h2');
   h2.textContent = block.text;
@@ -62,6 +64,14 @@ function renderClickRegionsBlock(block) {
   const wrapper = document.createElement('div');
   wrapper.className = 'block-click-regions';
 
+  if (block.hideTargets) {
+    wrapper.classList.add('targets-hidden');
+  }
+
+  if (block.shape === 'ellipse') {
+    wrapper.classList.add('shape-ellipse');
+  }
+
   const img = document.createElement('img');
   img.src = block.image;
   img.className = 'click-regions-img';
@@ -74,6 +84,10 @@ function renderClickRegionsBlock(block) {
     hotspot.style.top = target.y + '%';
     hotspot.style.width = target.width + '%';
     hotspot.style.height = target.height + '%';
+
+    if (target.rotation) {
+      hotspot.style.transform = `rotate(${target.rotation}deg)`;
+    }
 
     hotspot.addEventListener('click', () => {
       hotspot.classList.toggle('circled');
@@ -539,6 +553,16 @@ function renderTextInputBlock(block) {
     field.type = 'text';
   }
   field.className = 'ti-field';
+
+  if (block.id) {
+    if (answerStore[block.id] !== undefined) {
+      field.value = answerStore[block.id];
+    }
+    field.addEventListener('input', () => {
+      answerStore[block.id] = field.value;
+    });
+  }
+
   wrapper.appendChild(field);
 
   return wrapper;
@@ -615,5 +639,170 @@ function renderLetterFillBlock(block) {
   });
 
   wrapper.appendChild(wordsRow);
+  return wrapper;
+}
+
+function polygonCentroid(points) {
+  let x = 0;
+  let y = 0;
+  points.forEach(p => {
+    x += p[0];
+    y += p[1];
+  });
+  return [x / points.length, y / points.length];
+}
+
+function renderRouteMazeBlock(block) {
+  const svgNS = 'http://www.w3.org/2000/svg';
+  const speed = block.speed || 40;
+
+  const wrapper = document.createElement('div');
+  wrapper.className = 'block-route-maze';
+
+  const img = document.createElement('img');
+  img.src = block.image;
+  img.className = 'route-maze-img';
+  wrapper.appendChild(img);
+
+  const overlay = document.createElementNS(svgNS, 'svg');
+  overlay.setAttribute('viewBox', '0 0 100 100');
+  overlay.setAttribute('preserveAspectRatio', 'none');
+  overlay.classList.add('route-maze-overlay');
+  wrapper.appendChild(overlay);
+
+  const token = document.createElement('div');
+  token.className = 'maze-token';
+  wrapper.appendChild(token);
+
+  const ring = document.createElement('div');
+  ring.className = 'maze-stop-ring';
+  wrapper.appendChild(ring);
+
+  const message = document.createElement('div');
+  message.className = 'maze-message';
+  wrapper.appendChild(message);
+
+  const questions = {};
+  block.questions.forEach(q => { questions[q.id] = q; });
+
+  function placeToken(point) {
+    token.style.left = point[0] + '%';
+    token.style.top = point[1] + '%';
+  }
+
+  function clearArrows() {
+    while (overlay.firstChild) overlay.removeChild(overlay.firstChild);
+  }
+
+  function showArrows(questionId) {
+    clearArrows();
+    const question = questions[questionId];
+
+    question.answers.forEach(answer => {
+      const pointsAttr = answer.arrow.map(p => p[0] + ',' + p[1]).join(' ');
+
+      const group = document.createElementNS(svgNS, 'g');
+      group.classList.add('rm-arrow');
+
+      const shape = document.createElementNS(svgNS, 'polygon');
+      shape.setAttribute('points', pointsAttr);
+      shape.classList.add('rm-arrow-shape');
+      group.appendChild(shape);
+
+      const hit = document.createElementNS(svgNS, 'polygon');
+      hit.setAttribute('points', pointsAttr);
+      hit.classList.add('rm-arrow-hit');
+      group.appendChild(hit);
+
+      group.addEventListener('click', () => choose(question, answer));
+      overlay.appendChild(group);
+    });
+  }
+
+  function travelAlong(points, onDone) {
+    const ratio = img.naturalWidth && img.naturalHeight ? img.naturalWidth / img.naturalHeight : 1;
+    const lengths = [];
+    let total = 0;
+
+    for (let i = 1; i < points.length; i++) {
+      const dx = points[i][0] - points[i - 1][0];
+      const dy = (points[i][1] - points[i - 1][1]) / ratio;
+      const length = Math.hypot(dx, dy);
+      lengths.push(length);
+      total += length;
+    }
+
+    if (total === 0) {
+      onDone();
+      return;
+    }
+
+    const duration = (total / speed) * 1000;
+    const startTime = performance.now();
+
+    function step(now) {
+      const t = Math.min((now - startTime) / duration, 1);
+      let remaining = t * total;
+      let i = 0;
+
+      while (i < lengths.length - 1 && remaining > lengths[i]) {
+        remaining -= lengths[i];
+        i++;
+      }
+
+      const f = lengths[i] === 0 ? 1 : Math.min(remaining / lengths[i], 1);
+      placeToken([
+        points[i][0] + (points[i + 1][0] - points[i][0]) * f,
+        points[i][1] + (points[i + 1][1] - points[i][1]) * f
+      ]);
+
+      if (t < 1) {
+        requestAnimationFrame(step);
+      } else {
+        onDone();
+      }
+    }
+
+    requestAnimationFrame(step);
+  }
+
+  function showSuccess() {
+    message.textContent = 'Great Job, Junior Ranger!';
+    message.className = 'maze-message maze-message-success';
+  }
+
+  function choose(question, answer) {
+    clearArrows();
+    const outbound = [question.hub, polygonCentroid(answer.arrow), ...answer.route];
+
+    if (answer.correct) {
+      const trip = answer.next === 'finish' ? outbound : [...outbound, questions[answer.next].hub];
+      travelAlong(trip, () => {
+        if (answer.next === 'finish') {
+          showSuccess();
+        } else {
+          showArrows(answer.next);
+        }
+      });
+      return;
+    }
+
+    travelAlong(outbound, () => {
+      const end = outbound[outbound.length - 1];
+      ring.style.left = end[0] + '%';
+      ring.style.top = end[1] + '%';
+      ring.classList.remove('maze-stop-ring-active');
+      void ring.offsetWidth;
+      ring.classList.add('maze-stop-ring-active');
+
+      setTimeout(() => {
+        travelAlong([...outbound].reverse(), () => showArrows(question.id));
+      }, 1200);
+    });
+  }
+
+  placeToken(questions[block.start].hub);
+  showArrows(block.start);
+
   return wrapper;
 }

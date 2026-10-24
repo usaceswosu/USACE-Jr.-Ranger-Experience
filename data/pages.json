@@ -29,11 +29,35 @@
       },
       {
         "type": "click-regions",
+        "shape": "ellipse",
         "image": "assets/pages/kayak_circling_activity.png",
         "targets": [
-          { "id": "oar", "x": 20, "y": 45, "width": 12, "height": 15, "correct": true },
-          { "id": "life jacket", "x": 60, "y": 30, "width": 10, "height": 10, "correct": true },
-          { "id": "pillow", "x": 40, "y": 70, "width": 15, "height": 10, "correct": false }
+          { "id": "oar", "x": 2, "y": 10, "width": 6, "height": 50, "correct": true },
+          { "id": "life jacket", "x": 34.5, "y": 45, "width": 15, "height": 32, "correct": true },
+          { "id": "pillow", "x": 31.5, "y": 79, "width": 16, "height": 16.5, "correct": false },
+          { "id": "clothes", "x": 15.75, "y": 78, "width": 15, "height": 16.5, "correct": false },
+          { "id": "laptop", "x": 1.25, "y": 74, "width": 14, "height": 22, "correct": false },
+          { "id": "water", "x": 9.75, "y": 47, "width": 7, "height": 25, "correct": false },
+          { "id": "hairbrush", "x": 17.5, "y": 68, "width": 11, "height": 9, "correct": false },
+          { "id": "food", "x": 16.5, "y": 48, "width": 14, "height": 19, "correct": false },
+          { "id": "walkie_talkie", "x": 8.5, "y": 29, "width": 7, "height": 17, "correct": false },
+          { "id": "hat", "x": 14.75, "y": 33.75, "width": 12, "height": 11, "correct": false },
+          { "id": "double_oar", "x": 24, "y": 28.5, "width": 52, "height": 10, "correct": false },
+          { "id": "kayak", "x": 6.5, "y": 10, "width": 74, "height": 20, "correct": false },
+          { "id": "sleeping_bag", "x": 48, "y": 76, "width": 37, "height": 18.5, "correct": false },
+          { "id": "tent", "x": 52, "y": 41, "width": 28, "height": 31, "correct": false },
+          { "id": "ipod", "x": 91, "y": 15, "width": 7, "height": 16.5, "correct": false },
+          { "id": "binoculars", "x": 80, "y": 13.5, "width": 10, "height": 16.5, "correct": false },
+          { "id": "slippers", "x": 84, "y": 48, "width": 13, "height": 16, "correct": false },
+          { "id": "map", "x": 83.5, "y": 31.5, "width": 16, "height": 18, "correct": false },
+          { "id": "rope", "x": 76.75, "y": 28, "width": 7, "height": 24, "correct": false },
+          { "id": "compass", "x": 49.5, "y": 69.5, "width": 6, "height": 9.25, "correct": false },
+          { "id": "hair_dryer", "x": 29, "y": 38, "width": 9, "height": 17, "correct": false },
+          { "id": "sunglasses", "x": 38.5, "y": 37.5, "width": 10, "height": 7, "correct": false },
+          { "id": "ice_cream", "x": 49.15, "y": 37.5, "width": 5, "height": 15, "correct": false },
+          { "id": "camera", "x": 0.25, "y": 61.5, "width": 10, "height": 12, "correct": false },
+          { "id": "guitar", "x": 84, "y": 54, "width": 8, "height": 45, "rotation": -38, "correct": false },
+          { "id": "sunscreen", "x": 91, "y": 62, "width": 5, "height": 16, "rotation": -55, "correct": false }
         ]
       }
     ]
@@ -196,7 +220,7 @@
       "type": "columns",
       "columns": [
         [
-          { "type": "text-input", "prompt": "Why is it important to wear a life jacket while in, on, or near the water?" },
+          { "type": "text-input", "id": "life-jacket-why", "prompt": "Why is it important to wear a life jacket while in, on, or near the water?" },
           {
             "type": "letter-fill",
             "prompt": "If someone in the water needs help, what should you do?",
@@ -354,79 +378,344 @@
 {
   "page": 9,
   "blocks": [
-    { "type": "heading", "text": "Make the Right Choices Maze" },
-    { "type": "paragraph", "text": "Junior Rangers are role models that set good examples for others by playing it safe and respecting the parks, wildlife, and other visitors. Complete the maze by choosing examples that are good behaviors." },
     {
-      "type": "path-graph",
+      "type": "heading",
+      "text": "Make the Right Choices Maze"
+    },
+    {
+      "type": "paragraph",
+      "text": "Junior Rangers are role models that set good examples for others by playing it safe and respecting the parks, wildlife, and other visitors. Complete the maze by choosing examples that are good behaviors."
+    },
+    {
+      "type": "route-maze",
       "image": "assets/pages/right_choices_maze.png",
-      "startNode": "q1",
-      "showAllNodes": true,
-      "showAllEdges": true,
-      "showAllChoiceArrows": false,
-      "previewAllArrows": false,
-      "nodes": [
-        { "id": "q1", "x": 10, "y": 7.5 },
-        { "id": "q1-alone", "x": 10.8, "y": 24 },
-        { "id": "q1-adult", "x": 34.7, "y": 24 },
-        { "id": "q2", "x": 76.5, "y": 14 },
-        { "id": "q2-stick", "x": 62.6, "y": 24 },
-        { "id": "q2-leave", "x": 91.1, "y": 24 },
-        { "id": "q3", "x": 23, "y": 47.5 },
-        { "id": "q3-putout", "x": 8.7, "y": 57.4 },
-        { "id": "q3-leaveit", "x": 31.7, "y": 57.4 },
-        { "id": "q4", "x": 76.5, "y": 47.5 },
-        { "id": "q4-leave", "x": 57.2, "y": 49.1 },
-        { "id": "q4-pickup", "x": 90.3, "y": 57.4 },
-        { "id": "q5", "x": 23, "y": 81 },
-        { "id": "q5-leash", "x": 8, "y": 91 },
-        { "id": "q5-free", "x": 36.7, "y": 91 },
-        { "id": "q6", "x": 76.5, "y": 81 },
-        { "id": "q6-jacket", "x": 61.1, "y": 91 },
-        { "id": "q6-floaties", "x": 90.9, "y": 71.3 },
-        { "id": "finish", "x": 73.5, "y": 95, "finish": true }
-      ],
-      "edges": [
-        { "from": "q1", "to": "q1-alone", "label": "Go Alone" },
-        { "from": "q1", "to": "q1-adult", "label": "With Adult" },
-        { "from": "q1-alone", "to": "q1", "label": "Back" },
-        { "from": "q1-adult", "to": "q1", "label": "Back" },
-        { "from": "q1-adult", "to": "q2", "label": "Next" },
-
-        { "from": "q2", "to": "q1-adult", "label": "Back" },
-        { "from": "q2", "to": "q2-stick", "label": "Hit With Stick" },
-        { "from": "q2", "to": "q2-leave", "label": "Leave It Alone" },
-        { "from": "q2-stick", "to": "q2", "label": "Back" },
-        { "from": "q2-leave", "to": "q2", "label": "Back" },
-        { "from": "q2-leave", "to": "q3", "label": "Next" },
-
-        { "from": "q3", "to": "q2-leave", "label": "Back" },
-        { "from": "q3", "to": "q3-putout", "label": "Put Out" },
-        { "from": "q3", "to": "q3-leaveit", "label": "Leave It" },
-        { "from": "q3-putout", "to": "q3", "label": "Back" },
-        { "from": "q3-leaveit", "to": "q3", "label": "Back" },
-        { "from": "q3-putout", "to": "q4", "label": "Next" },
-
-        { "from": "q4", "to": "q3-putout", "label": "Back" },
-        { "from": "q4", "to": "q4-leave", "label": "Leave It" },
-        { "from": "q4", "to": "q4-pickup", "label": "Pick It Up" },
-        { "from": "q4-leave", "to": "q4", "label": "Back" },
-        { "from": "q4-pickup", "to": "q4", "label": "Back" },
-        { "from": "q4-pickup", "to": "q5", "label": "Next" },
-
-        { "from": "q5", "to": "q4-pickup", "label": "Back" },
-        { "from": "q5", "to": "q5-leash", "label": "On Leash" },
-        { "from": "q5", "to": "q5-free", "label": "Run Free" },
-        { "from": "q5-leash", "to": "q5", "label": "Back" },
-        { "from": "q5-free", "to": "q5", "label": "Back" },
-        { "from": "q5-leash", "to": "q6", "label": "Next" },
-
-        { "from": "q6", "to": "q5-leash", "label": "Back" },
-        { "from": "q6", "to": "q6-jacket", "label": "Wear a Life Jacket" },
-        { "from": "q6", "to": "q6-floaties", "label": "Wear Inflatable Floaties" },
-        { "from": "q6-jacket", "to": "q6", "label": "Back" },
-        { "from": "q6-floaties", "to": "q6", "label": "Back" },
-        { "from": "q6-jacket", "to": "finish", "label": "Finish" }
+      "speed": 40,
+      "start": "q1",
+      "questions": [
+    {
+      "id": "q1",
+      "hub": [9.55, 7.9],
+      "answers": [
+        {
+          "label": "Go Alone",
+          "correct": false,
+          "arrow": [[11.33, 24.29], [11.95, 22.83], [10.63, 22.42], [10.01, 23.88], [9.23, 23.63], [10.15, 25.32], [12.11, 24.54]],
+          "route": [
+            [10.2, 25.74], [9.24, 26.79], [6.36, 26.79], [5.49, 27.39], [5.4, 34.3], [6.01, 34.97],
+            [7.58, 34.97], [8.28, 34.37], [8.45, 30.09], [9.15, 29.57], [12.72, 29.42], [13.42, 28.74],
+            [13.59, 27.39], [14.64, 26.79], [20.22, 26.79], [21.18, 27.62], [21.18, 31.74], [20.22, 32.27],
+            [15.51, 32.42], [15.08, 32.8], [15.08, 34.45], [16.03, 34.97], [26.14, 34.82], [26.67, 34.37],
+            [26.93, 32.65], [26.75, 30.24], [27.45, 29.57], [32.68, 29.57], [34.07, 30.09], [36.69, 32.2],
+            [48.8, 32.27], [49.5, 32.87]
+          ]
+        },
+        {
+          "label": "With Adult",
+          "correct": true,
+          "next": "q2",
+          "arrow": [[35.47, 23.84], [34.88, 22.38], [33.56, 22.77], [34.14, 24.23], [33.36, 24.47], [35.31, 25.28], [36.26, 23.6]],
+          "route": [
+            [35.21, 25.74], [35.21, 26.19], [36.17, 26.79], [51.85, 26.79], [52.9, 26.19], [52.98, 18.61],
+            [52.37, 18.09], [50.63, 18.01], [49.85, 18.61], [49.76, 23.49], [48.98, 24.09], [47.41, 24.09],
+            [46.62, 23.49], [46.62, 7.05], [47.23, 6.45], [51.85, 6.3], [52.9, 6.9], [52.9, 9.98],
+            [52.37, 10.43], [50.46, 10.43], [49.85, 11.03], [49.85, 14.63], [50.98, 15.38], [54.12, 15.38]
+          ]
+        }
       ]
+    },
+    {
+      "id": "q2",
+      "hub": [57.6, 15.38],
+      "answers": [
+        {
+          "label": "Hit With Stick",
+          "correct": false,
+          "arrow": [[63.26, 24.14], [63.88, 22.68], [62.56, 22.27], [61.95, 23.73], [61.16, 23.48], [62.08, 25.17], [64.05, 24.38]],
+          "route": [
+            [62.05, 25.74], [62.05, 26.27], [63.09, 26.79], [77.12, 26.87], [77.82, 27.54], [77.82, 34.22],
+            [77.12, 34.9], [69.89, 34.97], [68.93, 34.37], [68.85, 33.02], [69.54, 32.35], [73.73, 32.27],
+            [74.68, 31.67], [74.77, 30.32], [73.99, 29.57], [66.58, 29.57], [65.19, 30.09], [62.57, 32.2],
+            [51.42, 32.2], [50.11, 32.35], [49.5, 32.87]
+          ]
+        },
+        {
+          "label": "Leave It Alone",
+          "correct": true,
+          "next": "q4",
+          "arrow": [[91.79, 23.84], [91.2, 22.38], [89.87, 22.77], [90.46, 24.23], [89.68, 24.47], [91.63, 25.28], [92.58, 23.6]],
+          "route": [
+            [91.68, 25.74], [91.68, 26.19], [90.72, 26.79], [81.66, 26.87], [80.96, 27.54], [80.96, 28.74],
+            [81.74, 29.49], [93.16, 29.57], [93.94, 30.32], [93.94, 31.52], [93.25, 32.2], [82, 32.27],
+            [80.96, 33.02], [80.96, 34.22], [82, 34.97], [93.16, 34.97], [94.12, 35.5], [94.12, 36.02]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "hub": [94.12, 39.02],
+      "answers": [
+        {
+          "label": "Leave It",
+          "correct": false,
+          "arrow": [[56.38, 49.28], [57.64, 50.39], [58.64, 49.55], [57.39, 48.44], [57.98, 47.94], [55.81, 47.92], [55.79, 49.79]],
+          "route": [
+            [54.2, 47.58], [53.07, 48.03], [52.98, 51.86], [52.37, 52.38], [47.41, 52.46], [46.62, 51.86],
+            [46.71, 45.55], [47.76, 44.95], [52.03, 44.95], [53.07, 44.2], [53.07, 43], [52.37, 42.25],
+            [47.76, 42.25], [46.62, 41.5], [46.62, 38.05], [47.76, 37.45], [49.15, 37.45], [49.67, 37],
+            [49.5, 32.87]
+          ]
+        },
+        {
+          "label": "Pick It Up",
+          "correct": true,
+          "next": "q3",
+          "arrow": [[91.08, 57.58], [90.49, 56.12], [89.17, 56.51], [89.76, 57.98], [88.97, 58.21], [90.92, 59.03], [91.87, 57.35]],
+          "route": [
+            [90.81, 59.51], [90.81, 62.66], [90.28, 63.11], [88.28, 63.11], [87.76, 62.66], [87.67, 61.09],
+            [87.06, 60.49], [80.17, 60.49], [79.3, 61.09], [79.13, 65.29], [78.08, 65.89], [74.25, 65.89],
+            [73.2, 65.14], [73.12, 61.16], [72.42, 60.49], [50.37, 60.26], [49.85, 59.74], [49.85, 58.39],
+            [50.63, 57.79], [52.37, 57.64], [52.98, 57.04], [52.98, 55.83], [52.11, 55.16], [47.23, 55.23],
+            [46.62, 55.83], [46.54, 59.66], [45.75, 60.34], [39.74, 60.34], [39.22, 59.36]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "hub": [39.22, 56.36],
+      "answers": [
+        {
+          "label": "Leave It",
+          "correct": false,
+          "arrow": [[32.31, 57.43], [31.72, 55.97], [30.39, 56.36], [30.98, 57.83], [30.2, 58.06], [32.15, 58.88], [33.09, 57.19]],
+          "route": [
+            [32.24, 59.36], [32.24, 59.89], [31.2, 60.41], [21.09, 60.56], [20.48, 61.39], [20.48, 65.07],
+            [21.26, 65.89], [23.01, 65.82], [23.53, 65.37], [23.7, 63.86], [24.49, 63.19], [28.58, 63.19],
+            [29.28, 63.86], [29.37, 65.44], [30.33, 65.97], [48.8, 65.97], [49.5, 66.57]
+          ]
+        },
+        {
+          "label": "Put Out",
+          "correct": true,
+          "next": "q5",
+          "arrow": [[9.4, 57.88], [10.02, 56.43], [8.7, 56.02], [8.08, 57.47], [7.3, 57.22], [8.22, 58.92], [10.18, 58.13]],
+          "route": [
+            [8.37, 59.44], [7.76, 60.41], [6.36, 60.49], [5.58, 61.16], [5.66, 65.29], [6.71, 65.89],
+            [10.81, 65.82], [11.5, 64.92], [11.5, 60.94], [12.37, 60.41], [16.56, 60.49], [17.34, 61.39],
+            [17.43, 67.99], [16.38, 68.59], [9.24, 68.59], [8.28, 69.19], [8.28, 69.64]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "hub": [8.28, 72.65],
+      "answers": [
+        {
+          "label": "Run Free",
+          "correct": false,
+          "arrow": [[37.4, 90.97], [36.81, 89.51], [35.49, 89.91], [36.07, 91.37], [35.29, 91.6], [37.24, 92.42], [38.19, 90.74]],
+          "route": [
+            [37.12, 93.06], [37.73, 94.03], [48.89, 94.03], [49.85, 93.36], [49.76, 91.78], [49.24, 91.33],
+            [47.32, 91.26], [46.62, 90.43], [46.62, 79.47], [47.58, 78.57], [52.37, 78.42], [52.98, 77.82],
+            [52.98, 74.22], [52.03, 73.62], [50.54, 73.7], [49.85, 74.22], [49.76, 75.35], [48.98, 75.95],
+            [47.41, 75.95], [46.62, 75.35], [46.62, 71.82], [47.41, 71.22], [48.98, 71.07], [49.67, 70.54],
+            [49.5, 66.57]
+          ]
+        },
+        {
+          "label": "On Leash",
+          "correct": true,
+          "next": "q6",
+          "arrow": [[8.7, 91.43], [9.32, 89.97], [8, 89.55], [7.38, 91.01], [6.6, 90.77], [7.52, 92.46], [9.48, 91.67]],
+          "route": [
+            [7.41, 93.06], [7.41, 96.06], [8.54, 96.74], [12.98, 96.59], [13.42, 96.21], [13.42, 94.56],
+            [14.38, 94.03], [20.04, 94.11], [20.65, 94.56], [20.65, 96.21], [21.61, 96.74], [24.92, 96.59],
+            [25.53, 95.98], [25.71, 94.63], [26.75, 94.03], [33.38, 94.11], [34.07, 94.78], [34.07, 96.06],
+            [35.21, 96.74], [52.2, 96.66], [52.98, 95.98], [52.98, 86.98], [52.37, 86.38], [50.72, 86.23],
+            [49.93, 85.63], [49.85, 82.1], [50.72, 81.2], [54.2, 81.2]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "hub": [57.69, 81.2],
+      "answers": [
+        {
+          "label": "Wear Inflatable Floaties",
+          "correct": false,
+          "arrow": [[90.09, 71.37], [89.97, 72.92], [91.36, 73], [91.49, 71.45], [92.32, 71.5], [90.89, 70.09], [89.25, 71.32]],
+          "route": [
+            [90.98, 69.57], [90.89, 66.42], [90.2, 65.89], [85.23, 65.97], [84.71, 66.42], [84.62, 67.99],
+            [83.66, 68.59], [71.2, 68.59], [70.15, 67.84], [69.98, 66.34], [69.02, 65.82], [50.28, 65.89],
+            [49.5, 66.57]
+          ]
+        },
+        {
+          "label": "Wear a Life Jacket",
+          "correct": true,
+          "next": "finish",
+          "arrow": [[61.83, 91.32], [62.43, 89.86], [61.1, 89.46], [60.51, 90.92], [59.72, 90.68], [60.66, 92.36], [62.61, 91.56]],
+          "route": [
+            [60.57, 93.06], [59.96, 94.03], [57.08, 94.03], [56.21, 94.63], [56.21, 96.14], [57.08, 96.74],
+            [62.57, 96.74], [65.27, 95.38], [73.03, 95.38], [73.38, 95.08]
+          ]
+        }
+      ]
+    }
+  ]
+}
+]
+},
+
+{
+  "page": 10,
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "Can You Spot The Differences?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Spot and circle the differences between the two pictures below. After you are done, show it to a park ranger or an adult that cares about you and tell them what makes the things you circled not safe in the top picture and safe in the bottom picture."
+    },
+    {
+      "type": "click-regions",
+      "hideTargets": true,
+      "image": "assets/pages/spot_unsafe.png",
+      "targets": [
+        {
+          "id": "swimmer_outside",
+          "x": 1.5,
+          "y": 33.5,
+          "width": 12.2,
+          "height": 11.8,
+          "correct": true
+        },
+        {
+          "id": "raft",
+          "x": 19.2,
+          "y": 44.5,
+          "width": 18.6,
+          "height": 16.2,
+          "correct": true
+        },
+        {
+          "id": "boat",
+          "x": 50.5,
+          "y": 25,
+          "width": 15.5,
+          "height": 11,
+          "correct": true
+        },
+        {
+          "id": "sleeping_man",
+          "x": 21.5,
+          "y": 71.5,
+          "width": 20,
+          "height": 15.5,
+          "correct": true
+        },
+        {
+          "id": "child_no_jacket",
+          "x": 61.8,
+          "y": 54,
+          "width": 5.9,
+          "height": 18,
+          "correct": true
+        },
+        {
+          "id": "child_ring",
+          "x": 68.4,
+          "y": 50,
+          "width": 6.2,
+          "height": 16,
+          "correct": true
+        },
+        {
+          "id": "woman_phone",
+          "x": 74.8,
+          "y": 55,
+          "width": 11.5,
+          "height": 31,
+          "correct": true
+        }
+      ]
+    },
+    {
+      "type": "click-regions",
+      "hideTargets": true,
+      "image": "assets/pages/spot_safe.png",
+      "targets": [
+        {
+          "id": "swimmer_outside",
+          "x": 20.8,
+          "y": 34.5,
+          "width": 4.2,
+          "height": 10,
+          "correct": true
+        },
+        {
+          "id": "raft",
+          "x": 19.2,
+          "y": 44.5,
+          "width": 18.6,
+          "height": 16.2,
+          "correct": true
+        },
+        {
+          "id": "boat",
+          "x": 45.5,
+          "y": 23.5,
+          "width": 10.5,
+          "height": 9,
+          "correct": true
+        },
+        {
+          "id": "sleeping_man",
+          "x": 21.8,
+          "y": 74,
+          "width": 19.7,
+          "height": 13.5,
+          "correct": true
+        },
+        {
+          "id": "child_no_jacket",
+          "x": 61.8,
+          "y": 54,
+          "width": 5.9,
+          "height": 18,
+          "correct": true
+        },
+        {
+          "id": "child_ring",
+          "x": 68.4,
+          "y": 50,
+          "width": 6.2,
+          "height": 16,
+          "correct": true
+        },
+        {
+          "id": "woman_phone",
+          "x": 74.8,
+          "y": 49.5,
+          "width": 14,
+          "height": 26,
+          "correct": true
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Water Safety Talk"
+    },
+    {
+      "type": "text-input",
+      "id": "water-safety-talk",
+      "prompt": "One of the duties of a U.S. Army Corps of Engineers Park Ranger is to talk to visitors about water safety. Write down the most important thing you would tell people about being safe while on, in, or near the water and why.",
+      "rows": 3
     }
   ]
 }
