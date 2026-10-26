@@ -19,6 +19,8 @@ function renderPage() {
     const el = renderBlock(block);
     if (el) container.appendChild(el);
   });
+
+  updateProgressUI();
 }
 
 function renderBlock(block) {
@@ -53,18 +55,8 @@ function renderBlock(block) {
   }
 }
 
-document.getElementById('next-btn').addEventListener('click', () => {
-  if (currentPageIndex < pagesJsonData.length - 1) {
-    currentPageIndex++;
-    renderPage();
-  }
-});
-
-document.getElementById('prev-btn').addEventListener('click', () => {
-  if (currentPageIndex > 0) {
-    currentPageIndex--;
-    renderPage();
-  }
-});
+document.getElementById('prev-btn').addEventListener('click', () => goToPage(currentPageIndex - 1));
+document.getElementById('next-btn').addEventListener('click', () => goToPage(currentPageIndex + 1));
+document.getElementById('certificate-btn').addEventListener('click', () => goToPage(findCertificatePageIndex()));
 
 loadPages();

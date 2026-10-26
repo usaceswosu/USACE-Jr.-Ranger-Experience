@@ -29,35 +29,39 @@
       },
       {
         "type": "click-regions",
+        "activityId": "kayak",
         "shape": "ellipse",
+        "hideTargets": true,
+        "feedback": "marks",
+        "maxWrong": 3,
         "image": "assets/pages/kayak_circling_activity.png",
         "targets": [
           { "id": "oar", "x": 2, "y": 10, "width": 6, "height": 50, "correct": true },
           { "id": "life jacket", "x": 34.5, "y": 45, "width": 15, "height": 32, "correct": true },
           { "id": "pillow", "x": 31.5, "y": 79, "width": 16, "height": 16.5, "correct": false },
-          { "id": "clothes", "x": 15.75, "y": 78, "width": 15, "height": 16.5, "correct": false },
+          { "id": "clothes", "x": 15.75, "y": 78, "width": 15, "height": 16.5, "correct": true },
           { "id": "laptop", "x": 1.25, "y": 74, "width": 14, "height": 22, "correct": false },
-          { "id": "water", "x": 9.75, "y": 47, "width": 7, "height": 25, "correct": false },
+          { "id": "water", "x": 9.75, "y": 47, "width": 7, "height": 25, "correct": true },
           { "id": "hairbrush", "x": 17.5, "y": 68, "width": 11, "height": 9, "correct": false },
-          { "id": "food", "x": 16.5, "y": 48, "width": 14, "height": 19, "correct": false },
+          { "id": "food", "x": 16.5, "y": 48, "width": 14, "height": 19, "correct": true },
           { "id": "walkie_talkie", "x": 8.5, "y": 29, "width": 7, "height": 17, "correct": false },
-          { "id": "hat", "x": 14.75, "y": 33.75, "width": 12, "height": 11, "correct": false },
-          { "id": "double_oar", "x": 24, "y": 28.5, "width": 52, "height": 10, "correct": false },
-          { "id": "kayak", "x": 6.5, "y": 10, "width": 74, "height": 20, "correct": false },
+          { "id": "hat", "x": 14.75, "y": 33.75, "width": 12, "height": 11, "correct": true },
+          { "id": "double_oar", "x": 24, "y": 28.5, "width": 52, "height": 10, "correct": true },
+          { "id": "kayak", "x": 6.5, "y": 10, "width": 74, "height": 20, "correct": true },
           { "id": "sleeping_bag", "x": 48, "y": 76, "width": 37, "height": 18.5, "correct": false },
           { "id": "tent", "x": 52, "y": 41, "width": 28, "height": 31, "correct": false },
           { "id": "ipod", "x": 91, "y": 15, "width": 7, "height": 16.5, "correct": false },
           { "id": "binoculars", "x": 80, "y": 13.5, "width": 10, "height": 16.5, "correct": false },
           { "id": "slippers", "x": 84, "y": 48, "width": 13, "height": 16, "correct": false },
-          { "id": "map", "x": 83.5, "y": 31.5, "width": 16, "height": 18, "correct": false },
+          { "id": "map", "x": 83.5, "y": 31.5, "width": 16, "height": 18, "correct": true },
           { "id": "rope", "x": 76.75, "y": 28, "width": 7, "height": 24, "correct": false },
-          { "id": "compass", "x": 49.5, "y": 69.5, "width": 6, "height": 9.25, "correct": false },
+          { "id": "compass", "x": 49.5, "y": 69.5, "width": 6, "height": 9.25, "correct": true },
           { "id": "hair_dryer", "x": 29, "y": 38, "width": 9, "height": 17, "correct": false },
-          { "id": "sunglasses", "x": 38.5, "y": 37.5, "width": 10, "height": 7, "correct": false },
+          { "id": "sunglasses", "x": 38.5, "y": 37.5, "width": 10, "height": 7, "correct": true },
           { "id": "ice_cream", "x": 49.15, "y": 37.5, "width": 5, "height": 15, "correct": false },
           { "id": "camera", "x": 0.25, "y": 61.5, "width": 10, "height": 12, "correct": false },
           { "id": "guitar", "x": 84, "y": 54, "width": 8, "height": 45, "rotation": -38, "correct": false },
-          { "id": "sunscreen", "x": 91, "y": 62, "width": 5, "height": 16, "rotation": -55, "correct": false }
+          { "id": "sunscreen", "x": 91, "y": 62, "width": 5, "height": 16, "rotation": -55, "correct": true }
         ]
       }
     ]
@@ -83,6 +87,7 @@
       },
       {
         "type": "path-graph",
+        "activityId": "bicycle-maze",
         "image": "assets/pages/bicycle_maze.png",
         "startNode": "start",
         "showAllNodes": false,
@@ -181,6 +186,7 @@
       },
       {
         "type": "true-false",
+        "activityId": "usace-history-checkbox_quiz",
         "heading": "What did you learn?",
         "columnLabel": "True or False",
         "questions": [
@@ -220,9 +226,13 @@
       "type": "columns",
       "columns": [
         [
-          { "type": "text-input", "id": "life-jacket-why", "prompt": "Why is it important to wear a life jacket while in, on, or near the water?" },
+          { "type": "text-input", 
+            "id": "life-jacket-why", 
+            "prompt": "Why is it important to wear a life jacket while in, on, or near the water?" 
+          },
           {
             "type": "letter-fill",
+            "activityId": "water-rescue-letters",
             "prompt": "If someone in the water needs help, what should you do?",
             "words": [
               { "pattern": "R__CH,", "answer": "REACH" },
@@ -371,7 +381,7 @@
       "text": "If you would like to volunteer at a U.S. Army Corps of Engineers lake or river, visit www.volunteer.gov.",
       "links": [{ "text": "www.volunteer.gov", "url": "https://www.volunteer.gov" }]
     },
-    { "type": "text-input", "prompt": "What would you like to do at this lake or river?", "rows": 2 }
+    { "type": "text-input", "id": "doing-your-part-plans", "prompt": "What would you like to do at this lake or river?", "rows": 2 }
   ]
 },
 
@@ -388,6 +398,7 @@
     },
     {
       "type": "route-maze",
+      "activityId": "right-choices-maze",
       "image": "assets/pages/right_choices_maze.png",
       "speed": 40,
       "start": "q1",
@@ -583,6 +594,9 @@
     },
     {
       "type": "click-regions",
+      "activityId": "spot-differences",
+      "part": "top",
+      "parts": 2,
       "hideTargets": true,
       "image": "assets/pages/spot_unsafe.png",
       "targets": [
@@ -646,6 +660,9 @@
     },
     {
       "type": "click-regions",
+      "activityId": "spot-differences",
+      "part": "bottom",
+      "parts": 2,
       "hideTargets": true,
       "image": "assets/pages/spot_safe.png",
       "targets": [

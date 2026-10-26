@@ -60,22 +60,81 @@ function renderImageBlock(block) {
   return img;
 }
 
+function createFeedbackMark(isCorrect) {
+  const svgNS = 'http://www.w3.org/2000/svg';
+  const svg = document.createElementNS(svgNS, 'svg');
+  svg.setAttribute('viewBox', '0 0 100 100');
+  svg.setAttribute('class', 'feedback-mark ' + (isCorrect ? 'feedback-check' : 'feedback-x'));
+  const path = document.createElementNS(svgNS, 'path');
+  path.setAttribute('d', isCorrect ? 'M12 54 L38 80 L88 22' : 'M16 16 L84 84 M84 16 L16 84');
+  svg.appendChild(path);
+  return svg;
+}
+
 function renderClickRegionsBlock(block) {
   const wrapper = document.createElement('div');
   wrapper.className = 'block-click-regions';
 
-  if (block.hideTargets) {
-    wrapper.classList.add('targets-hidden');
-  }
+  const useMarks = block.feedback === 'marks';
+  const placed = new Map();
+  const correctHotspots = new Set();
+  const totalCorrect = block.targets.filter(t => t.correct === true).length;
+  const canWin = block.activityId !== undefined && totalCorrect > 0;
+  const isParted = block.parts !== undefined;
+  let wrongPicks = 0;
+  let locked = false;
 
-  if (block.shape === 'ellipse') {
-    wrapper.classList.add('shape-ellipse');
-  }
+  if (block.hideTargets) { wrapper.classList.add('targets-hidden'); }
+  if (block.shape === 'ellipse') { wrapper.classList.add('shape-ellipse'); }
 
   const img = document.createElement('img');
   img.src = block.image;
   img.className = 'click-regions-img';
   wrapper.appendChild(img);
+
+  function correctFound() {
+    let count = 0;
+    if (useMarks) {
+      placed.forEach((mark, hotspot) => { if (correctHotspots.has(hotspot)) count++; });
+    } else {
+      correctHotspots.forEach(hotspot => { if (hotspot.classList.contains('circled')) count++; });
+    }
+    return count;
+  }
+
+  function alreadyDone() {
+    return isParted ? isPartComplete(block.activityId, block.part) : isActivityComplete(block.activityId);
+  }
+
+  function recordWin() {
+    if (isParted) {
+      completePart(block.activityId, block.part, block.parts);
+    } else {
+      completeActivity(block.activityId);
+    }
+  }
+
+  function showWin() {
+    locked = true;
+    wrapper.appendChild(createCompleteOverlay());
+  }
+
+  function winActivity() {
+    locked = true;
+    recordWin();
+    setTimeout(showWin, 900);
+  }
+
+  function resetSelections() {
+    locked = true;
+    placed.forEach(mark => mark.classList.add('feedback-flashing'));
+    setTimeout(() => {
+      placed.forEach(mark => mark.remove());
+      placed.clear();
+      wrongPicks = 0;
+      locked = false;
+    }, 1500);
+  }
 
   block.targets.forEach(target => {
     const hotspot = document.createElement('div');
@@ -84,17 +143,44 @@ function renderClickRegionsBlock(block) {
     hotspot.style.top = target.y + '%';
     hotspot.style.width = target.width + '%';
     hotspot.style.height = target.height + '%';
-
-    if (target.rotation) {
-      hotspot.style.transform = `rotate(${target.rotation}deg)`;
-    }
+    if (target.rotation) { hotspot.style.transform = `rotate(${target.rotation}deg)`; }
+    if (target.correct === true) { correctHotspots.add(hotspot); }
 
     hotspot.addEventListener('click', () => {
-      hotspot.classList.toggle('circled');
+      if (locked) return;
+
+      if (!useMarks) {
+        hotspot.classList.toggle('circled');
+        if (canWin && correctFound() === totalCorrect) { winActivity(); }
+        return;
+      }
+
+      if (placed.has(hotspot)) {
+        placed.get(hotspot).remove();
+        placed.delete(hotspot);
+        return;
+      }
+
+      const isCorrect = target.correct === true;
+      const mark = createFeedbackMark(isCorrect);
+      mark.style.left = (target.x + target.width / 2) + '%';
+      mark.style.top = (target.y + target.height / 2) + '%';
+      wrapper.appendChild(mark);
+      placed.set(hotspot, mark);
+
+      if (!isCorrect) {
+        wrongPicks++;
+        if (block.maxWrong !== undefined && wrongPicks > block.maxWrong) { resetSelections(); }
+        return;
+      }
+
+      if (canWin && correctFound() === totalCorrect) { winActivity(); }
     });
 
     wrapper.appendChild(hotspot);
   });
+
+  if (canWin && alreadyDone()) { showWin(); }
 
   return wrapper;
 }
@@ -119,6 +205,32 @@ function renderTrueFalseBlock(block) {
   }
 
   wrapper.appendChild(header);
+
+  const rows = [];
+  const canWin = block.activityId !== undefined;
+
+  function allCorrect() {
+    return rows.every(r => (r.answer ? r.trueBox.checked : r.falseBox.checked));
+  }
+
+  function lockAll() {
+    rows.forEach(r => {
+      r.trueBox.disabled = true;
+      r.falseBox.disabled = true;
+    });
+  }
+
+  function showWin() {
+    lockAll();
+    wrapper.appendChild(createCompleteOverlay());
+  }
+
+  function checkWin() {
+    if (!canWin || !allCorrect()) return;
+    lockAll();
+    completeActivity(block.activityId);
+    setTimeout(showWin, 600);
+  }
 
   block.questions.forEach((q, index) => {
     const row = document.createElement('div');
@@ -147,10 +259,14 @@ function renderTrueFalseBlock(block) {
 
     trueBox.addEventListener('change', () => {
       if (trueBox.checked) falseBox.checked = false;
+      checkWin();
     });
     falseBox.addEventListener('change', () => {
       if (falseBox.checked) trueBox.checked = false;
+      checkWin();
     });
+
+    rows.push({ trueBox, falseBox, answer: q.answer });
 
     choices.appendChild(trueBox);
     choices.appendChild(falseBox);
@@ -158,6 +274,14 @@ function renderTrueFalseBlock(block) {
 
     wrapper.appendChild(row);
   });
+
+  if (canWin && isActivityComplete(block.activityId)) {
+    rows.forEach(r => {
+      r.trueBox.checked = r.answer;
+      r.falseBox.checked = !r.answer;
+    });
+    showWin();
+  }
 
   return wrapper;
 }
@@ -491,6 +615,7 @@ function renderPathGraphBlock(block) {
       if (toNode.finish) {
         message.textContent = 'Great Job, Junior Ranger!';
         message.className = 'maze-message maze-message-success';
+        completeActivity(block.activityId);
         return;
       }
 
@@ -589,6 +714,23 @@ function renderLetterFillBlock(block) {
   const wordsRow = document.createElement('div');
   wordsRow.className = 'lf-words';
   const allInputs = [];
+  const canWin = block.activityId !== undefined;
+
+  function allCorrect() {
+    return allInputs.every(input => input.value === input.dataset.answer);
+  }
+
+  function showWin() {
+    allInputs.forEach(input => { input.disabled = true; });
+    wrapper.appendChild(createCompleteOverlay());
+  }
+
+  function checkWin() {
+    if (!canWin || !allCorrect()) return;
+    allInputs.forEach(input => { input.disabled = true; });
+    completeActivity(block.activityId);
+    setTimeout(showWin, 700);
+  }
 
   block.words.forEach(word => {
     const wordEl = document.createElement('div');
@@ -625,6 +767,7 @@ function renderLetterFillBlock(block) {
         const index = allInputs.indexOf(input);
         if (input.value && allInputs[index + 1]) allInputs[index + 1].focus();
         checkWord(wordEl, wordInputs);
+        checkWin();
       });
 
       input.addEventListener('keydown', e => {
@@ -639,6 +782,13 @@ function renderLetterFillBlock(block) {
   });
 
   wrapper.appendChild(wordsRow);
+
+  if (canWin && isActivityComplete(block.activityId)) {
+    allInputs.forEach(input => { input.value = input.dataset.answer; });
+    wordsRow.querySelectorAll('.lf-word').forEach(el => el.classList.add('lf-correct'));
+    showWin();
+  }
+
   return wrapper;
 }
 
@@ -769,6 +919,7 @@ function renderRouteMazeBlock(block) {
   function showSuccess() {
     message.textContent = 'Great Job, Junior Ranger!';
     message.className = 'maze-message maze-message-success';
+    completeActivity(block.activityId);
   }
 
   function choose(question, answer) {
@@ -801,8 +952,13 @@ function renderRouteMazeBlock(block) {
     });
   }
 
-  placeToken(questions[block.start].hub);
-  showArrows(block.start);
+   placeToken(questions[block.start].hub);
+
+  if (isActivityComplete(block.activityId)) {
+    showSuccess();
+  } else {
+    showArrows(block.start);
+  }
 
   return wrapper;
 }
