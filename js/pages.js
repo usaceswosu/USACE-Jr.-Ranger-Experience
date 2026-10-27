@@ -49,6 +49,8 @@ function renderBlock(block) {
       return renderPathGraphBlock(block);
     case 'route-maze':
       return renderRouteMazeBlock(block);
+    case 'label-diagram':
+      return renderLabelDiagramBlock(block);
     default:
       console.warn('Unknown block type:', block.type);
       return null;

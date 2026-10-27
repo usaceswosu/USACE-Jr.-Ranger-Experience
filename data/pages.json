@@ -735,5 +735,176 @@
       "rows": 3
     }
   ]
+},
+
+{
+  "page": 11,
+  "textScale": 1.7,
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "Tree Anatomy"
+    },
+    {
+      "type": "paragraph",
+      "text": "Trees are one of our most important resources. Some of the things made from trees include lumber for houses, furniture, maple syrup, pencils, baseball bats, paper, and tool handles."
+    },
+    {
+      "type": "paragraph",
+      "text": "The trunk of a tree is made up of five different layers."
+    },
+    {
+      "type": "paragraph",
+      "lead": "Look at the picture below, read the descriptions, and label the layers of the trunk.",
+      "text": ""
+    },
+    {
+      "type": "paragraph",
+      "lead": "A. Outer Bark:",
+      "text": "The outside layer that protects the tree from extreme temperatures, rain, and insects."
+    },
+    {
+      "type": "paragraph",
+      "lead": "B. Inner Bark or Phloem:",
+      "text": "Layer that carries nutrients down from the leaves to the rest of the tree. As the tree gets older, the outer part of the inner bark or phloem dies and becomes outer bark."
+    },
+    {
+      "type": "paragraph",
+      "lead": "C. Cambium:",
+      "text": "Layer that is the growing part of the trunk. It annually produces a ring of new bark and wood in response to hormones called auxins that pass down through the inner bark or phloem with nutrients from the leaves. Auxins stimulate growth in cells of the tree and are produced by leaf buds at the ends of branches as soon as they start growing in the spring."
+    },
+    {
+      "type": "paragraph",
+      "lead": "D. Sapwood:",
+      "text": "Layer that carries water and nutrients up from the roots to the rest of the tree. As the tree gets older, the inner part of the sapwood dies and turns to heartwood."
+    },
+    {
+      "type": "paragraph",
+      "lead": "E. Heartwood:",
+      "text": "The center, supporting layer of the tree. It is dead wood made up of fibers bound together by a chemical called lignin. In many ways the heartwood is strong as steel."
+    },
+    {
+      "type": "label-diagram",
+      "activityId": "tree-layers",
+      "image": "assets/pages/tree_anatomy_diagram.png",
+      "lines": [
+        [
+          44.92,
+          22.05,
+          53.26,
+          10.89
+        ],
+        [
+          46.04,
+          29.67,
+          53.26,
+          19.53
+        ],
+        [
+          41.39,
+          69.82,
+          53.19,
+          79.42
+        ],
+        [
+          33.12,
+          71.37,
+          53.19,
+          87.74
+        ],
+        [
+          18.12,
+          68.78,
+          53.19,
+          97.17
+        ]
+      ],
+      "notes": [
+        {
+          "x": 57.03,
+          "y": 37.35,
+          "width": 40,
+          "text": "A tree produces a trunk ring every year. Count the rings on top of the trunk to tell how old the tree is."
+        }
+      ],
+      "fields": [
+        {
+          "id": "A",
+          "letter": true,
+          "prefix": "A",
+          "x": 53.53,
+          "y": 4.63,
+          "width": 38.01,
+          "height": 6.04,
+          "answers": [
+            "Outer Bark"
+          ]
+        },
+        {
+          "id": "B",
+          "letter": true,
+          "prefix": "B",
+          "x": 53.53,
+          "y": 13.15,
+          "width": 38.01,
+          "height": 6.04,
+          "answers": [
+            "Inner Bark",
+            "Phloem",
+            "Inner Bark or Phloem"
+          ]
+        },
+        {
+          "id": "C",
+          "letter": true,
+          "prefix": "C",
+          "x": 53.53,
+          "y": 73.49,
+          "width": 38.01,
+          "height": 6.04,
+          "answers": [
+            "Cambium"
+          ]
+        },
+        {
+          "id": "D",
+          "letter": true,
+          "prefix": "D",
+          "x": 53.53,
+          "y": 81.71,
+          "width": 38.01,
+          "height": 6.04,
+          "answers": [
+            "Sapwood"
+          ]
+        },
+        {
+          "id": "E",
+          "letter": true,
+          "prefix": "E",
+          "x": 53.53,
+          "y": 91.24,
+          "width": 38.01,
+          "height": 6.04,
+          "answers": [
+            "Heartwood"
+          ]
+        },
+        {
+          "id": "years",
+          "prefix": "The tree is",
+          "suffix": "years old.",
+          "align": "center",
+          "x": 57.03,
+          "y": 56.68,
+          "width": 40,
+          "height": 4.83,
+          "answers": [
+            "10"
+          ]
+        }
+      ]
+    }
+  ]
 }
 ]

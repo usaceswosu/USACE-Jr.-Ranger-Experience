@@ -962,3 +962,135 @@ function renderRouteMazeBlock(block) {
 
   return wrapper;
 }
+
+function normalizeAnswer(text) {
+  return text.toLowerCase().replace(/[^a-z0-9 ]/g, '').replace(/\s+/g, ' ').trim();
+}
+
+function renderLabelDiagramBlock(block) {
+  const svgNS = 'http://www.w3.org/2000/svg';
+  const wrapper = document.createElement('div');
+  wrapper.className = 'block-label-diagram';
+
+  const img = document.createElement('img');
+  img.src = block.image;
+  img.className = 'label-diagram-img';
+  wrapper.appendChild(img);
+
+  const svg = document.createElementNS(svgNS, 'svg');
+  svg.setAttribute('viewBox', '0 0 100 100');
+  svg.setAttribute('preserveAspectRatio', 'none');
+  svg.classList.add('label-diagram-lines');
+  (block.lines || []).forEach(line => {
+    const el = document.createElementNS(svgNS, 'line');
+    el.setAttribute('x1', line[0]);
+    el.setAttribute('y1', line[1]);
+    el.setAttribute('x2', line[2]);
+    el.setAttribute('y2', line[3]);
+    svg.appendChild(el);
+  });
+  wrapper.appendChild(svg);
+
+  (block.notes || []).forEach(note => {
+    const el = document.createElement('p');
+    el.className = 'label-diagram-note';
+    el.style.left = note.x + '%';
+    el.style.top = note.y + '%';
+    el.style.width = note.width + '%';
+    el.textContent = note.text;
+    wrapper.appendChild(el);
+  });
+
+  const canWin = block.activityId !== undefined;
+  const entries = [];
+
+  function storeKey(field) {
+    return block.activityId + ':' + field.id;
+  }
+
+  function isCorrect(entry) {
+    const typed = normalizeAnswer(entry.input.value);
+    return entry.field.answers.some(answer => normalizeAnswer(answer) === typed);
+  }
+
+  function lockAll() {
+    entries.forEach(entry => { entry.input.disabled = true; });
+  }
+
+  function showWin() {
+    lockAll();
+    wrapper.appendChild(createCompleteOverlay());
+  }
+
+  function refresh(entry) {
+    const correct = isCorrect(entry);
+    entry.box.classList.toggle('ld-correct', correct);
+    if (correct) entry.box.classList.remove('ld-wrong');
+  }
+
+  function checkWin() {
+    if (!canWin || !entries.every(isCorrect)) return;
+    lockAll();
+    completeActivity(block.activityId);
+    setTimeout(showWin, 700);
+  }
+
+  block.fields.forEach(field => {
+    const box = document.createElement('label');
+    box.className = 'label-diagram-field' + (field.align === 'center' ? ' ld-centered' : '');
+    box.style.left = field.x + '%';
+    box.style.top = field.y + '%';
+    box.style.width = field.width + '%';
+    box.style.height = field.height + '%';
+
+    if (field.prefix) {
+      const prefix = document.createElement('span');
+      prefix.className = field.letter ? 'ld-letter' : 'ld-text';
+      prefix.textContent = field.prefix;
+      box.appendChild(prefix);
+    }
+
+    const input = document.createElement('input');
+    input.type = 'text';
+    input.className = 'ld-input';
+    input.autocomplete = 'off';
+    input.spellcheck = false;
+    if (field.inputWidth) input.style.width = field.inputWidth + 'cqw';
+    box.appendChild(input);
+
+    if (field.suffix) {
+      const suffix = document.createElement('span');
+      suffix.className = 'ld-text';
+      suffix.textContent = field.suffix;
+      box.appendChild(suffix);
+    }
+
+    const entry = { field, box, input };
+    entries.push(entry);
+
+    const saved = answerStore[storeKey(field)];
+    if (saved !== undefined) input.value = saved;
+
+    input.addEventListener('input', () => {
+      answerStore[storeKey(field)] = input.value;
+      box.classList.remove('ld-wrong');
+      refresh(entry);
+      checkWin();
+    });
+
+    input.addEventListener('blur', () => {
+      if (input.value.trim() !== '' && !isCorrect(entry)) box.classList.add('ld-wrong');
+    });
+
+    wrapper.appendChild(box);
+  });
+
+  if (canWin && isActivityComplete(block.activityId)) {
+    entries.forEach(entry => { entry.input.value = entry.field.answers[0]; });
+    showWin();
+  }
+
+  entries.forEach(refresh);
+
+  return wrapper;
+}
