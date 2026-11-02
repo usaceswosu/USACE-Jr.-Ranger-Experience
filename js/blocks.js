@@ -286,6 +286,18 @@ function renderTrueFalseBlock(block) {
   return wrapper;
 }
 
+function appendLeadText(parent, item) {
+  const entry = typeof item === 'string' ? { text: item } : item;
+
+  if (entry.lead) {
+    const strong = document.createElement('strong');
+    strong.textContent = entry.lead + ' ';
+    parent.appendChild(strong);
+  }
+
+  parent.appendChild(document.createTextNode(entry.text));
+}
+
 function renderTextWithImageBlock(block) {
   const wrapper = document.createElement('div');
   wrapper.className = 'block-text-image';
@@ -300,10 +312,15 @@ function renderTextWithImageBlock(block) {
   img.src = block.image;
   img.className = block.imagePosition === 'left' ? 'flow-image flow-left' : 'flow-image flow-right';
 
+  if (block.imageWidth !== undefined) {
+    img.style.width = block.imageWidth + '%';
+    img.style.maxWidth = block.imageWidth + '%';
+  }
+
   const insertAfter = block.imageAfterParagraph ?? -1;
   const bulletStart = block.bulletStartIndex ?? Infinity;
 
-  block.paragraphs.forEach((text, index) => {
+  block.paragraphs.forEach((item, index) => {
     let line;
 
     if (block.bulletIcon && index >= bulletStart) {
@@ -316,11 +333,11 @@ function renderTextWithImageBlock(block) {
       line.appendChild(bulletImg);
 
       const span = document.createElement('span');
-      span.textContent = text;
+      appendLeadText(span, item);
       line.appendChild(span);
     } else {
       line = document.createElement('p');
-      line.textContent = text;
+      appendLeadText(line, item);
     }
 
     wrapper.appendChild(line);
@@ -703,6 +720,10 @@ function checkWord(wordEl, inputs) {
 function renderLetterFillBlock(block) {
   const wrapper = document.createElement('div');
   wrapper.className = 'block-letter-fill';
+
+  if (block.size) {
+       wrapper.style.setProperty('--lf-scale', block.size);
+     }
 
   if (block.prompt) {
     const prompt = document.createElement('p');
@@ -1091,6 +1112,23 @@ function renderLabelDiagramBlock(block) {
   }
 
   entries.forEach(refresh);
+
+  return wrapper;
+}
+
+function renderFloatWrapBlock(block) {
+  const wrapper = document.createElement('div');
+  wrapper.className = 'block-float-wrap';
+
+  const img = document.createElement('img');
+  img.src = block.image;
+  img.className = 'fw-image';
+  img.style.width = (block.imageWidth || 30) + '%';
+  wrapper.appendChild(img);
+
+  (block.children || []).forEach(child => {
+    wrapper.appendChild(renderBlock(child));
+  });
 
   return wrapper;
 }

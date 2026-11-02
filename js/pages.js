@@ -45,6 +45,8 @@ function renderBlock(block) {
       return renderTrueFalseBlock(block);
     case 'text-with-image':
       return renderTextWithImageBlock(block);
+    case 'float-wrap':
+      return renderFloatWrapBlock(block);
     case 'path-graph':
       return renderPathGraphBlock(block);
     case 'route-maze':

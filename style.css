@@ -516,36 +516,36 @@ textarea.ti-field {
 .lf-words {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px 22px;
+  gap: calc(10px * var(--lf-scale, 1)) calc(22px * var(--lf-scale, 1));
 }
 
 .lf-word {
   display: flex;
   align-items: flex-end;
-  gap: 4px;
+  gap: calc(4px * var(--lf-scale, 1));
 }
 
 .lf-letter {
-  min-width: 0.8rem;
-  font-size: 1.1rem;
-  line-height: 1.6rem;
+  min-width: calc(0.8rem * var(--lf-scale, 1));
+  font-size: calc(1.1rem * var(--lf-scale, 1));
+  line-height: calc(1.6rem * var(--lf-scale, 1));
   text-align: center;
 }
 
 .lf-gap {
-  width: 0.6rem;
+  width: calc(0.6rem * var(--lf-scale, 1));
 }
 
 .lf-input {
-  width: 1.4rem;
-  height: 1.6rem;
+  width: calc(1.4rem * var(--lf-scale, 1));
+  height: calc(1.6rem * var(--lf-scale, 1));
   box-sizing: border-box;
   padding: 0;
   border: none;
   border-bottom: 2px solid #1a1a1a;
   background: transparent;
   font-family: inherit;
-  font-size: 1.1rem;
+  font-size: calc(1.1rem * var(--lf-scale, 1));
   text-align: center;
   outline: none;
 }
@@ -734,4 +734,28 @@ textarea.ti-field {
 
 .block-label-diagram .maze-message {
   border-radius: 8px;
+}
+
+.block-float-wrap {
+  width: 100%;
+  flex-shrink: 0;
+  margin-bottom: 14px;
+}
+
+.block-float-wrap::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.block-float-wrap .fw-image {
+  float: left;
+  height: auto;
+  border-radius: 8px;
+  margin: 0 20px 8px 0;
+}
+
+.block-float-wrap > .block-paragraph,
+.block-float-wrap > .block-columns {
+  width: auto;
 }

@@ -906,5 +906,253 @@
       ]
     }
   ]
+},
+
+{
+  "page": 12,
+  "textScale": 1.67,
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "Invasive Species"
+    },
+    {
+      "type": "paragraph",
+      "text": "Invasive species are plants and animals that don't naturally live in an ecosystem and their arrival can cause economic and environmental damage and harm to human health. Invasive species are often introduced by human actions, so we can all help stop the spread of invasive species in the United States."
+    },
+    {
+      "type": "columns",
+      "weights": [
+        2,
+        1
+      ],
+      "columns": [
+        [
+          {
+            "type": "text-with-image",
+            "image": "assets/illustrations/invasive_zebra_mussels.png",
+            "imagePosition": "left",
+            "imageWidth": 62,
+            "paragraphs": [
+              {
+                "lead": "Zebra mussel",
+                "text": "got their name because they have dark and light stripes. A zebra mussel is usually the size of your fingernail but can grow up to two inches long. Its young are too small for you to see and can be easily moved from one lake to another. A female zebra mussel releases up to one million eggs in a season!"
+              },
+              "First found in the Great Lakes in 1988, zebra mussels have spread quickly. They damage boat engines, threaten native wildlife by eating available food, and clog water pipes that cost millions of dollars to replace. Learn if zebra mussels are in your area, and, if they are, help stop the spread by cleaning your boat and gear when boating or fishing."
+            ]
+          },
+          {
+            "type": "text-with-image",
+            "image": "assets/illustrations/invasive_hydrilla.png",
+            "imagePosition": "left",
+            "imageWidth": 62,
+            "paragraphs": [
+              {
+                "lead": "Hydrilla",
+                "text": "came into the United States in the 1950s. Stems of hydrilla are thin and can grow an inch per day, and up to 30 feet long. As it nears the water surface, the stems branch out horizontally, often forming dense mats of vegetation."
+              },
+              "Thick growths of hydrilla can crowd out native plants, block boat routes, and reduce fishing and swimming areas, limit flow in irrigation canals, and clog water pipes. Today it is spread mostly by human activities. Small pieces of hydrilla can travel from one water body to another on boats, trailers, and recreational gear."
+            ]
+          }
+        ],
+        [
+          {
+            "type": "image",
+            "src": "assets/illustrations/invasive_zebra_cartoon.png"
+          },
+          {
+            "type": "image",
+            "src": "assets/illustrations/invasive_clean_drain_dry.png"
+          }
+        ]
+      ]
+    },
+    {
+  "type": "float-wrap",
+  "image": "assets/illustrations/invasive_ash_borer_bark.png",
+  "imageWidth": 30,
+  "children": [
+    {
+      "type": "columns",
+      "weights": [1, 3],
+      "align": "center",
+      "columns": [
+        [
+          {
+            "type": "image",
+            "src": "assets/illustrations/invasive_ash_borer_beetle.png"
+          }
+        ],
+        [
+          {
+            "type": "letter-fill",
+            "activityId": "invasive-species-steps",
+            "size": 1.4,
+            "prompt": "What simple steps can help stop zebra mussels and hydrilla from spreading?",
+            "words": [
+              { "pattern": "C_E__,", "answer": "CLEAN" },
+              { "pattern": "_R_I_,", "answer": "DRAIN" },
+              { "pattern": "D__", "answer": "DRY" }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "lead": "Emerald Ash Borer",
+      "text": "is an invasive insect from Asia that kills ash trees. It was first found in the United States in 2002. Adult beetles are metallic green and about 1/2-inch long. Emerald Ash Borer larvae can survive hidden in the bark of firewood. You can help stop their spread by not moving firewood. Remember to: buy local firewood, burn local firewood."
+    },
+    {
+      "type": "paragraph",
+      "text": "To learn more about the invasive species in your area, download the free mobile app “Outsmart Invasive Species”. "
+    }
+  ]
+}
+  ]
+},
+
+{
+  "page": 13,
+  "textScale": 1.5,
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "Know Your Fish"
+    },
+    {
+      "type": "paragraph",
+      "lead": "Walleye:",
+      "text": "The color of a walleye's back is dark brown, golden-brown, or olive-brown. It has a yellow belly and silver or yellowish-colored sides. A walleye has a large mouth filled with sharp teeth and thousands of taste buds on its lips. Its front dorsal fin has sharp spines. The name “walleye” refers to its eyes which glow in the dark thanks to a reflective layer that helps it see in dark, murky water."
+    },
+    {
+      "type": "paragraph",
+      "lead": "Largemouth Bass:",
+      "text": "The color of a largemouth bass varies depending on the type of water they live in. It is generally an olive-green colored fish with a dark horizontal stripe along each side and a whitish belly. The largemouth bass is the most popular fish in the United States with about 30 million people that fish for it."
+    },
+    {
+      "type": "paragraph",
+      "lead": "Bluegill:",
+      "text": "The body of a bluegill is dark green in color and oval shaped with dark bars running vertically down its sides. Behind each eye is a black ear flap. The belly of a female bluegill is yellow, and the belly of a male is a rusty red color. Bluegill is one of the easiest fish to catch but remember to use a very small hook because its mouth is not very big."
+    },
+    {
+      "type": "paragraph",
+      "lead": "Crappie:",
+      "text": "A black crappie has seven to eight spines in its dorsal fin and a white crappie has six. A black crappie has irregular speckles and blotches and a white crappie has faint vertical bars in its color pattern. Crappie are most active at dawn and dusk when they feed. One of the best baits for crappie is live minnows. To bait up, hook the minnow right below its dorsal fin and don’t forget to use a bobber."
+    },
+    {
+      "type": "paragraph",
+      "lead": "Channel Catfish:",
+      "text": "The most common catfish species in the United States is the channel catfish. Catfish are smooth with no scales and their entire body is covered with taste buds. The channel catfish is olive to light blue in color with black speckles on its sides. It has a forked tail, whisker-like organs around the mouth, broad flat head, and thin body. Bait for catfishing includes night crawlers, chicken liver, grasshoppers, minnows, cut bait, stink bait, cheese, hot dogs, and even bubble gum!"
+    },
+    {
+      "type": "paragraph",
+      "text": "Now that you know a little bit about a few of the fish found in the United States, can you identify them? Write the name of the fish next to each picture."
+    },
+    {
+      "type": "label-diagram",
+      "activityId": "know-your-fish",
+      "image": "assets/pages/identify_fishes.png",
+      "lines": [],
+      "notes": [],
+      "fields": [
+        {
+          "id": "1",
+          "prefix": "1.",
+          "x": 4.11,
+          "y": 40.73,
+          "width": 28.75,
+          "height": 5.45,
+          "answers": [
+            "Walleye"
+          ]
+        },
+        {
+          "id": "2",
+          "prefix": "2.",
+          "x": 63.75,
+          "y": 40.73,
+          "width": 28.75,
+          "height": 5.45,
+          "answers": [
+            "Largemouth Bass",
+            "Bass",
+            "Largemouth"
+          ]
+        },
+        {
+          "id": "3",
+          "prefix": "3.",
+          "x": 32.86,
+          "y": 58.18,
+          "width": 28.75,
+          "height": 5.45,
+          "answers": [
+            "Bluegill"
+          ]
+        },
+        {
+          "id": "4",
+          "prefix": "4.",
+          "x": 5.71,
+          "y": 89.09,
+          "width": 28.75,
+          "height": 5.45,
+          "answers": [
+            "Crappie",
+            "Black Crappie",
+            "White Crappie"
+          ]
+        },
+        {
+          "id": "5",
+          "prefix": "5.",
+          "x": 61.96,
+          "y": 89.09,
+          "width": 28.75,
+          "height": 5.45,
+          "answers": [
+            "Channel Catfish",
+            "Catfish"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "List three fish that are at the lake or river that you are visiting."
+    },
+    {
+      "type": "columns",
+      "weights": [
+        1,
+        1,
+        1
+      ],
+      "columns": [
+        [
+          {
+            "type": "text-input",
+            "id": "local-fish-1",
+            "prompt": "1."
+          }
+        ],
+        [
+          {
+            "type": "text-input",
+            "id": "local-fish-2",
+            "prompt": "2."
+          }
+        ],
+        [
+          {
+            "type": "text-input",
+            "id": "local-fish-3",
+            "prompt": "3."
+          }
+        ]
+      ]
+    }
+  ]
 }
 ]
