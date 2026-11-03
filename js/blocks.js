@@ -1132,3 +1132,156 @@ function renderFloatWrapBlock(block) {
 
   return wrapper;
 }
+
+const chainStore = {};
+
+function renderMatchChainBlock(block) {
+  const wrapper = document.createElement('div');
+  wrapper.className = 'block-match-chain';
+
+  const total = block.items.length;
+  const matched = new Set(chainStore[block.activityId] || []);
+  let pickedAnimal = null;
+  let pickedName = null;
+
+  const counter = document.createElement('p');
+  counter.className = 'mc-counter';
+  wrapper.appendChild(counter);
+
+  const stages = {};
+  const hotspots = [];
+
+  ['animal', 'name', 'track'].forEach(kind => {
+    const stage = document.createElement('div');
+    stage.className = 'mc-stage';
+    const img = document.createElement('img');
+    img.src = block.images[kind + 's'];
+    img.className = 'mc-img';
+    stage.appendChild(img);
+    wrapper.appendChild(stage);
+    stages[kind] = stage;
+  });
+
+  function updateCounter() {
+    counter.textContent = matched.size + ' of ' + total + ' matched';
+  }
+
+  function updateStages() {
+    stages.name.classList.toggle('mc-locked', pickedAnimal === null);
+    stages.track.classList.toggle('mc-locked', pickedName === null);
+  }
+
+  function updateHighlights() {
+    hotspots.forEach(h => {
+      const done = matched.has(h.item.id);
+      h.el.classList.toggle('mc-done', done);
+      h.el.classList.toggle('mc-selected',
+        !done && ((h.kind === 'animal' && h.item === pickedAnimal) || (h.kind === 'name' && h.item === pickedName)));
+    });
+  }
+
+  function placeMark(kind, item, isCorrect, persist) {
+    const spot = item[kind];
+    const mark = createFeedbackMark(isCorrect);
+    mark.style.left = (spot.x + spot.width / 2) + '%';
+    mark.style.top = (spot.y + spot.height / 2) + '%';
+    stages[kind].appendChild(mark);
+    if (!persist) {
+      mark.classList.add('feedback-flashing');
+      setTimeout(() => mark.remove(), 1500);
+    }
+  }
+
+  function showMatch(item) {
+    ['animal', 'name', 'track'].forEach(kind => placeMark(kind, item, true, true));
+  }
+
+  function showWin() {
+    wrapper.appendChild(createCompleteOverlay());
+  }
+
+  function recordMatch(item) {
+    matched.add(item.id);
+    chainStore[block.activityId] = Array.from(matched);
+    showMatch(item);
+    updateCounter();
+    if (matched.size === total) {
+      completeActivity(block.activityId);
+      setTimeout(showWin, 900);
+    }
+  }
+
+  function pickAnimal(item) {
+    pickedAnimal = pickedAnimal === item ? null : item;
+    pickedName = null;
+    updateStages();
+    updateHighlights();
+  }
+
+  function pickName(item) {
+    if (pickedAnimal === null) return;
+    if (item.id === pickedAnimal.id) {
+      pickedName = item;
+    } else {
+      pickedName = null;
+      placeMark('name', item, false, false);
+    }
+    updateStages();
+    updateHighlights();
+  }
+
+  function pickTrack(item) {
+    if (pickedName === null) return;
+    if (item.id === pickedAnimal.id) {
+      recordMatch(item);
+      pickedAnimal = null;
+      pickedName = null;
+    } else {
+      placeMark('track', item, false, false);
+    }
+    updateStages();
+    updateHighlights();
+  }
+
+  const handlers = { animal: pickAnimal, name: pickName, track: pickTrack };
+
+  block.items.forEach(item => {
+    ['animal', 'name', 'track'].forEach(kind => {
+      const spot = item[kind];
+      const el = document.createElement('div');
+      el.className = 'mc-hotspot';
+      el.style.left = spot.x + '%';
+      el.style.top = spot.y + '%';
+      el.style.width = spot.width + '%';
+      el.style.height = spot.height + '%';
+      el.addEventListener('click', () => {
+        if (matched.has(item.id)) return;
+        if (stages[kind].classList.contains('mc-locked')) return;
+        handlers[kind](item);
+      });
+      stages[kind].appendChild(el);
+      hotspots.push({ el, item, kind });
+    });
+  });
+
+  matched.forEach(id => {
+    const item = block.items.find(entry => entry.id === id);
+    if (item) showMatch(item);
+  });
+
+  if (isActivityComplete(block.activityId)) {
+    block.items.forEach(item => {
+      if (!matched.has(item.id)) {
+        matched.add(item.id);
+        showMatch(item);
+      }
+    });
+    showWin();
+  }
+
+  updateCounter();
+  updateStages();
+  updateHighlights();
+
+  return wrapper;
+}

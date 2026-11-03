@@ -759,3 +759,70 @@ textarea.ti-field {
 .block-float-wrap > .block-columns {
   width: auto;
 }
+
+.block-match-chain {
+  position: relative;
+  width: 100%;
+  flex-shrink: 0;
+  margin-bottom: 14px;
+}
+
+.mc-counter {
+  margin: 0 0 6px 0;
+  text-align: right;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #2b7cd3;
+}
+
+.mc-stage {
+  position: relative;
+  width: 100%;
+  margin-bottom: 10px;
+  transition: opacity 0.25s;
+}
+
+.mc-stage.mc-locked {
+  opacity: 0.4;
+}
+
+.mc-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.mc-hotspot {
+  position: absolute;
+  box-sizing: border-box;
+  border: 3px solid transparent;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.mc-stage.mc-locked .mc-hotspot {
+  cursor: default;
+}
+
+.mc-hotspot:hover {
+  background: rgba(43, 124, 211, 0.1);
+}
+
+.mc-hotspot.mc-selected {
+  border-color: #2b7cd3;
+  background: rgba(43, 124, 211, 0.15);
+}
+
+.mc-hotspot.mc-done {
+  background: rgba(255, 255, 255, 0.6);
+  border-color: transparent;
+  cursor: default;
+}
+
+.block-match-chain .feedback-mark {
+  width: 5%;
+}
+
+.block-match-chain .maze-message {
+  border-radius: 8px;
+}

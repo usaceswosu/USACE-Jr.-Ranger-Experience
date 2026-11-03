@@ -35,6 +35,8 @@ function renderBlock(block) {
       return renderImageBlock(block);
     case 'click-regions':
       return renderClickRegionsBlock(block);
+    case 'match-chain': 
+      return renderMatchChainBlock(block);
     case 'columns':
       return renderColumnsBlock(block);
     case 'text-input':
