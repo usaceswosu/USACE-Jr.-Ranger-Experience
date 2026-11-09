@@ -826,3 +826,133 @@ textarea.ti-field {
 .block-match-chain .maze-message {
   border-radius: 8px;
 }
+
+.block-image + .block-paragraph {
+  margin-top: 12px;
+}
+
+.block-checklist {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.cl-summary {
+  margin: 0 0 8px 0;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #2b7cd3;
+}
+
+.cl-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.cl-item.cl-manual {
+  cursor: pointer;
+}
+
+.cl-box {
+  position: relative;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  width: 22px;
+  height: 22px;
+  border: 3px solid #1a1a1a;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.cl-box.cl-checked {
+  background: #e6f6ea;
+  border-color: #2e9e4f;
+}
+
+.cl-box.cl-checked::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: -4px;
+  width: 6px;
+  height: 14px;
+  border-right: 4px solid #2e9e4f;
+  border-bottom: 4px solid #2e9e4f;
+  transform: rotate(40deg);
+}
+
+.cl-label {
+  font-size: 0.9rem;
+}
+
+.block-columns + .block-paragraph,
+.block-columns + .block-subheading {
+  margin-top: 16px;
+}
+
+
+.block-fact-nest {
+  position: relative;
+  width: 100%;
+  margin: -24px auto 8px;
+  container-type: inline-size;
+}
+
+.fn-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.fn-panel {
+  position: absolute;
+  left: 27.5%;
+  top: 18.8%;
+  width: 47%;
+  height: 42%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  font-size: 2.2cqw;
+  line-height: 1.35;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.fn-title {
+  margin: 0 0 1.2cqw;
+  font-family: 'Patrick Hand', cursive;
+  font-size: 3.6cqw;
+  font-weight: normal;
+  text-align: center;
+  color: #fff;
+}
+
+.fn-fact {
+  margin: 0;
+  color: #fff;
+  font-size: inherit;
+}
+
+.fn-input {
+  box-sizing: content-box;
+  padding: 0;
+  border: none;
+  border-bottom: 2px solid #fff;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-family: inherit;
+  font-size: inherit;
+  text-align: center;
+  outline: none;
+}
+
+.fn-input:focus {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.fn-correct {
+  color: #9be3a9;
+  border-bottom-color: #9be3a9;
+}

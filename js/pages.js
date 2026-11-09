@@ -33,6 +33,8 @@ function renderBlock(block) {
       return renderParagraphBlock(block);
     case 'image':
       return renderImageBlock(block);
+    case 'checklist':
+      return renderChecklistBlock(block);
     case 'click-regions':
       return renderClickRegionsBlock(block);
     case 'match-chain': 
@@ -55,6 +57,8 @@ function renderBlock(block) {
       return renderRouteMazeBlock(block);
     case 'label-diagram':
       return renderLabelDiagramBlock(block);
+    case 'fact-nest': 
+      return renderFactNestBlock(block);
     default:
       console.warn('Unknown block type:', block.type);
       return null;

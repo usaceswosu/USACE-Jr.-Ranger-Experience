@@ -18,6 +18,8 @@ function renderParagraphBlock(block) {
   const p = document.createElement('p');
   p.className = 'block-paragraph';
 
+  if (block.align) p.style.textAlign = block.align;
+
   if (block.lead) {
     const strong = document.createElement('strong');
     strong.textContent = block.lead + ' ';
@@ -57,6 +59,10 @@ function renderImageBlock(block) {
   const img = document.createElement('img');
   img.src = block.src;
   img.className = 'block-image';
+   if (block.width) {
+       img.style.width = block.width + '%';
+       img.style.maxWidth = block.width + '%';
+     }
   return img;
 }
 
@@ -1282,6 +1288,146 @@ function renderMatchChainBlock(block) {
   updateCounter();
   updateStages();
   updateHighlights();
+
+  return wrapper;
+}
+
+function renderChecklistBlock(block) {
+  const wrapper = document.createElement('div');
+  wrapper.className = 'block-checklist';
+
+  const summary = document.createElement('p');
+  summary.className = 'cl-summary';
+  wrapper.appendChild(summary);
+
+  const rows = [];
+
+  function updateSummary() {
+    const done = rows.filter(row => isActivityComplete(row.item.activityId)).length;
+    summary.textContent = done + ' of ' + rows.length + ' complete';
+  }
+
+  function paint(row) {
+    const done = isActivityComplete(row.item.activityId);
+    row.box.classList.toggle('cl-checked', done);
+    row.el.setAttribute('aria-checked', done ? 'true' : 'false');
+  }
+
+  block.items.forEach(item => {
+    const el = document.createElement('div');
+    el.className = 'cl-item';
+    el.setAttribute('role', 'checkbox');
+
+    const box = document.createElement('span');
+    box.className = 'cl-box';
+    el.appendChild(box);
+
+    const label = document.createElement('span');
+    label.className = 'cl-label';
+    label.textContent = item.label;
+    el.appendChild(label);
+
+    const row = { el, box, item };
+    rows.push(row);
+
+    if (item.manual) {
+      el.classList.add('cl-manual');
+      el.addEventListener('click', () => {
+        if (isActivityComplete(item.activityId)) {
+          uncompleteActivity(item.activityId);
+        } else {
+          completeActivity(item.activityId);
+        }
+        paint(row);
+        updateSummary();
+      });
+    }
+
+    paint(row);
+    wrapper.appendChild(el);
+  });
+
+  updateSummary();
+  return wrapper;
+}
+
+function renderFactNestBlock(block) {
+  const wrapper = document.createElement('div');
+  wrapper.className = 'block-fact-nest';
+  if (block.width) wrapper.style.width = block.width + '%';
+
+  const img = document.createElement('img');
+  img.src = block.image;
+  img.className = 'fn-image';
+  wrapper.appendChild(img);
+
+  const panel = document.createElement('div');
+  panel.className = 'fn-panel';
+  wrapper.appendChild(panel);
+
+  if (block.title) {
+    const title = document.createElement('h3');
+    title.className = 'fn-title';
+    title.textContent = block.title;
+    panel.appendChild(title);
+  }
+
+  const inputs = [];
+  const canWin = block.activityId !== undefined;
+
+  function normalize(value) {
+    return value.replace(/,/g, '').trim();
+  }
+
+  function allCorrect() {
+    return inputs.every(input => normalize(input.value) === input.dataset.answer);
+  }
+
+  function showWin() {
+    inputs.forEach(input => { input.disabled = true; });
+    wrapper.appendChild(createCompleteOverlay());
+  }
+
+  function checkWin() {
+    if (!canWin || !allCorrect()) return;
+    completeActivity(block.activityId);
+    setTimeout(showWin, 700);
+  }
+
+  block.facts.forEach((fact, index) => {
+    const line = document.createElement('p');
+    line.className = 'fn-fact';
+    line.appendChild(document.createTextNode((index + 1) + '. '));
+
+    const pieces = fact.text.split('_____');
+    line.appendChild(document.createTextNode(pieces[0]));
+
+    const input = document.createElement('input');
+    input.type = 'text';
+    input.className = 'fn-input';
+    input.maxLength = fact.answer.length + 1;
+    input.dataset.answer = fact.answer;
+    input.style.width = (fact.answer.length + 1.5) + 'ch';
+    input.addEventListener('input', () => {
+      const correct = normalize(input.value) === input.dataset.answer;
+      input.classList.toggle('fn-correct', correct);
+      if (correct && inputs[index + 1]) inputs[index + 1].focus();
+      checkWin();
+    });
+    inputs.push(input);
+    line.appendChild(input);
+
+    line.appendChild(document.createTextNode(pieces[1] || ''));
+    panel.appendChild(line);
+  });
+
+  if (canWin && isActivityComplete(block.activityId)) {
+    inputs.forEach(input => {
+      input.value = input.dataset.answer;
+      input.classList.add('fn-correct');
+    });
+    showWin();
+  }
 
   return wrapper;
 }

@@ -19,6 +19,12 @@ function completeActivity(id) {
   updateProgressUI();
 }
 
+function uncompleteActivity(id) {
+  if (id === undefined || !progress.completed.has(id)) return;
+  progress.completed.delete(id);
+  updateProgressUI();
+}
+
 function isPartComplete(id, part) {
   const done = progress.parts.get(id);
   return done !== undefined && done.has(part);
