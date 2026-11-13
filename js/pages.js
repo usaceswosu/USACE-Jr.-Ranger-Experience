@@ -61,6 +61,8 @@ function renderBlock(block) {
       return renderLabelDiagramBlock(block);
     case 'fact-nest': 
       return renderFactNestBlock(block);
+    case 'certificate':
+      return renderCertificateBlock(block);
     default:
       console.warn('Unknown block type:', block.type);
       return null;
