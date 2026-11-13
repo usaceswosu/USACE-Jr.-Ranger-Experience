@@ -1488,16 +1488,34 @@
         "type": "certificate",
         "pdf": "assets/pages/junior_ranger_certificate.pdf",
         "image": "assets/pages/certificate_preview.jpg",
-        "fileName": "junior_ranger_certificate.pdf"
+        "fileName": "Junior-Ranger-Certificate.pdf"
       },
       {
-        "type": "heading",
-        "text": "Congratulations, Junior Ranger!"
-      },
-      {
-        "type": "paragraph",
-        "align": "center",
-        "text": "You did your part to keep our parks and waters safe and clean. Keep playing it safe, wear your life jacket, and keep exploring America's lakes and rivers!"
+        "type": "columns",
+        "weights": [
+          2,
+          2,
+          4.4,
+          2
+        ],
+        "columns": [
+          [],
+          [
+            {
+              "type": "image",
+              "src": "assets/illustrations/ranger_mascot.png",
+              "width": 100
+            }
+          ],
+          [
+            {
+              "type": "speech-bubble",
+              "title": "Congratulations, Junior Ranger!",
+              "text": "You did your part to keep our parks and waters safe and clean. Keep playing it safe, wear your life jacket, and keep exploring America's lakes and rivers!"
+            }
+          ],
+          []
+        ]
       }
     ]
   }
