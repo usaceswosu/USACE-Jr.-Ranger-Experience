@@ -1521,3 +1521,22 @@ function renderCertificateBlock(block) {
 
   return wrapper;
 }
+
+function renderSpeechBubbleBlock(block) {
+  const bubble = document.createElement('div');
+  bubble.className = 'block-speech-bubble';
+
+  if (block.title) {
+    const title = document.createElement('h3');
+    title.className = 'sb-title';
+    title.textContent = block.title;
+    bubble.appendChild(title);
+  }
+
+  const text = document.createElement('p');
+  text.className = 'sb-text';
+  text.textContent = block.text;
+  bubble.appendChild(text);
+
+  return bubble;
+}

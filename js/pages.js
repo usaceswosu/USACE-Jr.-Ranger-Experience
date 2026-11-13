@@ -63,6 +63,8 @@ function renderBlock(block) {
       return renderFactNestBlock(block);
     case 'certificate':
       return renderCertificateBlock(block);
+    case 'speech-bubble':
+      return renderSpeechBubbleBlock(block);
     default:
       console.warn('Unknown block type:', block.type);
       return null;
