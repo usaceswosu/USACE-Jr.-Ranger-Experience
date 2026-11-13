@@ -1432,7 +1432,7 @@ function renderCertificateBlock(block) {
   }
 
   const nameInput = makeField('Your Name', 'First and last name', 'cert-name');
-  const dateInput = makeField('Date', 'Month Day, Year', 'cert-date');
+  const dateInput = makeField('Date', 'XX/XX/XXXX', 'cert-date');
 
   const button = document.createElement('button');
   button.type = 'button';
