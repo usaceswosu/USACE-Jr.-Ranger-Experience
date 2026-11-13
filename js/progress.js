@@ -10,7 +10,7 @@ const progress = {
   parts: new Map()
 };
 
-const unlockOverride = new URLSearchParams(location.search).get('ranger') === PROGRESS_SETTINGS.unlockCode;
+const unlockOverride = new URLSearchParams(location.search).get('password') === PROGRESS_SETTINGS.unlockCode;
 
 function isActivityComplete(id) {
   return id !== undefined && progress.completed.has(id);
