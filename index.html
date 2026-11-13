@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Junior Rangers</title>
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -10,8 +11,8 @@
 </head>
 <body>
   <div id="book">
-    <div id="page-container">
-      <div id="page-content"></div>
+    <div id="book-frame">
+      <div id="flipbook"></div>
     </div>
     <div class="nav-buttons">
       <button id="prev-btn">Prev</button>
@@ -25,8 +26,9 @@
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+  <script src="js/page-flip.browser.js"></script>
   <script src="js/progress.js"></script>
-  <script src="js/pages.js"></script>
   <script src="js/blocks.js"></script>
+  <script src="js/flipbook.js"></script>
 </body>
 </html>

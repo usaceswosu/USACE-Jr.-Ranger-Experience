@@ -1517,6 +1517,11 @@
           []
         ]
       }
+    ],
+    "lockedBlocks": [
+      {"type": "heading", "text": "Junior Ranger Certificate"},
+      {"type": "image", "src": "assets/illustrations/ranger_mascot.png", "width": 30},
+      {"type": "unlock-notice", "text": "Complete {remaining} more {activities} to unlock your Junior Ranger Certificate."}
     ]
   }
 ]
