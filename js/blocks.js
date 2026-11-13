@@ -1441,6 +1441,9 @@ function renderCertificateBlock(block) {
   controls.appendChild(button);
   wrapper.appendChild(controls);
 
+  const nameLine = block.nameLine || { x: 417.5, y: 228.5, length: 160 };
+  const dateLine = block.dateLine || { x: 552.5, y: 217.5, length: 125 };
+
   const preview = document.createElement('div');
   preview.className = 'cert-preview';
 
@@ -1455,6 +1458,7 @@ function renderCertificateBlock(block) {
 
   const dateText = document.createElement('div');
   dateText.className = 'cert-overlay cert-overlay-date';
+  if (block.dateOverlay) Object.assign(dateText.style, block.dateOverlay);
   preview.appendChild(dateText);
   wrapper.appendChild(preview);
 
@@ -1490,9 +1494,9 @@ function renderCertificateBlock(block) {
       const page = doc.getPage(0);
       const font = await doc.embedFont(PDFLib.StandardFonts.TimesRomanItalic);
 
-      drawLine(page, font, name, { x: 417.5, y: 228.5, length: 160 }, 18);
+      drawLine(page, font, name, nameLine, 18);
       if (dateInput.value.trim()) {
-        drawLine(page, font, dateInput.value.trim(), { x: 552.5, y: 217.5, length: 125 }, 12);
+        drawLine(page, font, dateInput.value.trim(), dateLine, 12);
       }
       page.setRotation(PDFLib.degrees(90));
 

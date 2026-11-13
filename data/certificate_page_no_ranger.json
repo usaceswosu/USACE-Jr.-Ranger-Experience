@@ -1,0 +1,39 @@
+{
+  "page": 21,
+  "id": "certificate",
+  "textScale": 1.5,
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "Your Junior Ranger Certificate"
+    },
+    {
+      "type": "paragraph",
+      "text": "Type your name and the date, then download your certificate. Your name is not saved anywhere."
+    },
+    {
+      "type": "certificate",
+      "pdf": "assets/pages/junior_ranger_certificate_no_ranger.pdf",
+      "image": "assets/pages/certificate_preview_no_ranger.jpg",
+      "fileName": "Junior-Ranger-Certificate.pdf",
+      "dateLine": {
+        "x": 552.5,
+        "y": 330.5,
+        "length": 125
+      },
+      "dateOverlay": {
+        "left": "41.07%",
+        "width": "17.06%"
+      }
+    },
+    {
+      "type": "heading",
+      "text": "Congratulations, Junior Ranger!"
+    },
+    {
+      "type": "paragraph",
+      "align": "center",
+      "text": "You did your part to keep our parks and waters safe and clean. Keep playing it safe, wear your life jacket, and keep exploring America's lakes and rivers!"
+    }
+  ]
+}
