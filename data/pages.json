@@ -1,256 +1,171 @@
 [
-{
-  "page": 1,
-  "textScale": 1.3,
-  "blocks": [
-    {
-      "type": "columns",
-      "weights": [
-        3,
-        10,
-        3
-      ],
-      "align": "center",
-      "columns": [
-        [
-          {
-            "type": "image",
-            "src": "assets/illustrations/usace_logo_wordmark.png"
-          },
-          {
-            "type": "image",
-            "src": "assets/illustrations/swosu_logo.png"
-          }
-        ],
-        [
-          {
-            "type": "heading",
-            "text": "U.S. Army Corps of Engineers"
-          },
-          {
-            "type": "heading",
-            "text": "Junior Ranger"
-          },
-          {
-            "type": "heading",
-            "text": "Online Activity Book"
-          }
-        ],
-        [
-          {
-            "type": "image",
-            "src": "assets/illustrations/ranger_badge.png"
-          }
-        ]
-      ]
-    },
-    {
-      "type": "image",
-      "src": "assets/illustrations/cover_scene.png",
-      "width": 100
-    },
-    {
-      "type": "paragraph",
-      "align": "center",
-      "text": "Made by McKenzie Olson, Steven Steele, and Shon Hakanson at Southwestern Oklahoma State University in partnership with the U.S. Army Corps of Engineers."
-    }
-  ]
-},
-
-{
-  "page": 2,
-  "textScale": 1.5,
-  "blocks": [
-    {
-      "type": "heading",
-      "text": "How to Become a Junior Ranger"
-    },
-    {
-      "type": "paragraph",
-      "text": "Complete seven or more activity pages, then sign the Junior Ranger pledge on the last page. Use the checklist below to track your progress. After you are done have a U.S. Army Corps of Engineers (USACE) Park Ranger check your book for completion and sign your certificate."
-    },
-    {
-      "type": "columns",
-      "weights": [
-        4,
-        5
-      ],
-      "columns": [
-        [
-          {
-            "type": "checklist",
-            "items": [
-              {
-                "label": "Your National Waterways",
-                "activityId": "national-waterways"
-              },
-              {
-                "label": "History of USACE",
-                "activityId": "usace-history-checkbox_quiz"
-              },
-              {
-                "label": "USACE Castle",
-                "activityId": "castle-true-false"
-              },
-              {
-                "label": "Water Safety Tips",
-                "activityId": "kayak"
-              },
-              {
-                "label": "Water Rescue Tips",
-                "activityId": "water-rescue-letters"
-              },
-              {
-                "label": "Spot the Difference",
-                "activityId": "spot-differences"
-              },
-              {
-                "label": "Paper Boat/Life Jacket Story",
-                "activityId": "paper-boat-story",
-                "manual": true
-              },
-              {
-                "label": "Bicycle Safety",
-                "activityId": "bicycle-maze"
-              },
-              {
-                "label": "Tree Anatomy",
-                "activityId": "tree-layers"
-              },
-              {
-                "label": "Leaf Identification",
-                "activityId": "leaf-identification"
-              },
-              {
-                "label": "Bald Eagles",
-                "activityId": "bald-eagles"
-              },
-              {
-                "label": "Know Your Fish",
-                "activityId": "know-your-fish"
-              },
-              {
-                "label": "Animal Tracks",
-                "activityId": "animal-tracks"
-              },
-              {
-                "label": "Invasive Species",
-                "activityId": "invasive-species-steps"
-              },
-              {
-                "label": "Doing Your Part",
-                "activityId": "doing-your-part",
-                "manual": true
-              },
-              {
-                "label": "Amazing Role Models",
-                "activityId": "right-choices-maze"
-              },
-              {
-                "label": "Picture This",
-                "activityId": "picture-this"
-              }
-            ]
-          }
-        ],
-        [
-          {
-            "type": "image",
-            "src": "assets/illustrations/ranger_group.png",
-            "width": 100
-          }
-        ]
-      ]
-    },
-    { "type": "subheading", "text": "How to become a U.S. Army Corps of Engineers National Junior Ranger" },
-    {
-      "type": "paragraph",
-      "text": "Visit six different U.S. Army Corps of Engineers lakes or rivers and email copies or photos of six different signed Junior Ranger Certificates to water.safety@usace.army.mil to receive your National Junior Ranger certificate and identification token. Please include your name and mailing address in the email with your certificates.",
-      "links": [{ "text": "water.safety@usace.army.mil", "url": "mailto:water.safety@usace.army.mil" }]
-    }
-  ]
-},
-
-{
-  "page": 3,
-  "textScale": 1.67,
-  "blocks": [
-    {
-      "type": "heading",
-      "text": "Your National Waterways"
-    },
-    {
-      "type": "paragraph",
-      "text": "The U.S. Army Corps of Engineers (USACE) has over 400 lake and river projects in 43 states. You can find the main USACE missions listed below."
-    },
-    {
-      "type": "text-with-image",
-      "image": "assets/illustrations/national_waterways_lock.png",
-      "imagePosition": "right",
-      "imageWidth": 52,
-      "imageAfterParagraph": 2,
-      "paragraphs": [
-        {
-          "lead": "Flood Risk Management:",
-          "text": "The USACE helps control flood risks all over the United States. They take care of over 400 lake and river projects, and built over 8,500 miles of levees and dikes, including hundreds of local flood risk reduction projects now operated and maintained by other agencies."
-        },
-        {
-          "lead": "Recreation:",
-          "text": "The USACE is the leading provider of water-based outdoor recreation in the nation. There are a lot of fun things you can do such as hiking, watching wildlife, swimming, boating, fishing, camping, hunting, and biking."
-        },
-        {
-          "lead": "Fish and Wildlife Conservation:",
-          "text": "By protecting natural resources, the USACE improves our quality of life. They own and manage over four million acres of land that provides critical wildlife habitat. The USACE also helps with the recovery of threatened and endangered species and is a world leader in controlling invasive aquatic plants."
-        },
-        {
-          "lead": "Navigation:",
-          "text": "Navigation was the first USACE mission, starting in 1824 to improve safety on the Ohio and Mississippi Rivers and several ports. The USACE works on navigation channels, harbors, and waterways to keep them safe for national security, shipping, and recreational boating. Across the United States, USACE takes care of 12,000 miles of navigation channels and over 900 harbors."
-        },
-        {
-          "lead": "Hydropower:",
-          "text": "Hydropower or hydroelectricity refers to turning the energy from flowing water into electricity. USACE owns and operates 24 percent of the hydropower capacity in the United States."
-        },
-        {
-          "lead": "Water Supply:",
-          "text": "A water supply of over 329 million acre-feet is provided by USACE lakes nationwide. A football field including the end zones is 1.32 acres, so that is enough water to cover 249,242,424 football fields with one foot of water. The water supply is used for things such as drinking water and irrigation."
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "text": "What Park Rangers Do"
-    },
-    {
-      "type": "paragraph",
-      "lead": "Interpretation/Education:",
-      "text": "Park rangers provide educational programs, events, and facilities to help you learn about USACE missions, how to protect natural resources, and how to be safe when in, on, or near the water."
-    },
-    {
-      "type": "paragraph",
-      "lead": "Environmental Stewardship:",
-      "text": "Managing natural resources is an important job for park rangers. They help protect the environment while making sure you enjoy hiking, fishing, and other outdoor activities."
-    },
-    {
-      "type": "paragraph",
-      "lead": "Recreation Management:",
-      "text": "Park rangers makes sure everyone can have a great time outdoors by taking care of campgrounds, beaches, boat ramps, picnic areas, and trails that are safe and accessible."
-    },
-    {
-      "type": "paragraph",
-      "lead": "Visitor Assistance:",
-      "text": "Park rangers enforce rules on USACE land and water to keep you and other visitors safe. They also will help answer your questions and provide assistance whenever possible to help ensure you enjoy your visit."
-    }
-  ]
-},
-
-{
-    "page": 4,
+  {
+    "page": 1, "id": "cover", "textScale": 1.3,
     "blocks": [
       {
-        "type": "text-with-image",
-        "heading": "History of the U.S. Army Corps of Engineers",
-        "image": "assets/illustrations/USACE_history_illustration.png",
-        "imagePosition": "right",
+        "type": "columns",
+        "weights": [3, 10, 3],
+        "align": "center",
+        "columns": [
+          [
+            {"type": "image", "src": "assets/illustrations/usace_logo_wordmark.png"},
+            {"type": "image", "src": "assets/illustrations/swosu_logo.png"}
+          ],
+          [
+            {"type": "heading", "text": "U.S. Army Corps of Engineers"},
+            {"type": "heading", "text": "Junior Ranger"},
+            {"type": "heading", "text": "Online Activity Book"}
+          ],
+          [
+            {"type": "image", "src": "assets/illustrations/ranger_badge.png"}
+          ]
+        ]
+      },
+      {"type": "image", "src": "assets/illustrations/cover_scene.png", "width": 100},
+      {
+        "type": "paragraph", "align": "center",
+        "text": "Made by McKenzie Olson, Steven Steele, and Shon Hakanson at Southwestern Oklahoma State University in partnership with the U.S. Army Corps of Engineers."
+      }
+    ]
+  },
+  {
+    "page": 2, "id": "checklist", "textScale": 1.5,
+    "blocks": [
+      {"type": "heading", "text": "How to Become a Junior Ranger"},
+      {
+        "type": "paragraph",
+        "text": "Complete seven or more activity pages, then sign the Junior Ranger pledge on the last page. Use the checklist below to track your progress. After you are done have a U.S. Army Corps of Engineers (USACE) Park Ranger check your book for completion and sign your certificate."
+      },
+      {
+        "type": "columns",
+        "weights": [4, 5],
+        "columns": [
+          [
+            {
+              "type": "checklist",
+              "items": [
+                {
+                  "label": "Your National Waterways", "activityId": "national-waterways",
+                  "pageId": "waterways"
+                },
+                {
+                  "label": "History of USACE", "activityId": "usace-history-checkbox_quiz",
+                  "pageId": "history"
+                },
+                {"label": "USACE Castle", "activityId": "castle-true-false", "pageId": "castle"},
+                {"label": "Water Safety Tips", "activityId": "kayak", "pageId": "water-safety"},
+                {"label": "Water Rescue Tips", "activityId": "water-rescue-letters", "pageId": "water-rescue"},
+                {
+                  "label": "How to Properly Fit a Life Jacket", "activityId": "life-jacket-fit",
+                  "pageId": "life-jacket-fit"
+                },
+                {
+                  "label": "Spot the Difference", "activityId": "spot-differences",
+                  "pageId": "spot-differences"
+                },
+                {
+                  "label": "Paper Boat/Life Jacket Story", "activityId": "paper-boat-story",
+                  "pageId": "paper-boat"
+                },
+                {"label": "Bicycle Safety", "activityId": "bicycle-maze", "pageId": "bicycle-safety"},
+                {"label": "Tree Anatomy", "activityId": "tree-layers", "pageId": "tree-anatomy"},
+                {
+                  "label": "Leaf Identification", "activityId": "leaf-identification",
+                  "pageId": "leaf-identification"
+                },
+                {"label": "Bald Eagles", "activityId": "bald-eagles", "pageId": "bald-eagles"},
+                {"label": "Know Your Fish", "activityId": "know-your-fish", "pageId": "know-your-fish"},
+                {"label": "Animal Tracks", "activityId": "animal-tracks", "pageId": "animal-tracks"},
+                {
+                  "label": "Invasive Species", "activityId": "invasive-species-steps",
+                  "pageId": "invasive-species"
+                },
+                {"label": "Doing Your Part", "activityId": "doing-your-part", "pageId": "doing-your-part"},
+                {
+                  "label": "Amazing Role Models", "activityId": "right-choices-maze",
+                  "pageId": "right-choices"
+                }
+              ]
+            }
+          ],
+          [
+            {"type": "image", "src": "assets/illustrations/ranger_group.png", "width": 100}
+          ]
+        ]
+      },
+      {"type": "subheading", "text": "How to become a U.S. Army Corps of Engineers National Junior Ranger"},
+      {
+        "type": "paragraph",
+        "text": "Visit six different U.S. Army Corps of Engineers lakes or rivers and email copies or photos of six different signed Junior Ranger Certificates to water.safety@usace.army.mil to receive your National Junior Ranger certificate and identification token. Please include your name and mailing address in the email with your certificates.",
+        "links": [
+          {"text": "water.safety@usace.army.mil", "url": "mailto:water.safety@usace.army.mil"}
+        ]
+      }
+    ]
+  },
+  {
+    "page": 3, "id": "waterways", "autoTick": "national-waterways", "textScale": 1.67,
+    "blocks": [
+      {"type": "heading", "text": "Your National Waterways"},
+      {
+        "type": "paragraph",
+        "text": "The U.S. Army Corps of Engineers (USACE) has over 400 lake and river projects in 43 states. You can find the main USACE missions listed below."
+      },
+      {
+        "type": "text-with-image", "image": "assets/illustrations/national_waterways_lock.png",
+        "imagePosition": "right", "imageWidth": 52, "imageAfterParagraph": 2,
+        "paragraphs": [
+          {
+            "lead": "Flood Risk Management:",
+            "text": "The USACE helps control flood risks all over the United States. They take care of over 400 lake and river projects, and built over 8,500 miles of levees and dikes, including hundreds of local flood risk reduction projects now operated and maintained by other agencies."
+          },
+          {
+            "lead": "Recreation:",
+            "text": "The USACE is the leading provider of water-based outdoor recreation in the nation. There are a lot of fun things you can do such as hiking, watching wildlife, swimming, boating, fishing, camping, hunting, and biking."
+          },
+          {
+            "lead": "Fish and Wildlife Conservation:",
+            "text": "By protecting natural resources, the USACE improves our quality of life. They own and manage over four million acres of land that provides critical wildlife habitat. The USACE also helps with the recovery of threatened and endangered species and is a world leader in controlling invasive aquatic plants."
+          },
+          {
+            "lead": "Navigation:",
+            "text": "Navigation was the first USACE mission, starting in 1824 to improve safety on the Ohio and Mississippi Rivers and several ports. The USACE works on navigation channels, harbors, and waterways to keep them safe for national security, shipping, and recreational boating. Across the United States, USACE takes care of 12,000 miles of navigation channels and over 900 harbors."
+          },
+          {
+            "lead": "Hydropower:",
+            "text": "Hydropower or hydroelectricity refers to turning the energy from flowing water into electricity. USACE owns and operates 24 percent of the hydropower capacity in the United States."
+          },
+          {
+            "lead": "Water Supply:",
+            "text": "A water supply of over 329 million acre-feet is provided by USACE lakes nationwide. A football field including the end zones is 1.32 acres, so that is enough water to cover 249,242,424 football fields with one foot of water. The water supply is used for things such as drinking water and irrigation."
+          }
+        ]
+      },
+      {"type": "heading", "text": "What Park Rangers Do"},
+      {
+        "type": "paragraph", "lead": "Interpretation/Education:",
+        "text": "Park rangers provide educational programs, events, and facilities to help you learn about USACE missions, how to protect natural resources, and how to be safe when in, on, or near the water."
+      },
+      {
+        "type": "paragraph", "lead": "Environmental Stewardship:",
+        "text": "Managing natural resources is an important job for park rangers. They help protect the environment while making sure you enjoy hiking, fishing, and other outdoor activities."
+      },
+      {
+        "type": "paragraph", "lead": "Recreation Management:",
+        "text": "Park rangers makes sure everyone can have a great time outdoors by taking care of campgrounds, beaches, boat ramps, picnic areas, and trails that are safe and accessible."
+      },
+      {
+        "type": "paragraph", "lead": "Visitor Assistance:",
+        "text": "Park rangers enforce rules on USACE land and water to keep you and other visitors safe. They also will help answer your questions and provide assistance whenever possible to help ensure you enjoy your visit."
+      }
+    ]
+  },
+  {
+    "page": 4, "id": "history",
+    "blocks": [
+      {
+        "type": "text-with-image", "heading": "History of the U.S. Army Corps of Engineers",
+        "image": "assets/illustrations/USACE_history_illustration.png", "imagePosition": "right",
         "imageAfterParagraph": 4,
         "paragraphs": [
           "The history of U.S. Army Corps of Engineers (USACE) goes back to June 16, 1775, when the Continental Congress organized an army with a chief engineer and two assistants; however, it was not until 1779 that Congress created a separate Corps of Engineers. At the end of the Revolutionary War, the engineers were released from service. Later in 1802 Congress created a separate, permanent Corps of Engineers.",
@@ -263,90 +178,68 @@
         ]
       },
       {
-        "type": "true-false",
-        "activityId": "usace-history-checkbox_quiz",
-        "heading": "What did you learn?",
+        "type": "true-false", "activityId": "usace-history-checkbox_quiz", "heading": "What did you learn?",
         "columnLabel": "True or False",
         "questions": [
-          { "text": "The history of the USACE can be traced back to July 4, 1776.", "answer": false },
-          { "text": "The most famous road project for the USACE is the Cumberland or National Road.", "answer": true },
-          { "text": "The USACE became involved in flood control after World War I.", "answer": false },
-          { "text": "The USACE has built several dams on our nation's waterways that provide flood control, irrigation, navigation, drinking water, hydropower, and recreation.", "answer": true }
+          {"text": "The history of the USACE can be traced back to July 4, 1776.", "answer": false},
+          {
+            "text": "The most famous road project for the USACE is the Cumberland or National Road.",
+            "answer": true
+          },
+          {"text": "The USACE became involved in flood control after World War I.", "answer": false},
+          {
+            "text": "The USACE has built several dams on our nation's waterways that provide flood control, irrigation, navigation, drinking water, hydropower, and recreation.",
+            "answer": true
+          }
         ]
       }
-  ]
-},
-
-{
-  "page": 5,
-  "textScale": 1.8,
-  "blocks": [
-    {
-      "type": "heading",
-      "text": "U.S. Army Corps of Engineers Castle"
-    },
-    {
-      "type": "paragraph",
-      "text": "The castle remains the premier symbol of the U.S. Army Corps of Engineers (USACE). The medieval castle is connected with fortifications and architecture. In the United States, the term “castle” has been applied to the strongest of our early fortifications such as Castle Pickney in Charleston, South Carolina, and Castles Williams and Clinton in New York Harbor, which are particular achievements of the USACE."
-    },
-    {
-      "type": "paragraph",
-      "text": "The USACE Castle is a highly stylized form without decoration or embellishment. The Army unofficially adopted the castle to appear on the USACE epaulets and belt plate in 1840. Soon afterwards the cadets at West Point, all of whom were part of the USACE, also wore the castle on their caps. Subsequently, the castle appeared on the shoulder knot, on the saddlecloth, as a collar device, and on the buttons. In 1902, the castle was formally adopted by the Army as the insignia of the USACE. Although its design has changed many times since its inception, the castle has remained the distinctive symbol of the USACE."
-    },
-    {
-      "type": "columns",
-      "weights": [
-        1,
-        2,
-        1
-      ],
-      "align": "center",
-      "columns": [
-        [],
-        [
+    ]
+  },
+  {
+    "page": 5, "id": "castle", "textScale": 1.8,
+    "blocks": [
+      {"type": "heading", "text": "U.S. Army Corps of Engineers Castle"},
+      {
+        "type": "paragraph",
+        "text": "The castle remains the premier symbol of the U.S. Army Corps of Engineers (USACE). The medieval castle is connected with fortifications and architecture. In the United States, the term “castle” has been applied to the strongest of our early fortifications such as Castle Pickney in Charleston, South Carolina, and Castles Williams and Clinton in New York Harbor, which are particular achievements of the USACE."
+      },
+      {
+        "type": "paragraph",
+        "text": "The USACE Castle is a highly stylized form without decoration or embellishment. The Army unofficially adopted the castle to appear on the USACE epaulets and belt plate in 1840. Soon afterwards the cadets at West Point, all of whom were part of the USACE, also wore the castle on their caps. Subsequently, the castle appeared on the shoulder knot, on the saddlecloth, as a collar device, and on the buttons. In 1902, the castle was formally adopted by the Army as the insignia of the USACE. Although its design has changed many times since its inception, the castle has remained the distinctive symbol of the USACE."
+      },
+      {
+        "type": "columns",
+        "weights": [1, 2, 1],
+        "align": "center",
+        "columns": [
+          [],
+          [
+            {"type": "image", "src": "assets/illustrations/usace_logo.png"}
+          ],
+          []
+        ]
+      },
+      {
+        "type": "true-false", "activityId": "castle-true-false", "heading": "What did you learn?",
+        "columnLabel": "True or False",
+        "questions": [
+          {"text": "The symbol of USACE is a castle.", "answer": true},
           {
-            "type": "image",
-            "src": "assets/illustrations/usace_logo.png"
-          }
-        ],
-        []
-      ]
-    },
-    {
-      "type": "true-false",
-      "activityId": "castle-true-false",
-      "heading": "What did you learn?",
-      "columnLabel": "True or False",
-      "questions": [
-        {
-          "text": "The symbol of USACE is a castle.",
-          "answer": true
-        },
-        {
-          "text": "In 1820, the castle was formally adopted by the Army as the insignia of the USACE.",
-          "answer": false
-        },
-        {
-          "text": "The USACE Castle has a lot of decoration or embellishment.",
-          "answer": false
-        },
-        {
-          "text": "The cadets at West Point wore the castle on their caps.",
-          "answer": true
-        }
-      ]
-    }
-  ]
-},
-
-{
-    "page": 6,
+            "text": "In 1820, the castle was formally adopted by the Army as the insignia of the USACE.",
+            "answer": false
+          },
+          {"text": "The USACE Castle has a lot of decoration or embellishment.", "answer": false},
+          {"text": "The cadets at West Point wore the castle on their caps.", "answer": true}
+        ]
+      }
+    ]
+  },
+  {
+    "page": 6, "id": "water-safety",
     "blocks": [
       {
-        "type": "text-with-image",
-        "heading": "Water Safety Tips",
-        "image": "assets/illustrations/water_safety_illustration.png",
-        "imagePosition": "right",
+        "type": "text-with-image", "heading": "Water Safety Tips",
+        "image": "assets/illustrations/water_safety_illustration.png", "imagePosition": "right",
         "imageAfterParagraph": 6,
         "paragraphs": [
           "Safe Swimming Tips:",
@@ -368,362 +261,304 @@
         ]
       },
       {
-        "type": "click-regions",
-        "activityId": "kayak",
-        "shape": "ellipse",
-        "hideTargets": true,
-        "feedback": "marks",
-        "maxWrong": 3,
-        "image": "assets/pages/kayak_circling_activity.png",
+        "type": "click-regions", "activityId": "kayak", "shape": "ellipse", "hideTargets": true,
+        "feedback": "marks", "maxWrong": 3, "image": "assets/pages/kayak_circling_activity.png",
         "targets": [
-          { "id": "oar", "x": 2, "y": 10, "width": 6, "height": 50, "correct": true },
-          { "id": "life jacket", "x": 34.5, "y": 45, "width": 15, "height": 32, "correct": true },
-          { "id": "pillow", "x": 31.5, "y": 79, "width": 16, "height": 16.5, "correct": false },
-          { "id": "clothes", "x": 15.75, "y": 78, "width": 15, "height": 16.5, "correct": true },
-          { "id": "laptop", "x": 1.25, "y": 74, "width": 14, "height": 22, "correct": false },
-          { "id": "water", "x": 9.75, "y": 47, "width": 7, "height": 25, "correct": true },
-          { "id": "hairbrush", "x": 17.5, "y": 68, "width": 11, "height": 9, "correct": false },
-          { "id": "food", "x": 16.5, "y": 48, "width": 14, "height": 19, "correct": true },
-          { "id": "walkie_talkie", "x": 8.5, "y": 29, "width": 7, "height": 17, "correct": false },
-          { "id": "hat", "x": 14.75, "y": 33.75, "width": 12, "height": 11, "correct": true },
-          { "id": "double_oar", "x": 24, "y": 28.5, "width": 52, "height": 10, "correct": true },
-          { "id": "kayak", "x": 6.5, "y": 10, "width": 74, "height": 20, "correct": true },
-          { "id": "sleeping_bag", "x": 48, "y": 76, "width": 37, "height": 18.5, "correct": false },
-          { "id": "tent", "x": 52, "y": 41, "width": 28, "height": 31, "correct": false },
-          { "id": "ipod", "x": 91, "y": 15, "width": 7, "height": 16.5, "correct": false },
-          { "id": "binoculars", "x": 80, "y": 13.5, "width": 10, "height": 16.5, "correct": false },
-          { "id": "slippers", "x": 84, "y": 48, "width": 13, "height": 16, "correct": false },
-          { "id": "map", "x": 83.5, "y": 31.5, "width": 16, "height": 18, "correct": true },
-          { "id": "rope", "x": 76.75, "y": 28, "width": 7, "height": 24, "correct": false },
-          { "id": "compass", "x": 49.5, "y": 69.5, "width": 6, "height": 9.25, "correct": true },
-          { "id": "hair_dryer", "x": 29, "y": 38, "width": 9, "height": 17, "correct": false },
-          { "id": "sunglasses", "x": 38.5, "y": 37.5, "width": 10, "height": 7, "correct": true },
-          { "id": "ice_cream", "x": 49.15, "y": 37.5, "width": 5, "height": 15, "correct": false },
-          { "id": "camera", "x": 0.25, "y": 61.5, "width": 10, "height": 12, "correct": false },
-          { "id": "guitar", "x": 84, "y": 54, "width": 8, "height": 45, "rotation": -38, "correct": false },
-          { "id": "sunscreen", "x": 91, "y": 62, "width": 5, "height": 16, "rotation": -55, "correct": true }
+          {"id": "oar", "x": 2, "y": 10, "width": 6, "height": 50, "correct": true},
+          {"id": "life jacket", "x": 34.5, "y": 45, "width": 15, "height": 32, "correct": true},
+          {"id": "pillow", "x": 31.5, "y": 79, "width": 16, "height": 16.5, "correct": false},
+          {"id": "clothes", "x": 15.75, "y": 78, "width": 15, "height": 16.5, "correct": true},
+          {"id": "laptop", "x": 1.25, "y": 74, "width": 14, "height": 22, "correct": false},
+          {"id": "water", "x": 9.75, "y": 47, "width": 7, "height": 25, "correct": true},
+          {"id": "hairbrush", "x": 17.5, "y": 68, "width": 11, "height": 9, "correct": false},
+          {"id": "food", "x": 16.5, "y": 48, "width": 14, "height": 19, "correct": true},
+          {"id": "walkie_talkie", "x": 8.5, "y": 29, "width": 7, "height": 17, "correct": false},
+          {"id": "hat", "x": 14.75, "y": 33.75, "width": 12, "height": 11, "correct": true},
+          {"id": "double_oar", "x": 24, "y": 28.5, "width": 52, "height": 10, "correct": true},
+          {"id": "kayak", "x": 6.5, "y": 10, "width": 74, "height": 20, "correct": true},
+          {"id": "sleeping_bag", "x": 48, "y": 76, "width": 37, "height": 18.5, "correct": false},
+          {"id": "tent", "x": 52, "y": 41, "width": 28, "height": 31, "correct": false},
+          {"id": "ipod", "x": 91, "y": 15, "width": 7, "height": 16.5, "correct": false},
+          {"id": "binoculars", "x": 80, "y": 13.5, "width": 10, "height": 16.5, "correct": false},
+          {"id": "slippers", "x": 84, "y": 48, "width": 13, "height": 16, "correct": false},
+          {"id": "map", "x": 83.5, "y": 31.5, "width": 16, "height": 18, "correct": true},
+          {"id": "rope", "x": 76.75, "y": 28, "width": 7, "height": 24, "correct": false},
+          {"id": "compass", "x": 49.5, "y": 69.5, "width": 6, "height": 9.25, "correct": true},
+          {"id": "hair_dryer", "x": 29, "y": 38, "width": 9, "height": 17, "correct": false},
+          {"id": "sunglasses", "x": 38.5, "y": 37.5, "width": 10, "height": 7, "correct": true},
+          {"id": "ice_cream", "x": 49.15, "y": 37.5, "width": 5, "height": 15, "correct": false},
+          {"id": "camera", "x": 0.25, "y": 61.5, "width": 10, "height": 12, "correct": false},
+          {"id": "guitar", "x": 84, "y": 54, "width": 8, "height": 45, "rotation": -38, "correct": false},
+          {"id": "sunscreen", "x": 91, "y": 62, "width": 5, "height": 16, "rotation": -55, "correct": true}
         ]
       }
     ]
   },
-
-{
-  "page": 7,
-  "textScale": 1.3,
-  "blocks": [
-    { "type": "heading", "text": "Water Rescue Tips" },
-    {
-      "type": "columns",
-      "columns": [
-        [
-          { "type": "paragraph", "lead": "REACH:", "text": "Hold on to the dock or your boat, then reach your hand, a boat oar, a fishing pole, or whatever you have nearby to the person in the water." },
-          { "type": "image", "src": "assets/illustrations/rescue_reach.png" },
-          { "type": "paragraph", "lead": "ROW:", "text": "If in a boat, use the oars to move the boat closer to the person in the water, or call out to a nearby boat for help. Don't use the boat's motor close to a person in the water; the propeller could injure them." },
-          { "type": "image", "src": "assets/illustrations/rescue_row.png" }
-        ],
-        [
-          { "type": "paragraph", "lead": "THROW:", "text": "If you can't reach far enough, toss things that float for the person to grab such as a life ring, life jacket, cooler, tackle box, etc." },
-          { "type": "image", "src": "assets/illustrations/rescue_throw.png" },
-          { "type": "paragraph", "lead": "DON'T GO:", "text": "Don't go into the water to save someone unless you are a trained lifeguard. The person that is drowning could hold you under water, and you could drown too. Yell, call 911, or go for help." },
-          { "type": "image", "src": "assets/illustrations/rescue_dont_go.png" }
-        ]
-      ]
-    },
-    { "type": "paragraph", "lead": "Learn First Aid and CPR.", "text": "When giving CPR to a drowning patient, remember to give them rescue breaths and compressions. Giving them breaths provides them some oxygen, which they are lacking." },
-    {
-      "type": "columns",
-      "columns": [
-        [
-          { "type": "text-input", 
-            "id": "life-jacket-why", 
-            "prompt": "Why is it important to wear a life jacket while in, on, or near the water?" 
-          },
-          {
-            "type": "letter-fill",
-            "activityId": "water-rescue-letters",
-            "prompt": "If someone in the water needs help, what should you do?",
-            "words": [
-              { "pattern": "R__CH,", "answer": "REACH" },
-              { "pattern": "_H__W,", "answer": "THROW" },
-              { "pattern": "_O_,", "answer": "ROW" },
-              { "pattern": "D_N'_ G_,", "answer": "DON'T GO" }
-            ]
-          },
-          {
-            "type": "paragraph",
-            "text": "Scan the QR code below to watch \"Safe Passage\". The award-winning, 36-minute video for kids grades K-6 provides water safety lessons in an entertaining way.",
-            "links": [{ "text": "Safe Passage", "url": "https://youtu.be/pB4IkVfM-7w" }]
-          },
-          {
-            "type": "columns",
-            "weights": [3, 1],
-            "columns": [
-              [ { "type": "image", "src": "assets/illustrations/safe_passage_video.png" } ],
-              [ { "type": "image", "src": "assets/illustrations/safe_passage_qr.png" } ]
-            ]
-          }
-        ],
-        [
-          { "type": "image", "src": "assets/illustrations/shallow_water_blackout.png" }
-        ]
-      ]
-    }
-  ]
-},
-
-{
-    "page": 8,
-    "textScale": 1.5,
+  {
+    "page": 7, "id": "water-rescue", "textScale": 1.3,
     "blocks": [
-      { "type": "heading", "text": "How to Properly Fit a Life Jacket" },
-      { "type": "paragraph", "text": "Life jackets are designed to help you float while in the water and can save your life, so make sure that your life jacket fits you properly. They come in many styles and colors so choose the right one for you and your water activity." },
-      { "type": "subheading", "text": "1. Check the Label" },
-      { "type": "paragraph", "text": "The label will tell you if the life jacket is Coast Guard approved, size of the life jacket, and what activities the life jacket can be used for. Sizes range from infant to extra extra large. Adult life jackets will not work for children and should not be worn by them until they weigh about 90 pounds." },
-      { "type": "subheading", "text": "2. Check for Damage" },
-      { "type": "paragraph", "text": "Check for broken parts, mold, and rips in the fabric." },
-      { "type": "subheading", "text": "3. Put Life Jacket On and Fasten It Up" },
-      { "type": "paragraph", "text": "Fasten up all buckles, zippers, and straps. Adjust straps so that the life jacket fits snugly." },
-      { "type": "subheading", "text": "4. Check for Proper Fit" },
-      { "type": "paragraph", "text": "Lift up on the shoulders of the life jacket. Make sure it does not come up above your chin or ears. It should feel snug, yet comfortable. A properly fitted life jacket keeps your head and shoulders above water. You will be able to swim with it on too. It is recommended that you perform a test wearing your life jacket in shallow water with an adult within arm's reach." },
-      { "type": "subheading", "text": "5. Please Wear It" },
-      { "type": "paragraph", "text": "A life jacket only works if it is worn properly. Take the time to be prepared. Make sure you have and wear a life jacket that fits you properly when in, on, or near the water." },
-      { "type": "image", "src": "assets/pages/lifejacket_instructions.png" }
+      {"type": "heading", "text": "Water Rescue Tips"},
+      {
+        "type": "columns",
+        "columns": [
+          [
+            {
+              "type": "paragraph", "lead": "REACH:",
+              "text": "Hold on to the dock or your boat, then reach your hand, a boat oar, a fishing pole, or whatever you have nearby to the person in the water."
+            },
+            {"type": "image", "src": "assets/illustrations/rescue_reach.png"},
+            {
+              "type": "paragraph", "lead": "ROW:",
+              "text": "If in a boat, use the oars to move the boat closer to the person in the water, or call out to a nearby boat for help. Don't use the boat's motor close to a person in the water; the propeller could injure them."
+            },
+            {"type": "image", "src": "assets/illustrations/rescue_row.png"}
+          ],
+          [
+            {
+              "type": "paragraph", "lead": "THROW:",
+              "text": "If you can't reach far enough, toss things that float for the person to grab such as a life ring, life jacket, cooler, tackle box, etc."
+            },
+            {"type": "image", "src": "assets/illustrations/rescue_throw.png"},
+            {
+              "type": "paragraph", "lead": "DON'T GO:",
+              "text": "Don't go into the water to save someone unless you are a trained lifeguard. The person that is drowning could hold you under water, and you could drown too. Yell, call 911, or go for help."
+            },
+            {"type": "image", "src": "assets/illustrations/rescue_dont_go.png"}
+          ]
+        ]
+      },
+      {
+        "type": "paragraph", "lead": "Learn First Aid and CPR.",
+        "text": "When giving CPR to a drowning patient, remember to give them rescue breaths and compressions. Giving them breaths provides them some oxygen, which they are lacking."
+      },
+      {
+        "type": "columns",
+        "columns": [
+          [
+            {
+              "type": "text-input", "id": "life-jacket-why",
+              "prompt": "Why is it important to wear a life jacket while in, on, or near the water?"
+            },
+            {
+              "type": "letter-fill", "activityId": "water-rescue-letters",
+              "prompt": "If someone in the water needs help, what should you do?",
+              "words": [
+                {"pattern": "R__CH,", "answer": "REACH"},
+                {"pattern": "_H__W,", "answer": "THROW"},
+                {"pattern": "_O_,", "answer": "ROW"},
+                {"pattern": "D_N'_ G_,", "answer": "DON'T GO"}
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "Scan the QR code below to watch \"Safe Passage\". The award-winning, 36-minute video for kids grades K-6 provides water safety lessons in an entertaining way.",
+              "links": [
+                {"text": "Safe Passage", "url": "https://youtu.be/pB4IkVfM-7w"}
+              ]
+            },
+            {
+              "type": "columns",
+              "weights": [3, 1],
+              "columns": [
+                [
+                  {"type": "image", "src": "assets/illustrations/safe_passage_video.png"}
+                ],
+                [
+                  {"type": "image", "src": "assets/illustrations/safe_passage_qr.png"}
+                ]
+              ]
+            }
+          ],
+          [
+            {"type": "image", "src": "assets/illustrations/shallow_water_blackout.png"}
+          ]
+        ]
+      }
     ]
   },
-
-{
-  "page": 9,
-  "textScale": 1.5,
-  "blocks": [
-    {
-      "type": "heading",
-      "text": "Can You Spot The Differences?"
-    },
-    {
-      "type": "paragraph",
-      "text": "Spot and circle the differences between the two pictures below. After you are done, show it to a park ranger or an adult that cares about you and tell them what makes the things you circled not safe in the top picture and safe in the bottom picture."
-    },
-    {
-      "type": "click-regions",
-      "activityId": "spot-differences",
-      "part": "top",
-      "parts": 2,
-      "hideTargets": true,
-      "image": "assets/pages/spot_unsafe.png",
-      "targets": [
-        {
-          "id": "swimmer_outside",
-          "x": 1.5,
-          "y": 33.5,
-          "width": 12.2,
-          "height": 11.8,
-          "correct": true
-        },
-        {
-          "id": "raft",
-          "x": 19.2,
-          "y": 44.5,
-          "width": 18.6,
-          "height": 16.2,
-          "correct": true
-        },
-        {
-          "id": "boat",
-          "x": 50.5,
-          "y": 25,
-          "width": 15.5,
-          "height": 11,
-          "correct": true
-        },
-        {
-          "id": "sleeping_man",
-          "x": 21.5,
-          "y": 71.5,
-          "width": 20,
-          "height": 15.5,
-          "correct": true
-        },
-        {
-          "id": "child_no_jacket",
-          "x": 61.8,
-          "y": 54,
-          "width": 5.9,
-          "height": 18,
-          "correct": true
-        },
-        {
-          "id": "child_ring",
-          "x": 68.4,
-          "y": 50,
-          "width": 6.2,
-          "height": 16,
-          "correct": true
-        },
-        {
-          "id": "woman_phone",
-          "x": 74.8,
-          "y": 55,
-          "width": 11.5,
-          "height": 31,
-          "correct": true
-        }
-      ]
-    },
-    {
-      "type": "click-regions",
-      "activityId": "spot-differences",
-      "part": "bottom",
-      "parts": 2,
-      "hideTargets": true,
-      "image": "assets/pages/spot_safe.png",
-      "targets": [
-        {
-          "id": "swimmer_outside",
-          "x": 20.8,
-          "y": 34.5,
-          "width": 4.2,
-          "height": 10,
-          "correct": true
-        },
-        {
-          "id": "raft",
-          "x": 19.2,
-          "y": 44.5,
-          "width": 18.6,
-          "height": 16.2,
-          "correct": true
-        },
-        {
-          "id": "boat",
-          "x": 45.5,
-          "y": 23.5,
-          "width": 10.5,
-          "height": 9,
-          "correct": true
-        },
-        {
-          "id": "sleeping_man",
-          "x": 21.8,
-          "y": 74,
-          "width": 19.7,
-          "height": 13.5,
-          "correct": true
-        },
-        {
-          "id": "child_no_jacket",
-          "x": 61.8,
-          "y": 54,
-          "width": 5.9,
-          "height": 18,
-          "correct": true
-        },
-        {
-          "id": "child_ring",
-          "x": 68.4,
-          "y": 50,
-          "width": 6.2,
-          "height": 16,
-          "correct": true
-        },
-        {
-          "id": "woman_phone",
-          "x": 74.8,
-          "y": 49.5,
-          "width": 14,
-          "height": 26,
-          "correct": true
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "text": "Water Safety Talk"
-    },
-    {
-      "type": "text-input",
-      "id": "water-safety-talk",
-      "prompt": "One of the duties of a U.S. Army Corps of Engineers Park Ranger is to talk to visitors about water safety. Write down the most important thing you would tell people about being safe while on, in, or near the water and why.",
-      "rows": 3
-    }
-  ]
-},
-
-{
-  "page": 10,
-  "blocks": [
-    { "type": "heading", "text": "Paper Boat/Life Jacket Activity Story" },
-    { "type": "paragraph", "text": "First make a boat using a 8.5 x 11 sheet of paper. Here's how to do it in 10 easy steps." },
-    {
-      "type": "columns",
-      "columns": [
-        [ { "type": "image", "src": "assets/pages/lifejacket_paper_step1.png" } ],
-        [ { "type": "image", "src": "assets/pages/lifejacket_paper_step2.png" } ]
-      ]
-    },
-    {
-      "type": "columns",
-      "columns": [
-        [ { "type": "image", "src": "assets/pages/lifejacket_paper_step3.png" } ],
-        [ { "type": "image", "src": "assets/pages/lifejacket_paper_step4.png" } ]
-      ]
-    },
-    {
-      "type": "columns",
-      "columns": [
-        [ { "type": "image", "src": "assets/pages/lifejacket_paper_step5.png" } ],
-        [ { "type": "image", "src": "assets/pages/lifejacket_paper_step6.png" } ]
-      ]
-    },
-    {
-      "type": "columns",
-      "columns": [
-        [ { "type": "image", "src": "assets/pages/lifejacket_paper_step7.png" } ],
-        [ { "type": "image", "src": "assets/pages/lifejacket_paper_step8.png" } ]
-      ]
-    }
-  ]
-},
-
-{
-  "page": 11,
-  "blocks": [
-    {
-      "type": "columns",
-      "columns": [
-        [ { "type": "image", "src": "assets/pages/lifejacket_paper_step9.png" } ],
-        [ { "type": "image", "src": "assets/pages/lifejacket_paper_step10.png" } ]
-      ]
-    },
-    { "type": "subheading", "text": "Now for the story..." },
-    { "type": "paragraph", "text": "One day John heard the fish were biting so he decided he would go fishing. He told his family where he was going and when he planned on returning home. He grabbed his favorite fishing gear, hooked up his boat to his truck, and headed to the lake. After he got to the lake, he put his boat in the water and headed to his favorite fishing spot. The fish were biting and John was having a good time just relaxing and enjoying the day." },
-    { "type": "paragraph", "text": "Then John noticed that the sky was getting darker, and it started to rain so he packed up his fishing gear and headed back to the boat ramp. On his way back, the wind started blowing very hard so he decided to pull into a cove." },
-    {
-      "type": "columns",
-      "columns": [
-        [ { "type": "image", "src": "assets/pages/lifejacket_paper_step11.png" } ],
-        [ { "type": "image", "src": "assets/pages/lifejacket_paper_step12.png" } ]
-      ]
-    },
-    {
-      "type": "columns",
-      "columns": [
-        [ { "type": "image", "src": "assets/pages/lifejacket_paper_step13.png" } ],
-        [ { "type": "image", "src": "assets/pages/lifejacket_paper_step14.png" } ]
-      ]
-    }
-  ]
-},
-
-{
-    "page": 12,
+  {
+    "page": 8, "id": "life-jacket-fit", "autoTick": "life-jacket-fit", "textScale": 1.5,
+    "blocks": [
+      {"type": "heading", "text": "How to Properly Fit a Life Jacket"},
+      {
+        "type": "paragraph",
+        "text": "Life jackets are designed to help you float while in the water and can save your life, so make sure that your life jacket fits you properly. They come in many styles and colors so choose the right one for you and your water activity."
+      },
+      {"type": "subheading", "text": "1. Check the Label"},
+      {
+        "type": "paragraph",
+        "text": "The label will tell you if the life jacket is Coast Guard approved, size of the life jacket, and what activities the life jacket can be used for. Sizes range from infant to extra extra large. Adult life jackets will not work for children and should not be worn by them until they weigh about 90 pounds."
+      },
+      {"type": "subheading", "text": "2. Check for Damage"},
+      {"type": "paragraph", "text": "Check for broken parts, mold, and rips in the fabric."},
+      {"type": "subheading", "text": "3. Put Life Jacket On and Fasten It Up"},
+      {
+        "type": "paragraph",
+        "text": "Fasten up all buckles, zippers, and straps. Adjust straps so that the life jacket fits snugly."
+      },
+      {"type": "subheading", "text": "4. Check for Proper Fit"},
+      {
+        "type": "paragraph",
+        "text": "Lift up on the shoulders of the life jacket. Make sure it does not come up above your chin or ears. It should feel snug, yet comfortable. A properly fitted life jacket keeps your head and shoulders above water. You will be able to swim with it on too. It is recommended that you perform a test wearing your life jacket in shallow water with an adult within arm's reach."
+      },
+      {"type": "subheading", "text": "5. Please Wear It"},
+      {
+        "type": "paragraph",
+        "text": "A life jacket only works if it is worn properly. Take the time to be prepared. Make sure you have and wear a life jacket that fits you properly when in, on, or near the water."
+      },
+      {"type": "image", "src": "assets/pages/lifejacket_instructions.png"}
+    ]
+  },
+  {
+    "page": 9, "id": "spot-differences", "textScale": 1.5,
+    "blocks": [
+      {"type": "heading", "text": "Can You Spot The Differences?"},
+      {
+        "type": "paragraph",
+        "text": "Spot and circle the differences between the two pictures below. After you are done, show it to a park ranger or an adult that cares about you and tell them what makes the things you circled not safe in the top picture and safe in the bottom picture."
+      },
+      {
+        "type": "click-regions", "activityId": "spot-differences", "part": "top", "parts": 2,
+        "hideTargets": true, "image": "assets/pages/spot_unsafe.png",
+        "targets": [
+          {"id": "swimmer_outside", "x": 1.5, "y": 33.5, "width": 12.2, "height": 11.8, "correct": true},
+          {"id": "raft", "x": 19.2, "y": 44.5, "width": 18.6, "height": 16.2, "correct": true},
+          {"id": "boat", "x": 50.5, "y": 25, "width": 15.5, "height": 11, "correct": true},
+          {"id": "sleeping_man", "x": 21.5, "y": 71.5, "width": 20, "height": 15.5, "correct": true},
+          {"id": "child_no_jacket", "x": 61.8, "y": 54, "width": 5.9, "height": 18, "correct": true},
+          {"id": "child_ring", "x": 68.4, "y": 50, "width": 6.2, "height": 16, "correct": true},
+          {"id": "woman_phone", "x": 74.8, "y": 55, "width": 11.5, "height": 31, "correct": true}
+        ]
+      },
+      {
+        "type": "click-regions", "activityId": "spot-differences", "part": "bottom", "parts": 2,
+        "hideTargets": true, "image": "assets/pages/spot_safe.png",
+        "targets": [
+          {"id": "swimmer_outside", "x": 20.8, "y": 34.5, "width": 4.2, "height": 10, "correct": true},
+          {"id": "raft", "x": 19.2, "y": 44.5, "width": 18.6, "height": 16.2, "correct": true},
+          {"id": "boat", "x": 45.5, "y": 23.5, "width": 10.5, "height": 9, "correct": true},
+          {"id": "sleeping_man", "x": 21.8, "y": 74, "width": 19.7, "height": 13.5, "correct": true},
+          {"id": "child_no_jacket", "x": 61.8, "y": 54, "width": 5.9, "height": 18, "correct": true},
+          {"id": "child_ring", "x": 68.4, "y": 50, "width": 6.2, "height": 16, "correct": true},
+          {"id": "woman_phone", "x": 74.8, "y": 49.5, "width": 14, "height": 26, "correct": true}
+        ]
+      },
+      {"type": "heading", "text": "Water Safety Talk"},
+      {
+        "type": "text-input", "id": "water-safety-talk",
+        "prompt": "One of the duties of a U.S. Army Corps of Engineers Park Ranger is to talk to visitors about water safety. Write down the most important thing you would tell people about being safe while on, in, or near the water and why.",
+        "rows": 3
+      }
+    ]
+  },
+  {
+    "page": 10, "id": "paper-boat", "autoTick": "paper-boat-story",
+    "blocks": [
+      {"type": "heading", "text": "Paper Boat/Life Jacket Activity Story"},
+      {
+        "type": "paragraph",
+        "text": "First make a boat using a 8.5 x 11 sheet of paper. Here's how to do it in 10 easy steps."
+      },
+      {
+        "type": "columns",
+        "columns": [
+          [
+            {"type": "image", "src": "assets/pages/lifejacket_paper_step1.png"}
+          ],
+          [
+            {"type": "image", "src": "assets/pages/lifejacket_paper_step2.png"}
+          ]
+        ]
+      },
+      {
+        "type": "columns",
+        "columns": [
+          [
+            {"type": "image", "src": "assets/pages/lifejacket_paper_step3.png"}
+          ],
+          [
+            {"type": "image", "src": "assets/pages/lifejacket_paper_step4.png"}
+          ]
+        ]
+      },
+      {
+        "type": "columns",
+        "columns": [
+          [
+            {"type": "image", "src": "assets/pages/lifejacket_paper_step5.png"}
+          ],
+          [
+            {"type": "image", "src": "assets/pages/lifejacket_paper_step6.png"}
+          ]
+        ]
+      },
+      {
+        "type": "columns",
+        "columns": [
+          [
+            {"type": "image", "src": "assets/pages/lifejacket_paper_step7.png"}
+          ],
+          [
+            {"type": "image", "src": "assets/pages/lifejacket_paper_step8.png"}
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "page": 11, "id": "paper-boat-story", "autoTick": "paper-boat-story",
     "blocks": [
       {
-        "type": "text-with-image",
-        "heading": "Bicycle Safety",
-        "image": "assets/illustrations/bicycle_safety_family.png",
-        "imagePosition": "right",
-        "bulletIcon": "assets/illustrations/bicycle_bullet.png",
-        "bulletStartIndex": 1,
+        "type": "columns",
+        "columns": [
+          [
+            {"type": "image", "src": "assets/pages/lifejacket_paper_step9.png"}
+          ],
+          [
+            {"type": "image", "src": "assets/pages/lifejacket_paper_step10.png"}
+          ]
+        ]
+      },
+      {"type": "subheading", "text": "Now for the story..."},
+      {
+        "type": "paragraph",
+        "text": "One day John heard the fish were biting so he decided he would go fishing. He told his family where he was going and when he planned on returning home. He grabbed his favorite fishing gear, hooked up his boat to his truck, and headed to the lake. After he got to the lake, he put his boat in the water and headed to his favorite fishing spot. The fish were biting and John was having a good time just relaxing and enjoying the day."
+      },
+      {
+        "type": "paragraph",
+        "text": "Then John noticed that the sky was getting darker, and it started to rain so he packed up his fishing gear and headed back to the boat ramp. On his way back, the wind started blowing very hard so he decided to pull into a cove."
+      },
+      {
+        "type": "columns",
+        "columns": [
+          [
+            {"type": "image", "src": "assets/pages/lifejacket_paper_step11.png"}
+          ],
+          [
+            {"type": "image", "src": "assets/pages/lifejacket_paper_step12.png"}
+          ]
+        ]
+      },
+      {
+        "type": "columns",
+        "columns": [
+          [
+            {"type": "image", "src": "assets/pages/lifejacket_paper_step13.png"}
+          ],
+          [
+            {"type": "image", "src": "assets/pages/lifejacket_paper_step14.png"}
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "page": 12, "id": "bicycle-safety",
+    "blocks": [
+      {
+        "type": "text-with-image", "heading": "Bicycle Safety",
+        "image": "assets/illustrations/bicycle_safety_family.png", "imagePosition": "right",
+        "bulletIcon": "assets/illustrations/bicycle_bullet.png", "bulletStartIndex": 1,
         "paragraphs": [
           "Here are some helpful tips that will keep you safe while riding a bicycle.",
           "Always wear a properly fitted bicycle helmet.",
@@ -734,1242 +569,936 @@
         ]
       },
       {
-        "type": "path-graph",
-        "activityId": "bicycle-maze",
-        "image": "assets/pages/bicycle_maze.png",
-        "startNode": "start",
-        "showAllNodes": false,
-        "showAllEdges": false,
-        "showAllChoiceArrows": false,
+        "type": "path-graph", "activityId": "bicycle-maze", "image": "assets/pages/bicycle_maze.png",
+        "startNode": "start", "showAllNodes": false, "showAllEdges": false, "showAllChoiceArrows": false,
         "previewAllArrows": false,
         "nodes": [
-          { "id": "start", "x": 37, "y": 37 },
-          { "id": "stop-1", "x": 51, "y": 24 },
-          { "id": "stop-2", "x": 84.75, "y": 22.5 },
-          { "id": "stop-3", "x": 74.5, "y": 37.25 },
-          { "id": "stop-4", "x": 54, "y": 41.5 },
-          { "id": "stop-5", "x": 61.75, "y": 47.75 },
-          { "id": "stop-6", "x": 88, "y": 54.25 },
-          { "id": "stop-7", "x": 43.5, "y": 65.5 },
-          { "id": "stop-8", "x": 33, "y": 72.5 },
-          { "id": "dead-1", "x": 90.5, "y": 51.95 },
-          { "id": "dead-2", "x": 62.25, "y": 62 },
-          { "id": "dead-3", "x": 50, "y": 73.25 },
-          { "id": "dead-4", "x": 49, "y": 92.75 },
-          { "id": "finish", "x": 76, "y": 90.5, "finish": true }
+          {"id": "start", "x": 37, "y": 37},
+          {"id": "stop-1", "x": 51, "y": 24},
+          {"id": "stop-2", "x": 84.75, "y": 22.5},
+          {"id": "stop-3", "x": 74.5, "y": 37.25},
+          {"id": "stop-4", "x": 54, "y": 41.5},
+          {"id": "stop-5", "x": 61.75, "y": 47.75},
+          {"id": "stop-6", "x": 88, "y": 54.25},
+          {"id": "stop-7", "x": 43.5, "y": 65.5},
+          {"id": "stop-8", "x": 33, "y": 72.5},
+          {"id": "dead-1", "x": 90.5, "y": 51.95},
+          {"id": "dead-2", "x": 62.25, "y": 62},
+          {"id": "dead-3", "x": 50, "y": 73.25},
+          {"id": "dead-4", "x": 49, "y": 92.75},
+          {"id": "finish", "x": 76, "y": 90.5, "finish": true}
         ],
-  
         "edges": [
-          { "from": "start", "to": "stop-1", "label": "Left", "controlPoints": [{ "x": 40, "y": 34 }, { "x": 48, "y": 31 }], "arrowX": 39.5, "arrowY": 34.25, "arrowRotation": -28 },
-          { "from": "start", "to": "stop-8", "label": "Right", "controlPoints": [{ "x": 35, "y": 39.5}, { "x": 40, "y": 43.5 }, { "x": 34, "y": 54 }, { "x": 9, "y": 50.5 }, { "x": 5, "y": 70.5 }, { "x": 18, "y": 73.5 }, { "x": 29, "y": 69 }], "arrowX": 36, "arrowY": 39.75, "arrowRotation": -280 },
-          { "from": "stop-1", "to": "stop-2", "label": "Straight", "controlPoints": [{ "x": 55, "y": 11 }, { "x": 70, "y": 14 }], "arrowX": 53.45, "arrowY": 19, "arrowRotation": -57 },
-          { "from": "stop-1", "to": "start", "label": "Back", "controlPoints": [{ "x": 48, "y": 31 }, { "x": 40, "y": 34 }] , "arrowX": 47.75, "arrowY": 29.25, "arrowRotation": -225 },
-          { "from": "stop-1", "to": "stop-4", "label": "Right", "controlPoints": [{ "x": 76.5, "y": 29 }], "arrowX": 56, "arrowY": 25.25, "arrowRotation": 12 },
-          { "from": "stop-2", "to": "stop-1", "label": "Back", "controlPoints": [{ "x": 70, "y": 14 }, { "x": 55, "y": 11 }], "arrowX": 81, "arrowY": 20, "arrowRotation": -155 },
-          { "from": "stop-2", "to": "stop-3", "label": "Right", "controlPoints": [{ "x": 84, "y": 30 }], "arrowX": 82.6, "arrowY": 28, "arrowRotation": -235 },
-          { "from": "stop-2", "to": "dead-1", "label": "Straight", "controlPoints": [{ "x": 93, "y": 27 }, { "x": 95.5, "y": 45 }], "arrowX": 88.75, "arrowY": 25.75, "arrowRotation": 30 },
-          { "from": "dead-1", "to": "stop-2", "label": "Back", "controlPoints": [{ "x": 95.5, "y": 45 }, { "x": 93, "y": 27 }], "arrowX": 92.65, "arrowY": 48, "arrowRotation": -60 },
-          { "from": "stop-3", "to": "stop-2", "label": "Back", "controlPoints": [{ "x": 84, "y": 30 }], "arrowX": 78, "arrowY": 34, "arrowRotation": -40 },
-          { "from": "stop-3", "to": "stop-5", "label": "Straight", "controlPoints":[{ "x": 67, "y": 40}], "arrowX": 70.25, "arrowY": 39.35, "arrowRotation": 155 },
-          { "from": "stop-3", "to": "stop-6", "label": "Left", "controlPoints":[{ "x": 84, "y": 45}], "arrowX": 78.5, "arrowY": 41.15, "arrowRotation": 35 },
-          { "from": "stop-4", "to": "stop-1", "label": "Back", "controlPoints": [{ "x": 76.5, "y": 29 }], "arrowX": 59, "arrowY": 38, "arrowRotation": -30 },
-          { "from": "stop-4", "to": "stop-5", "label": "Straight", "arrowX": 58, "arrowY": 45.5, "arrowRotation": 30 },
-          { "from": "stop-4", "to": "stop-7", "label": "Straight", "controlPoints": [{ "x": 38, "y": 52}], "arrowX": 50, "arrowY": 44.75, "arrowRotation": -215 },
-          { "from": "stop-5", "to": "stop-3", "label": "Back", "controlPoints":[{ "x": 67, "y": 40}], "arrowX": 64.75, "arrowY": 44, "arrowRotation": -40 },
-          { "from": "stop-5", "to": "stop-4", "label": "Right", "arrowX": 58, "arrowY": 45.25, "arrowRotation": -145 },
-          { "from": "dead-2", "to": "stop-5", "label": "Back", "controlPoints": [{ "x": 60, "y": 55 }], "arrowX": 61.15, "arrowY": 57, "arrowRotation": -100 },
-          { "from": "stop-5", "to": "dead-2", "label": "Left", "controlPoints": [{ "x": 60, "y": 55 }], "arrowX": 61, "arrowY": 53.5, "arrowRotation": 98 },
-          { "from": "stop-6", "to": "stop-3", "label": "Back", "controlPoints":[{ "x": 84, "y": 45}], "arrowX": 85.85, "arrowY": 50, "arrowRotation": -125 },
-          { "from": "stop-6", "to": "finish", "label": "Right", "controlPoints":[{ "x": 85, "y": 59.75}, { "x": 52.75, "y": 68}, { "x": 49.25, "y": 96.25}, { "x": 76, "y": 98}], "arrowX": 84.25, "arrowY": 57.75, "arrowRotation": -210 },
-          { "from": "stop-7", "to": "stop-4", "label": "Back", "controlPoints": [{ "x": 38, "y": 52}], "arrowX": 42.35, "arrowY": 60.1, "arrowRotation": -105 },
-          { "from": "stop-7", "to": "dead-3", "label": "Straight", "arrowX": 46.25, "arrowY": 69.5, "arrowRotation": 50 },
-          { "from": "stop-7", "to": "stop-8", "label": "Right", "arrowX": 40, "arrowY": 67.15, "arrowRotation": -205 },
-          { "from": "dead-3", "to": "stop-7", "label": "Straight", "arrowX": 46.85, "arrowY": 70, "arrowRotation": -140 },
-          { "from": "stop-8", "to": "start", "label": "Back", "controlPoints":[ { "x": 29, "y": 69 }, { "x": 18, "y": 73.5 }, { "x": 5, "y": 70.5 }, { "x": 9, "y": 50.5 }, { "x": 34, "y": 54 }, { "x": 40, "y": 43.5 }, { "x": 35, "y": 39.5 } ], "arrowX": 30, "arrowY": 70.5, "arrowRotation": -165 },
-          { "from": "stop-8", "to": "stop-7", "label": "Back", "arrowX": 35.75, "arrowY": 70.15, "arrowRotation": -30 },
-          { "from": "stop-8", "to": "dead-4", "label": "Left", "controlPoints": [{ "x": 34.5, "y": 80 }, { "x": 25, "y": 85 }, { "x": 8, "y": 79 }, { "x": 9, "y": 96 }, { "x": 37, "y": 99 }], "arrowX": 33.5, "arrowY": 76.5, "arrowRotation": 90 },
-          { "from": "dead-4", "to": "stop-8", "label": "Back", "controlPoints": [{ "x": 37, "y": 99 }, { "x": 9, "y": 96 }, { "x": 8, "y": 79 }, { "x": 25, "y": 85 }, { "x": 34.5, "y": 80 }], "arrowX": 46, "arrowY": 94.25, "arrowRotation": -200 }
+          {
+            "from": "start", "to": "stop-1", "label": "Left",
+            "controlPoints": [{"x": 40, "y": 34}, {"x": 48, "y": 31}],
+            "arrowX": 39.5, "arrowY": 34.25, "arrowRotation": -28
+          },
+          {
+            "from": "start", "to": "stop-8", "label": "Right",
+            "controlPoints": [
+              {"x": 35, "y": 39.5}, {"x": 40, "y": 43.5}, {"x": 34, "y": 54}, {"x": 9, "y": 50.5},
+              {"x": 5, "y": 70.5}, {"x": 18, "y": 73.5}, {"x": 29, "y": 69}
+            ],
+            "arrowX": 36, "arrowY": 39.75, "arrowRotation": -280
+          },
+          {
+            "from": "stop-1", "to": "stop-2", "label": "Straight",
+            "controlPoints": [{"x": 55, "y": 11}, {"x": 70, "y": 14}],
+            "arrowX": 53.45, "arrowY": 19, "arrowRotation": -57
+          },
+          {
+            "from": "stop-1", "to": "start", "label": "Back",
+            "controlPoints": [{"x": 48, "y": 31}, {"x": 40, "y": 34}],
+            "arrowX": 47.75, "arrowY": 29.25, "arrowRotation": -225
+          },
+          {
+            "from": "stop-1", "to": "stop-4", "label": "Right",
+            "controlPoints": [{"x": 76.5, "y": 29}],
+            "arrowX": 56, "arrowY": 25.25, "arrowRotation": 12
+          },
+          {
+            "from": "stop-2", "to": "stop-1", "label": "Back",
+            "controlPoints": [{"x": 70, "y": 14}, {"x": 55, "y": 11}],
+            "arrowX": 81, "arrowY": 20, "arrowRotation": -155
+          },
+          {
+            "from": "stop-2", "to": "stop-3", "label": "Right",
+            "controlPoints": [{"x": 84, "y": 30}],
+            "arrowX": 82.6, "arrowY": 28, "arrowRotation": -235
+          },
+          {
+            "from": "stop-2", "to": "dead-1", "label": "Straight",
+            "controlPoints": [{"x": 93, "y": 27}, {"x": 95.5, "y": 45}],
+            "arrowX": 88.75, "arrowY": 25.75, "arrowRotation": 30
+          },
+          {
+            "from": "dead-1", "to": "stop-2", "label": "Back",
+            "controlPoints": [{"x": 95.5, "y": 45}, {"x": 93, "y": 27}],
+            "arrowX": 92.65, "arrowY": 48, "arrowRotation": -60
+          },
+          {
+            "from": "stop-3", "to": "stop-2", "label": "Back",
+            "controlPoints": [{"x": 84, "y": 30}],
+            "arrowX": 78, "arrowY": 34, "arrowRotation": -40
+          },
+          {
+            "from": "stop-3", "to": "stop-5", "label": "Straight",
+            "controlPoints": [{"x": 67, "y": 40}],
+            "arrowX": 70.25, "arrowY": 39.35, "arrowRotation": 155
+          },
+          {
+            "from": "stop-3", "to": "stop-6", "label": "Left",
+            "controlPoints": [{"x": 84, "y": 45}],
+            "arrowX": 78.5, "arrowY": 41.15, "arrowRotation": 35
+          },
+          {
+            "from": "stop-4", "to": "stop-1", "label": "Back",
+            "controlPoints": [{"x": 76.5, "y": 29}],
+            "arrowX": 59, "arrowY": 38, "arrowRotation": -30
+          },
+          {
+            "from": "stop-4", "to": "stop-5", "label": "Straight", "arrowX": 58, "arrowY": 45.5,
+            "arrowRotation": 30
+          },
+          {
+            "from": "stop-4", "to": "stop-7", "label": "Straight",
+            "controlPoints": [{"x": 38, "y": 52}],
+            "arrowX": 50, "arrowY": 44.75, "arrowRotation": -215
+          },
+          {
+            "from": "stop-5", "to": "stop-3", "label": "Back",
+            "controlPoints": [{"x": 67, "y": 40}],
+            "arrowX": 64.75, "arrowY": 44, "arrowRotation": -40
+          },
+          {
+            "from": "stop-5", "to": "stop-4", "label": "Right", "arrowX": 58, "arrowY": 45.25,
+            "arrowRotation": -145
+          },
+          {
+            "from": "dead-2", "to": "stop-5", "label": "Back",
+            "controlPoints": [{"x": 60, "y": 55}],
+            "arrowX": 61.15, "arrowY": 57, "arrowRotation": -100
+          },
+          {
+            "from": "stop-5", "to": "dead-2", "label": "Left",
+            "controlPoints": [{"x": 60, "y": 55}],
+            "arrowX": 61, "arrowY": 53.5, "arrowRotation": 98
+          },
+          {
+            "from": "stop-6", "to": "stop-3", "label": "Back",
+            "controlPoints": [{"x": 84, "y": 45}],
+            "arrowX": 85.85, "arrowY": 50, "arrowRotation": -125
+          },
+          {
+            "from": "stop-6", "to": "finish", "label": "Right",
+            "controlPoints": [{"x": 85, "y": 59.75}, {"x": 52.75, "y": 68}, {"x": 49.25, "y": 96.25}, {"x": 76, "y": 98}],
+            "arrowX": 84.25, "arrowY": 57.75, "arrowRotation": -210
+          },
+          {
+            "from": "stop-7", "to": "stop-4", "label": "Back",
+            "controlPoints": [{"x": 38, "y": 52}],
+            "arrowX": 42.35, "arrowY": 60.1, "arrowRotation": -105
+          },
+          {
+            "from": "stop-7", "to": "dead-3", "label": "Straight", "arrowX": 46.25, "arrowY": 69.5,
+            "arrowRotation": 50
+          },
+          {
+            "from": "stop-7", "to": "stop-8", "label": "Right", "arrowX": 40, "arrowY": 67.15,
+            "arrowRotation": -205
+          },
+          {
+            "from": "dead-3", "to": "stop-7", "label": "Straight", "arrowX": 46.85, "arrowY": 70,
+            "arrowRotation": -140
+          },
+          {
+            "from": "stop-8", "to": "start", "label": "Back",
+            "controlPoints": [
+              {"x": 29, "y": 69}, {"x": 18, "y": 73.5}, {"x": 5, "y": 70.5}, {"x": 9, "y": 50.5},
+              {"x": 34, "y": 54}, {"x": 40, "y": 43.5}, {"x": 35, "y": 39.5}
+            ],
+            "arrowX": 30, "arrowY": 70.5, "arrowRotation": -165
+          },
+          {
+            "from": "stop-8", "to": "stop-7", "label": "Back", "arrowX": 35.75, "arrowY": 70.15,
+            "arrowRotation": -30
+          },
+          {
+            "from": "stop-8", "to": "dead-4", "label": "Left",
+            "controlPoints": [
+              {"x": 34.5, "y": 80}, {"x": 25, "y": 85}, {"x": 8, "y": 79}, {"x": 9, "y": 96},
+              {"x": 37, "y": 99}
+            ],
+            "arrowX": 33.5, "arrowY": 76.5, "arrowRotation": 90
+          },
+          {
+            "from": "dead-4", "to": "stop-8", "label": "Back",
+            "controlPoints": [
+              {"x": 37, "y": 99}, {"x": 9, "y": 96}, {"x": 8, "y": 79}, {"x": 25, "y": 85},
+              {"x": 34.5, "y": 80}
+            ],
+            "arrowX": 46, "arrowY": 94.25, "arrowRotation": -200
+          }
+        ]
+      },
+      {
+        "type": "paragraph", "align": "center",
+        "text": "Use the arrows to guide the bicyclists to the playground. Watch out for dead ends!"
+      }
+    ]
+  },
+  {
+    "page": 13, "id": "tree-anatomy", "textScale": 1.7,
+    "blocks": [
+      {"type": "heading", "text": "Tree Anatomy"},
+      {
+        "type": "paragraph",
+        "text": "Trees are one of our most important resources. Some of the things made from trees include lumber for houses, furniture, maple syrup, pencils, baseball bats, paper, and tool handles."
+      },
+      {"type": "paragraph", "text": "The trunk of a tree is made up of five different layers."},
+      {
+        "type": "paragraph",
+        "lead": "Look at the picture below, read the descriptions, and label the layers of the trunk.",
+        "text": ""
+      },
+      {
+        "type": "paragraph", "lead": "A. Outer Bark:",
+        "text": "The outside layer that protects the tree from extreme temperatures, rain, and insects."
+      },
+      {
+        "type": "paragraph", "lead": "B. Inner Bark or Phloem:",
+        "text": "Layer that carries nutrients down from the leaves to the rest of the tree. As the tree gets older, the outer part of the inner bark or phloem dies and becomes outer bark."
+      },
+      {
+        "type": "paragraph", "lead": "C. Cambium:",
+        "text": "Layer that is the growing part of the trunk. It annually produces a ring of new bark and wood in response to hormones called auxins that pass down through the inner bark or phloem with nutrients from the leaves. Auxins stimulate growth in cells of the tree and are produced by leaf buds at the ends of branches as soon as they start growing in the spring."
+      },
+      {
+        "type": "paragraph", "lead": "D. Sapwood:",
+        "text": "Layer that carries water and nutrients up from the roots to the rest of the tree. As the tree gets older, the inner part of the sapwood dies and turns to heartwood."
+      },
+      {
+        "type": "paragraph", "lead": "E. Heartwood:",
+        "text": "The center, supporting layer of the tree. It is dead wood made up of fibers bound together by a chemical called lignin. In many ways the heartwood is strong as steel."
+      },
+      {
+        "type": "label-diagram", "activityId": "tree-layers", "image": "assets/pages/tree_anatomy_diagram.png",
+        "lines": [
+          [44.92, 22.05, 53.26, 10.89], [46.04, 29.67, 53.26, 19.53], [41.39, 69.82, 53.19, 79.42],
+          [33.12, 71.37, 53.19, 87.74], [18.12, 68.78, 53.19, 97.17]
+        ],
+        "notes": [
+          {
+            "x": 57.03, "y": 37.35, "width": 40,
+            "text": "A tree produces a trunk ring every year. Count the rings on top of the trunk to tell how old the tree is."
+          }
+        ],
+        "fields": [
+          {
+            "id": "A", "letter": true, "prefix": "A", "x": 53.53, "y": 4.63, "width": 38.01, "height": 6.04,
+            "answers": ["Outer Bark"]
+          },
+          {
+            "id": "B", "letter": true, "prefix": "B", "x": 53.53, "y": 13.15, "width": 38.01, "height": 6.04,
+            "answers": ["Inner Bark", "Phloem", "Inner Bark or Phloem"]
+          },
+          {
+            "id": "C", "letter": true, "prefix": "C", "x": 53.53, "y": 73.49, "width": 38.01, "height": 6.04,
+            "answers": ["Cambium"]
+          },
+          {
+            "id": "D", "letter": true, "prefix": "D", "x": 53.53, "y": 81.71, "width": 38.01, "height": 6.04,
+            "answers": ["Sapwood"]
+          },
+          {
+            "id": "E", "letter": true, "prefix": "E", "x": 53.53, "y": 91.24, "width": 38.01, "height": 6.04,
+            "answers": ["Heartwood"]
+          },
+          {
+            "id": "years", "prefix": "The tree is", "suffix": "years old.", "align": "center", "x": 57.03,
+            "y": 56.68, "width": 40, "height": 4.83,
+            "answers": ["10"]
+          }
         ]
       }
     ]
   },
-
-{
-  "page": 13,
-  "textScale": 1.7,
-  "blocks": [
-    {
-      "type": "heading",
-      "text": "Tree Anatomy"
-    },
-    {
-      "type": "paragraph",
-      "text": "Trees are one of our most important resources. Some of the things made from trees include lumber for houses, furniture, maple syrup, pencils, baseball bats, paper, and tool handles."
-    },
-    {
-      "type": "paragraph",
-      "text": "The trunk of a tree is made up of five different layers."
-    },
-    {
-      "type": "paragraph",
-      "lead": "Look at the picture below, read the descriptions, and label the layers of the trunk.",
-      "text": ""
-    },
-    {
-      "type": "paragraph",
-      "lead": "A. Outer Bark:",
-      "text": "The outside layer that protects the tree from extreme temperatures, rain, and insects."
-    },
-    {
-      "type": "paragraph",
-      "lead": "B. Inner Bark or Phloem:",
-      "text": "Layer that carries nutrients down from the leaves to the rest of the tree. As the tree gets older, the outer part of the inner bark or phloem dies and becomes outer bark."
-    },
-    {
-      "type": "paragraph",
-      "lead": "C. Cambium:",
-      "text": "Layer that is the growing part of the trunk. It annually produces a ring of new bark and wood in response to hormones called auxins that pass down through the inner bark or phloem with nutrients from the leaves. Auxins stimulate growth in cells of the tree and are produced by leaf buds at the ends of branches as soon as they start growing in the spring."
-    },
-    {
-      "type": "paragraph",
-      "lead": "D. Sapwood:",
-      "text": "Layer that carries water and nutrients up from the roots to the rest of the tree. As the tree gets older, the inner part of the sapwood dies and turns to heartwood."
-    },
-    {
-      "type": "paragraph",
-      "lead": "E. Heartwood:",
-      "text": "The center, supporting layer of the tree. It is dead wood made up of fibers bound together by a chemical called lignin. In many ways the heartwood is strong as steel."
-    },
-    {
-      "type": "label-diagram",
-      "activityId": "tree-layers",
-      "image": "assets/pages/tree_anatomy_diagram.png",
-      "lines": [
-        [
-          44.92,
-          22.05,
-          53.26,
-          10.89
-        ],
-        [
-          46.04,
-          29.67,
-          53.26,
-          19.53
-        ],
-        [
-          41.39,
-          69.82,
-          53.19,
-          79.42
-        ],
-        [
-          33.12,
-          71.37,
-          53.19,
-          87.74
-        ],
-        [
-          18.12,
-          68.78,
-          53.19,
-          97.17
-        ]
-      ],
-      "notes": [
-        {
-          "x": 57.03,
-          "y": 37.35,
-          "width": 40,
-          "text": "A tree produces a trunk ring every year. Count the rings on top of the trunk to tell how old the tree is."
-        }
-      ],
-      "fields": [
-        {
-          "id": "A",
-          "letter": true,
-          "prefix": "A",
-          "x": 53.53,
-          "y": 4.63,
-          "width": 38.01,
-          "height": 6.04,
-          "answers": [
-            "Outer Bark"
-          ]
-        },
-        {
-          "id": "B",
-          "letter": true,
-          "prefix": "B",
-          "x": 53.53,
-          "y": 13.15,
-          "width": 38.01,
-          "height": 6.04,
-          "answers": [
-            "Inner Bark",
-            "Phloem",
-            "Inner Bark or Phloem"
-          ]
-        },
-        {
-          "id": "C",
-          "letter": true,
-          "prefix": "C",
-          "x": 53.53,
-          "y": 73.49,
-          "width": 38.01,
-          "height": 6.04,
-          "answers": [
-            "Cambium"
-          ]
-        },
-        {
-          "id": "D",
-          "letter": true,
-          "prefix": "D",
-          "x": 53.53,
-          "y": 81.71,
-          "width": 38.01,
-          "height": 6.04,
-          "answers": [
-            "Sapwood"
-          ]
-        },
-        {
-          "id": "E",
-          "letter": true,
-          "prefix": "E",
-          "x": 53.53,
-          "y": 91.24,
-          "width": 38.01,
-          "height": 6.04,
-          "answers": [
-            "Heartwood"
-          ]
-        },
-        {
-          "id": "years",
-          "prefix": "The tree is",
-          "suffix": "years old.",
-          "align": "center",
-          "x": 57.03,
-          "y": 56.68,
-          "width": 40,
-          "height": 4.83,
-          "answers": [
-            "10"
-          ]
-        }
-      ]
-    }
-  ]
-},
-
-{
-  "page": 14,
-  "textScale": 1.5,
-  "blocks": [
-    {
-      "type": "heading",
-      "text": "Leaf Identification"
-    },
-    {
-      "type": "paragraph",
-      "text": "Identify the leaves by writing the number of the leaf next to the name of the tree."
-    },
-    {
-      "type": "label-diagram",
-      "activityId": "leaf-identification",
-      "image": "assets/pages/leaf_identification.png",
-      "lines": [],
-      "notes": [],
-      "fields": [
-        {
-          "id": "cottonwood",
-          "x": 0.71,
-          "y": 1.3,
-          "width": 5.0,
-          "height": 2.51,
-          "align": "center",
-          "inputWidth": 4.6,
-          "answers": [
-            "6"
-          ]
-        },
-        {
-          "id": "slippery-elm",
-          "x": 0.71,
-          "y": 9.14,
-          "width": 5.0,
-          "height": 2.51,
-          "align": "center",
-          "inputWidth": 4.6,
-          "answers": [
-            "2"
-          ]
-        },
-        {
-          "id": "green-ash",
-          "x": 0.71,
-          "y": 16.97,
-          "width": 5.0,
-          "height": 2.51,
-          "align": "center",
-          "inputWidth": 4.6,
-          "answers": [
-            "9"
-          ]
-        },
-        {
-          "id": "red-maple",
-          "x": 0.71,
-          "y": 24.81,
-          "width": 5.0,
-          "height": 2.51,
-          "align": "center",
-          "inputWidth": 4.6,
-          "answers": [
-            "5"
-          ]
-        },
-        {
-          "id": "red-mulberry",
-          "x": 0.71,
-          "y": 32.65,
-          "width": 5.0,
-          "height": 2.51,
-          "align": "center",
-          "inputWidth": 4.6,
-          "answers": [
-            "4"
-          ]
-        },
-        {
-          "id": "sycamore",
-          "x": 0.71,
-          "y": 40.49,
-          "width": 5.0,
-          "height": 2.51,
-          "align": "center",
-          "inputWidth": 4.6,
-          "answers": [
-            "8"
-          ]
-        },
-        {
-          "id": "black-willow",
-          "x": 0.71,
-          "y": 48.32,
-          "width": 5.0,
-          "height": 2.51,
-          "align": "center",
-          "inputWidth": 4.6,
-          "answers": [
-            "12"
-          ]
-        },
-        {
-          "id": "redbud",
-          "x": 0.71,
-          "y": 56.16,
-          "width": 5.0,
-          "height": 2.51,
-          "align": "center",
-          "inputWidth": 4.6,
-          "answers": [
-            "7"
-          ]
-        },
-        {
-          "id": "dogwood",
-          "x": 0.71,
-          "y": 64.0,
-          "width": 5.0,
-          "height": 2.51,
-          "align": "center",
-          "inputWidth": 4.6,
-          "answers": [
-            "11"
-          ]
-        },
-        {
-          "id": "red-oak",
-          "x": 0.71,
-          "y": 71.83,
-          "width": 5.0,
-          "height": 2.51,
-          "align": "center",
-          "inputWidth": 4.6,
-          "answers": [
-            "10"
-          ]
-        },
-        {
-          "id": "sassafras",
-          "x": 0.71,
-          "y": 79.67,
-          "width": 5.0,
-          "height": 2.51,
-          "align": "center",
-          "inputWidth": 4.6,
-          "answers": [
-            "3"
-          ]
-        },
-        {
-          "id": "white-oak",
-          "x": 0.71,
-          "y": 87.51,
-          "width": 5.0,
-          "height": 2.51,
-          "align": "center",
-          "inputWidth": 4.6,
-          "answers": [
-            "13"
-          ]
-        },
-        {
-          "id": "black-cherry",
-          "x": 0.71,
-          "y": 95.34,
-          "width": 5.0,
-          "height": 2.51,
-          "align": "center",
-          "inputWidth": 4.6,
-          "answers": [
-            "1"
-          ]
-        }
-      ]
-    }
-  ]
-},
-
-{
-  "page": 15,
-  "textScale": 1.5,
-  "blocks": [
-    {
-      "type": "heading",
-      "text": "Know Your Fish"
-    },
-    {
-      "type": "paragraph",
-      "lead": "Walleye:",
-      "text": "The color of a walleye's back is dark brown, golden-brown, or olive-brown. It has a yellow belly and silver or yellowish-colored sides. A walleye has a large mouth filled with sharp teeth and thousands of taste buds on its lips. Its front dorsal fin has sharp spines. The name “walleye” refers to its eyes which glow in the dark thanks to a reflective layer that helps it see in dark, murky water."
-    },
-    {
-      "type": "paragraph",
-      "lead": "Largemouth Bass:",
-      "text": "The color of a largemouth bass varies depending on the type of water they live in. It is generally an olive-green colored fish with a dark horizontal stripe along each side and a whitish belly. The largemouth bass is the most popular fish in the United States with about 30 million people that fish for it."
-    },
-    {
-      "type": "paragraph",
-      "lead": "Bluegill:",
-      "text": "The body of a bluegill is dark green in color and oval shaped with dark bars running vertically down its sides. Behind each eye is a black ear flap. The belly of a female bluegill is yellow, and the belly of a male is a rusty red color. Bluegill is one of the easiest fish to catch but remember to use a very small hook because its mouth is not very big."
-    },
-    {
-      "type": "paragraph",
-      "lead": "Crappie:",
-      "text": "A black crappie has seven to eight spines in its dorsal fin and a white crappie has six. A black crappie has irregular speckles and blotches and a white crappie has faint vertical bars in its color pattern. Crappie are most active at dawn and dusk when they feed. One of the best baits for crappie is live minnows. To bait up, hook the minnow right below its dorsal fin and don’t forget to use a bobber."
-    },
-    {
-      "type": "paragraph",
-      "lead": "Channel Catfish:",
-      "text": "The most common catfish species in the United States is the channel catfish. Catfish are smooth with no scales and their entire body is covered with taste buds. The channel catfish is olive to light blue in color with black speckles on its sides. It has a forked tail, whisker-like organs around the mouth, broad flat head, and thin body. Bait for catfishing includes night crawlers, chicken liver, grasshoppers, minnows, cut bait, stink bait, cheese, hot dogs, and even bubble gum!"
-    },
-    {
-      "type": "paragraph",
-      "text": "Now that you know a little bit about a few of the fish found in the United States, can you identify them? Write the name of the fish next to each picture."
-    },
-    {
-      "type": "label-diagram",
-      "activityId": "know-your-fish",
-      "image": "assets/pages/identify_fishes.png",
-      "lines": [],
-      "notes": [],
-      "fields": [
-        {
-          "id": "1",
-          "prefix": "1.",
-          "x": 4.11,
-          "y": 40.73,
-          "width": 28.75,
-          "height": 5.45,
-          "answers": [
-            "Walleye"
-          ]
-        },
-        {
-          "id": "2",
-          "prefix": "2.",
-          "x": 63.75,
-          "y": 40.73,
-          "width": 28.75,
-          "height": 5.45,
-          "answers": [
-            "Largemouth Bass",
-            "Bass",
-            "Largemouth"
-          ]
-        },
-        {
-          "id": "3",
-          "prefix": "3.",
-          "x": 32.86,
-          "y": 58.18,
-          "width": 28.75,
-          "height": 5.45,
-          "answers": [
-            "Bluegill"
-          ]
-        },
-        {
-          "id": "4",
-          "prefix": "4.",
-          "x": 5.71,
-          "y": 89.09,
-          "width": 28.75,
-          "height": 5.45,
-          "answers": [
-            "Crappie",
-            "Black Crappie",
-            "White Crappie"
-          ]
-        },
-        {
-          "id": "5",
-          "prefix": "5.",
-          "x": 61.96,
-          "y": 89.09,
-          "width": 28.75,
-          "height": 5.45,
-          "answers": [
-            "Channel Catfish",
-            "Catfish"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "text": "List three fish that are at the lake or river that you are visiting."
-    },
-    {
-      "type": "columns",
-      "weights": [
-        1,
-        1,
-        1
-      ],
-      "columns": [
-        [
-          {
-            "type": "text-input",
-            "id": "local-fish-1",
-            "prompt": "1."
-          }
-        ],
-        [
-          {
-            "type": "text-input",
-            "id": "local-fish-2",
-            "prompt": "2."
-          }
-        ],
-        [
-          {
-            "type": "text-input",
-            "id": "local-fish-3",
-            "prompt": "3."
-          }
-        ]
-      ]
-    }
-  ]
-},
-
-{
-  "page": 16,
-  "textScale": 1.5,
-  "blocks": [
-    {
-      "type": "heading",
-      "text": "Animal Tracks"
-    },
-    {
-      "type": "paragraph",
-      "text": "Animal tracks are evidence of wildlife that live in the area. Match the animal’s picture to its name, then match the name to the animal’s track."
-    },
-    {
-      "type": "match-chain",
-      "activityId": "animal-tracks",
-      "images": {
-        "animals": "assets/pages/tracks_animals.png",
-        "names": "assets/pages/tracks_names.png",
-        "tracks": "assets/pages/tracks_tracks.png"
+  {
+    "page": 14, "id": "leaf-identification", "textScale": 1.5,
+    "blocks": [
+      {"type": "heading", "text": "Leaf Identification"},
+      {
+        "type": "paragraph",
+        "text": "Identify the leaves by writing the number of the leaf next to the name of the tree."
       },
-      "items": [
-        {
-          "id": "deer",
-          "animal": {
-            "x": 1.97,
-            "y": 2.48,
-            "width": 19.82,
-            "height": 58.15
-          },
-          "name": {
-            "x": 2.5,
-            "y": 6.94,
-            "width": 20.71,
-            "height": 31.94
-          },
-          "track": {
-            "x": 67.14,
-            "y": 3.88,
-            "width": 9.46,
-            "height": 42.67
-          }
-        },
-        {
-          "id": "otter",
-          "animal": {
-            "x": 24.65,
-            "y": 5.67,
-            "width": 27.85,
-            "height": 17.73
-          },
-          "name": {
-            "x": 40.0,
-            "y": 62.5,
-            "width": 13.21,
-            "height": 31.94
-          },
-          "track": {
-            "x": 5.54,
-            "y": 62.5,
-            "width": 16.25,
-            "height": 34.91
-          }
-        },
-        {
-          "id": "muskrat",
-          "animal": {
-            "x": 57.86,
-            "y": 7.45,
-            "width": 17.67,
-            "height": 10.28
-          },
-          "name": {
-            "x": 54.46,
-            "y": 6.94,
-            "width": 10.36,
-            "height": 31.94
-          },
-          "track": {
-            "x": 52.68,
-            "y": 4.31,
-            "width": 10.36,
-            "height": 40.09
-          }
-        },
-        {
-          "id": "raccoon",
-          "animal": {
-            "x": 76.97,
-            "y": 1.77,
-            "width": 19.99,
-            "height": 23.4
-          },
-          "name": {
-            "x": 40.0,
-            "y": 6.94,
-            "width": 10.54,
-            "height": 31.94
-          },
-          "track": {
-            "x": 27.14,
-            "y": 52.59,
-            "width": 8.75,
-            "height": 42.67
-          }
-        },
-        {
-          "id": "duck",
-          "animal": {
-            "x": 25.72,
-            "y": 29.43,
-            "width": 18.21,
-            "height": 28.72
-          },
-          "name": {
-            "x": 7.5,
-            "y": 62.5,
-            "width": 15.71,
-            "height": 31.94
-          },
-          "track": {
-            "x": 82.14,
-            "y": 9.48,
-            "width": 13.21,
-            "height": 30.6
-          }
-        },
-        {
-          "id": "bobcat",
-          "animal": {
-            "x": 46.07,
-            "y": 29.08,
-            "width": 17.14,
-            "height": 30.49
-          },
-          "name": {
-            "x": 27.14,
-            "y": 6.94,
-            "width": 8.93,
-            "height": 31.94
-          },
-          "track": {
-            "x": 15.71,
-            "y": 6.03,
-            "width": 14.64,
-            "height": 33.62
-          }
-        },
-        {
-          "id": "heron",
-          "animal": {
-            "x": 67.5,
-            "y": 26.95,
-            "width": 19.64,
-            "height": 35.46
-          },
-          "name": {
-            "x": 71.07,
-            "y": 62.5,
-            "width": 20.0,
-            "height": 31.94
-          },
-          "track": {
-            "x": 35.0,
-            "y": 1.72,
-            "width": 13.75,
-            "height": 50.43
-          }
-        },
-        {
-          "id": "beaver",
-          "animal": {
-            "x": 1.07,
-            "y": 74.82,
-            "width": 24.28,
-            "height": 23.4
-          },
-          "name": {
-            "x": 27.32,
-            "y": 62.5,
-            "width": 8.75,
-            "height": 31.94
-          },
-          "track": {
-            "x": 61.43,
-            "y": 56.03,
-            "width": 13.21,
-            "height": 40.09
-          }
-        },
-        {
-          "id": "mink",
-          "animal": {
-            "x": 30.9,
-            "y": 78.72,
-            "width": 13.39,
-            "height": 16.31
-          },
-          "name": {
-            "x": 89.46,
-            "y": 6.94,
-            "width": 6.61,
-            "height": 31.94
-          },
-          "track": {
-            "x": 78.39,
-            "y": 66.38,
-            "width": 12.32,
-            "height": 27.59
-          }
-        },
-        {
-          "id": "skunk",
-          "animal": {
-            "x": 50.72,
-            "y": 65.96,
-            "width": 11.6,
-            "height": 30.14
-          },
-          "name": {
-            "x": 68.75,
-            "y": 6.94,
-            "width": 16.79,
-            "height": 31.94
-          },
-          "track": {
-            "x": 2.32,
-            "y": 6.47,
-            "width": 8.93,
-            "height": 38.79
-          }
-        },
-        {
-          "id": "fox",
-          "animal": {
-            "x": 67.5,
-            "y": 62.41,
-            "width": 25.35,
-            "height": 35.1
-          },
-          "name": {
-            "x": 57.14,
-            "y": 62.5,
-            "width": 9.82,
-            "height": 31.94
-          },
-          "track": {
-            "x": 43.21,
-            "y": 62.93,
-            "width": 12.14,
-            "height": 34.05
-          }
-        }
-      ]
-    }
-  ]
-},
-
-{
-  "page": 17,
-  "textScale": 1.67,
-  "blocks": [
-    {
-      "type": "heading",
-      "text": "Bald Eagles"
-    },
-    {
-      "type": "text-with-image",
-      "image": "assets/illustrations/bald_eagle_flying.png",
-      "imagePosition": "right",
-      "imageWidth": 30,
-      "paragraphs": [
-        "The bald eagle is the national symbol of the United States. They have made an amazing recovery from the brink of extinction. Habitat protection has been one factor in their recovery. For this activity, complete the problems in the eggs, then fill in the “Amazing Eagle Facts” blanks by matching the egg number with the fact number."
-      ]
-    },
-    {
-      "type": "fact-nest",
-      "activityId": "bald-eagles",
-      "image": "assets/pages/bald_eagle_nest.png",
-      "title": "Amazing Eagle Facts",
-      "facts": [
-        {
-          "text": "After _____ years, their head and tail turn white.",
-          "answer": "5"
-        },
-        {
-          "text": "Adult bald eagles may weigh about _____ pounds.",
-          "answer": "14"
-        },
-        {
-          "text": "On average, they stand _____ inches tall.",
-          "answer": "32"
-        },
-        {
-          "text": "An adult eagle’s wingspan may be up to _____ feet.",
-          "answer": "8"
-        },
-        {
-          "text": "Eagles live to be about _____ years old.",
-          "answer": "30"
-        },
-        {
-          "text": "Eagles have up to _____ feathers.",
-          "answer": "7000"
-        },
-        {
-          "text": "They can reach diving speeds (flying downward) of _____ miles per hour.",
-          "answer": "100"
-        },
-        {
-          "text": "Their nest may be up to _____ feet in diameter (the distance across it).",
-          "answer": "10"
-        },
-        {
-          "text": "Their nest can weigh _____ pounds or more.",
-          "answer": "1000"
-        }
-      ],
-      "width": 88
-    },
-    {
-      "type": "image",
-      "src": "assets/pages/bald_eagle_success_story.png",
-      "width": 100
-    }
-  ]
-},
-
-{
-  "page": 18,
-  "textScale": 1.67,
-  "blocks": [
-    {
-      "type": "heading",
-      "text": "Invasive Species"
-    },
-    {
-      "type": "paragraph",
-      "text": "Invasive species are plants and animals that don't naturally live in an ecosystem and their arrival can cause economic and environmental damage and harm to human health. Invasive species are often introduced by human actions, so we can all help stop the spread of invasive species in the United States."
-    },
-    {
-      "type": "columns",
-      "weights": [
-        2,
-        1
-      ],
-      "columns": [
-        [
+      {
+        "type": "label-diagram", "activityId": "leaf-identification",
+        "image": "assets/pages/leaf_identification.png",
+        "lines": [],
+        "notes": [],
+        "fields": [
           {
-            "type": "text-with-image",
-            "image": "assets/illustrations/invasive_zebra_mussels.png",
-            "imagePosition": "left",
-            "imageWidth": 62,
-            "paragraphs": [
+            "id": "cottonwood", "x": 0.71, "y": 1.3, "width": 5.0, "height": 2.51, "align": "center",
+            "inputWidth": 4.6,
+            "answers": ["6"]
+          },
+          {
+            "id": "slippery-elm", "x": 0.71, "y": 9.14, "width": 5.0, "height": 2.51, "align": "center",
+            "inputWidth": 4.6,
+            "answers": ["2"]
+          },
+          {
+            "id": "green-ash", "x": 0.71, "y": 16.97, "width": 5.0, "height": 2.51, "align": "center",
+            "inputWidth": 4.6,
+            "answers": ["9"]
+          },
+          {
+            "id": "red-maple", "x": 0.71, "y": 24.81, "width": 5.0, "height": 2.51, "align": "center",
+            "inputWidth": 4.6,
+            "answers": ["5"]
+          },
+          {
+            "id": "red-mulberry", "x": 0.71, "y": 32.65, "width": 5.0, "height": 2.51, "align": "center",
+            "inputWidth": 4.6,
+            "answers": ["4"]
+          },
+          {
+            "id": "sycamore", "x": 0.71, "y": 40.49, "width": 5.0, "height": 2.51, "align": "center",
+            "inputWidth": 4.6,
+            "answers": ["8"]
+          },
+          {
+            "id": "black-willow", "x": 0.71, "y": 48.32, "width": 5.0, "height": 2.51, "align": "center",
+            "inputWidth": 4.6,
+            "answers": ["12"]
+          },
+          {
+            "id": "redbud", "x": 0.71, "y": 56.16, "width": 5.0, "height": 2.51, "align": "center",
+            "inputWidth": 4.6,
+            "answers": ["7"]
+          },
+          {
+            "id": "dogwood", "x": 0.71, "y": 64.0, "width": 5.0, "height": 2.51, "align": "center",
+            "inputWidth": 4.6,
+            "answers": ["11"]
+          },
+          {
+            "id": "red-oak", "x": 0.71, "y": 71.83, "width": 5.0, "height": 2.51, "align": "center",
+            "inputWidth": 4.6,
+            "answers": ["10"]
+          },
+          {
+            "id": "sassafras", "x": 0.71, "y": 79.67, "width": 5.0, "height": 2.51, "align": "center",
+            "inputWidth": 4.6,
+            "answers": ["3"]
+          },
+          {
+            "id": "white-oak", "x": 0.71, "y": 87.51, "width": 5.0, "height": 2.51, "align": "center",
+            "inputWidth": 4.6,
+            "answers": ["13"]
+          },
+          {
+            "id": "black-cherry", "x": 0.71, "y": 95.34, "width": 5.0, "height": 2.51, "align": "center",
+            "inputWidth": 4.6,
+            "answers": ["1"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "page": 15, "id": "bald-eagles", "textScale": 1.67,
+    "blocks": [
+      {"type": "heading", "text": "Bald Eagles"},
+      {
+        "type": "text-with-image", "image": "assets/illustrations/bald_eagle_flying.png",
+        "imagePosition": "right", "imageWidth": 30,
+        "paragraphs": [
+          "The bald eagle is the national symbol of the United States. They have made an amazing recovery from the brink of extinction. Habitat protection has been one factor in their recovery. For this activity, complete the problems in the eggs, then fill in the “Amazing Eagle Facts” blanks by matching the egg number with the fact number."
+        ]
+      },
+      {
+        "type": "fact-nest", "activityId": "bald-eagles", "image": "assets/pages/bald_eagle_nest.png",
+        "title": "Amazing Eagle Facts",
+        "facts": [
+          {"text": "After _____ years, their head and tail turn white.", "answer": "5"},
+          {"text": "Adult bald eagles may weigh about _____ pounds.", "answer": "14"},
+          {"text": "On average, they stand _____ inches tall.", "answer": "32"},
+          {"text": "An adult eagle’s wingspan may be up to _____ feet.", "answer": "8"},
+          {"text": "Eagles live to be about _____ years old.", "answer": "30"},
+          {"text": "Eagles have up to _____ feathers.", "answer": "7000"},
+          {"text": "They can reach diving speeds (flying downward) of _____ miles per hour.", "answer": "100"},
+          {"text": "Their nest may be up to _____ feet in diameter (the distance across it).", "answer": "10"},
+          {"text": "Their nest can weigh _____ pounds or more.", "answer": "1000"}
+        ],
+        "width": 88
+      },
+      {"type": "image", "src": "assets/pages/bald_eagle_success_story.png", "width": 100}
+    ]
+  },
+  {
+    "page": 16, "id": "know-your-fish", "textScale": 1.5,
+    "blocks": [
+      {"type": "heading", "text": "Know Your Fish"},
+      {
+        "type": "paragraph", "lead": "Walleye:",
+        "text": "The color of a walleye's back is dark brown, golden-brown, or olive-brown. It has a yellow belly and silver or yellowish-colored sides. A walleye has a large mouth filled with sharp teeth and thousands of taste buds on its lips. Its front dorsal fin has sharp spines. The name “walleye” refers to its eyes which glow in the dark thanks to a reflective layer that helps it see in dark, murky water."
+      },
+      {
+        "type": "paragraph", "lead": "Largemouth Bass:",
+        "text": "The color of a largemouth bass varies depending on the type of water they live in. It is generally an olive-green colored fish with a dark horizontal stripe along each side and a whitish belly. The largemouth bass is the most popular fish in the United States with about 30 million people that fish for it."
+      },
+      {
+        "type": "paragraph", "lead": "Bluegill:",
+        "text": "The body of a bluegill is dark green in color and oval shaped with dark bars running vertically down its sides. Behind each eye is a black ear flap. The belly of a female bluegill is yellow, and the belly of a male is a rusty red color. Bluegill is one of the easiest fish to catch but remember to use a very small hook because its mouth is not very big."
+      },
+      {
+        "type": "paragraph", "lead": "Crappie:",
+        "text": "A black crappie has seven to eight spines in its dorsal fin and a white crappie has six. A black crappie has irregular speckles and blotches and a white crappie has faint vertical bars in its color pattern. Crappie are most active at dawn and dusk when they feed. One of the best baits for crappie is live minnows. To bait up, hook the minnow right below its dorsal fin and don’t forget to use a bobber."
+      },
+      {
+        "type": "paragraph", "lead": "Channel Catfish:",
+        "text": "The most common catfish species in the United States is the channel catfish. Catfish are smooth with no scales and their entire body is covered with taste buds. The channel catfish is olive to light blue in color with black speckles on its sides. It has a forked tail, whisker-like organs around the mouth, broad flat head, and thin body. Bait for catfishing includes night crawlers, chicken liver, grasshoppers, minnows, cut bait, stink bait, cheese, hot dogs, and even bubble gum!"
+      },
+      {
+        "type": "paragraph",
+        "text": "Now that you know a little bit about a few of the fish found in the United States, can you identify them? Write the name of the fish next to each picture."
+      },
+      {
+        "type": "label-diagram", "activityId": "know-your-fish", "image": "assets/pages/identify_fishes.png",
+        "lines": [],
+        "notes": [],
+        "fields": [
+          {
+            "id": "1", "prefix": "1.", "x": 4.11, "y": 40.73, "width": 28.75, "height": 5.45,
+            "answers": ["Walleye"]
+          },
+          {
+            "id": "2", "prefix": "2.", "x": 63.75, "y": 40.73, "width": 28.75, "height": 5.45,
+            "answers": ["Largemouth Bass", "Bass", "Largemouth"]
+          },
+          {
+            "id": "3", "prefix": "3.", "x": 32.86, "y": 58.18, "width": 28.75, "height": 5.45,
+            "answers": ["Bluegill"]
+          },
+          {
+            "id": "4", "prefix": "4.", "x": 5.71, "y": 89.09, "width": 28.75, "height": 5.45,
+            "answers": ["Crappie", "Black Crappie", "White Crappie"]
+          },
+          {
+            "id": "5", "prefix": "5.", "x": 61.96, "y": 89.09, "width": 28.75, "height": 5.45,
+            "answers": ["Channel Catfish", "Catfish"]
+          }
+        ]
+      },
+      {"type": "paragraph", "text": "List three fish that are at the lake or river that you are visiting."},
+      {
+        "type": "columns",
+        "weights": [1, 1, 1],
+        "columns": [
+          [
+            {"type": "text-input", "id": "local-fish-1", "prompt": "1."}
+          ],
+          [
+            {"type": "text-input", "id": "local-fish-2", "prompt": "2."}
+          ],
+          [
+            {"type": "text-input", "id": "local-fish-3", "prompt": "3."}
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "page": 17, "id": "animal-tracks", "textScale": 1.5,
+    "blocks": [
+      {"type": "heading", "text": "Animal Tracks"},
+      {
+        "type": "paragraph",
+        "text": "Animal tracks are evidence of wildlife that live in the area. Match the animal’s picture to its name, then match the name to the animal’s track."
+      },
+      {
+        "type": "match-chain", "activityId": "animal-tracks",
+        "images": {
+          "animals": "assets/pages/tracks_animals.png", "names": "assets/pages/tracks_names.png",
+          "tracks": "assets/pages/tracks_tracks.png"
+        },
+        "items": [
+          {
+            "id": "deer",
+            "animal": {"x": 1.97, "y": 2.48, "width": 19.82, "height": 58.15},
+            "name": {"x": 2.5, "y": 6.94, "width": 20.71, "height": 31.94},
+            "track": {"x": 67.14, "y": 3.88, "width": 9.46, "height": 42.67}
+          },
+          {
+            "id": "otter",
+            "animal": {"x": 24.65, "y": 5.67, "width": 27.85, "height": 17.73},
+            "name": {"x": 40.0, "y": 62.5, "width": 13.21, "height": 31.94},
+            "track": {"x": 5.54, "y": 62.5, "width": 16.25, "height": 34.91}
+          },
+          {
+            "id": "muskrat",
+            "animal": {"x": 57.86, "y": 7.45, "width": 17.67, "height": 10.28},
+            "name": {"x": 54.46, "y": 6.94, "width": 10.36, "height": 31.94},
+            "track": {"x": 52.68, "y": 4.31, "width": 10.36, "height": 40.09}
+          },
+          {
+            "id": "raccoon",
+            "animal": {"x": 76.97, "y": 1.77, "width": 19.99, "height": 23.4},
+            "name": {"x": 40.0, "y": 6.94, "width": 10.54, "height": 31.94},
+            "track": {"x": 27.14, "y": 52.59, "width": 8.75, "height": 42.67}
+          },
+          {
+            "id": "duck",
+            "animal": {"x": 25.72, "y": 29.43, "width": 18.21, "height": 28.72},
+            "name": {"x": 7.5, "y": 62.5, "width": 15.71, "height": 31.94},
+            "track": {"x": 82.14, "y": 9.48, "width": 13.21, "height": 30.6}
+          },
+          {
+            "id": "bobcat",
+            "animal": {"x": 46.07, "y": 29.08, "width": 17.14, "height": 30.49},
+            "name": {"x": 27.14, "y": 6.94, "width": 8.93, "height": 31.94},
+            "track": {"x": 15.71, "y": 6.03, "width": 14.64, "height": 33.62}
+          },
+          {
+            "id": "heron",
+            "animal": {"x": 67.5, "y": 26.95, "width": 19.64, "height": 35.46},
+            "name": {"x": 71.07, "y": 62.5, "width": 20.0, "height": 31.94},
+            "track": {"x": 35.0, "y": 1.72, "width": 13.75, "height": 50.43}
+          },
+          {
+            "id": "beaver",
+            "animal": {"x": 1.07, "y": 74.82, "width": 24.28, "height": 23.4},
+            "name": {"x": 27.32, "y": 62.5, "width": 8.75, "height": 31.94},
+            "track": {"x": 61.43, "y": 56.03, "width": 13.21, "height": 40.09}
+          },
+          {
+            "id": "mink",
+            "animal": {"x": 30.9, "y": 78.72, "width": 13.39, "height": 16.31},
+            "name": {"x": 89.46, "y": 6.94, "width": 6.61, "height": 31.94},
+            "track": {"x": 78.39, "y": 66.38, "width": 12.32, "height": 27.59}
+          },
+          {
+            "id": "skunk",
+            "animal": {"x": 50.72, "y": 65.96, "width": 11.6, "height": 30.14},
+            "name": {"x": 68.75, "y": 6.94, "width": 16.79, "height": 31.94},
+            "track": {"x": 2.32, "y": 6.47, "width": 8.93, "height": 38.79}
+          },
+          {
+            "id": "fox",
+            "animal": {"x": 67.5, "y": 62.41, "width": 25.35, "height": 35.1},
+            "name": {"x": 57.14, "y": 62.5, "width": 9.82, "height": 31.94},
+            "track": {"x": 43.21, "y": 62.93, "width": 12.14, "height": 34.05}
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "page": 18, "id": "invasive-species", "textScale": 1.67,
+    "blocks": [
+      {"type": "heading", "text": "Invasive Species"},
+      {
+        "type": "paragraph",
+        "text": "Invasive species are plants and animals that don't naturally live in an ecosystem and their arrival can cause economic and environmental damage and harm to human health. Invasive species are often introduced by human actions, so we can all help stop the spread of invasive species in the United States."
+      },
+      {
+        "type": "columns",
+        "weights": [2, 1],
+        "columns": [
+          [
+            {
+              "type": "text-with-image", "image": "assets/illustrations/invasive_zebra_mussels.png",
+              "imagePosition": "left", "imageWidth": 62,
+              "paragraphs": [
+                {
+                  "lead": "Zebra mussel",
+                  "text": "got their name because they have dark and light stripes. A zebra mussel is usually the size of your fingernail but can grow up to two inches long. Its young are too small for you to see and can be easily moved from one lake to another. A female zebra mussel releases up to one million eggs in a season!"
+                },
+                "First found in the Great Lakes in 1988, zebra mussels have spread quickly. They damage boat engines, threaten native wildlife by eating available food, and clog water pipes that cost millions of dollars to replace. Learn if zebra mussels are in your area, and, if they are, help stop the spread by cleaning your boat and gear when boating or fishing."
+              ]
+            },
+            {
+              "type": "text-with-image", "image": "assets/illustrations/invasive_hydrilla.png",
+              "imagePosition": "left", "imageWidth": 62,
+              "paragraphs": [
+                {
+                  "lead": "Hydrilla",
+                  "text": "came into the United States in the 1950s. Stems of hydrilla are thin and can grow an inch per day, and up to 30 feet long. As it nears the water surface, the stems branch out horizontally, often forming dense mats of vegetation."
+                },
+                "Thick growths of hydrilla can crowd out native plants, block boat routes, and reduce fishing and swimming areas, limit flow in irrigation canals, and clog water pipes. Today it is spread mostly by human activities. Small pieces of hydrilla can travel from one water body to another on boats, trailers, and recreational gear."
+              ]
+            }
+          ],
+          [
+            {"type": "image", "src": "assets/illustrations/invasive_zebra_cartoon.png"},
+            {"type": "image", "src": "assets/illustrations/invasive_clean_drain_dry.png"}
+          ]
+        ]
+      },
+      {
+        "type": "float-wrap", "image": "assets/illustrations/invasive_ash_borer_bark.png", "imageWidth": 30,
+        "children": [
+          {
+            "type": "columns",
+            "weights": [1, 3],
+            "align": "center",
+            "columns": [
+              [
+                {"type": "image", "src": "assets/illustrations/invasive_ash_borer_beetle.png"}
+              ],
+              [
+                {
+                  "type": "letter-fill", "activityId": "invasive-species-steps", "size": 1.4,
+                  "prompt": "What simple steps can help stop zebra mussels and hydrilla from spreading?",
+                  "words": [
+                    {"pattern": "C_E__,", "answer": "CLEAN"}, {"pattern": "_R_I_,", "answer": "DRAIN"},
+                    {"pattern": "D__", "answer": "DRY"}
+                  ]
+                }
+              ]
+            ]
+          },
+          {
+            "type": "paragraph", "lead": "Emerald Ash Borer",
+            "text": "is an invasive insect from Asia that kills ash trees. It was first found in the United States in 2002. Adult beetles are metallic green and about 1/2-inch long. Emerald Ash Borer larvae can survive hidden in the bark of firewood. You can help stop their spread by not moving firewood. Remember to: buy local firewood, burn local firewood."
+          },
+          {
+            "type": "paragraph",
+            "text": "To learn more about the invasive species in your area, download the free mobile app “Outsmart Invasive Species”. "
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "page": 19, "id": "doing-your-part", "autoTick": "doing-your-part", "textScale": 1.4,
+    "blocks": [
+      {"type": "heading", "text": "Doing Your Part"},
+      {
+        "type": "paragraph",
+        "text": "Here are some things that you can do to help make your visit more enjoyable, and to help parks so that others may enjoy them too."
+      },
+      {
+        "type": "columns",
+        "weights": [3, 2],
+        "columns": [
+          [
+            {"type": "subheading", "text": "Follow the Rules"},
+            {
+              "type": "paragraph",
+              "text": "Know the rules and learn about the area you are visiting. Stop by a visitor center, office, or campground entrance station to get a copy of the rules and regulations. Ask someone like a park ranger if there is anything you should be aware of during your visit."
+            },
+            {"type": "subheading", "text": "Leave It Better Than You Found It"},
+            {
+              "type": "paragraph",
+              "text": "Whether it's at your campsite, along a trail, at a beach, or boat ramp, if you see trash, even if it's not yours, please pick it up and dispose of it."
+            }
+          ],
+          [
+            {"type": "image", "src": "assets/illustrations/doing_part_visitor_center.png"}
+          ]
+        ]
+      },
+      {
+        "type": "columns",
+        "weights": [2, 3],
+        "align": "center",
+        "columns": [
+          [
+            {"type": "image", "src": "assets/illustrations/doing_part_campfire.png"}
+          ],
+          [
+            {"type": "subheading", "text": "Be Careful With Fire"},
+            {
+              "type": "paragraph",
+              "text": "Where fires are allowed, use fire rings and grills that are already there and keep your fires small. Be sure to put out campfires and grill fires completely. Adults should always be involved in building, burning, and putting out fires at your campsite or picnic site."
+            },
+            {"type": "subheading", "text": "Remember Your Best Friend"},
+            {
+              "type": "paragraph",
+              "text": "If you bring your dog along on your visit, remember that they might not act the same as they do at home because they are in a new environment. While in the parks, your dog must be on a leash and is not allowed on the sand portion of a swimming beach. Remember to pick up after your pet and dispose of it properly. Not all dogs are natural swimmers. They need a life jacket too."
+            }
+          ]
+        ]
+      },
+      {
+        "type": "columns",
+        "weights": [3, 2],
+        "align": "center",
+        "columns": [
+          [
+            {"type": "subheading", "text": "Be Kind to Others"},
+            {
+              "type": "paragraph",
+              "text": "Be kind and respectful to other visitors and remember that they are in the parks to enjoy the outdoors too."
+            },
+            {"type": "subheading", "text": "Have Fun and Play It Safe"},
+            {
+              "type": "paragraph",
+              "text": "When on, in, or near the water having fun, make sure an adult is watching you. Remember to wear a properly fitted life jacket and encourage others to do so too."
+            }
+          ],
+          [
+            {"type": "image", "src": "assets/illustrations/doing_part_lifejacket.png"}
+          ]
+        ]
+      },
+      {"type": "heading", "text": "Want to Volunteer?"},
+      {
+        "type": "paragraph",
+        "text": "If you would like to volunteer at a U.S. Army Corps of Engineers lake or river, visit www.volunteer.gov.",
+        "links": [
+          {"text": "www.volunteer.gov", "url": "https://www.volunteer.gov"}
+        ]
+      },
+      {
+        "type": "text-input", "id": "doing-your-part-plans",
+        "prompt": "What would you like to do at this lake or river?", "rows": 2
+      }
+    ]
+  },
+  {
+    "page": 20, "id": "right-choices",
+    "blocks": [
+      {"type": "heading", "text": "Make the Right Choices Maze"},
+      {
+        "type": "paragraph",
+        "text": "Junior Rangers are role models that set good examples for others by playing it safe and respecting the parks, wildlife, and other visitors. Complete the maze by choosing examples that are good behaviors."
+      },
+      {
+        "type": "route-maze", "activityId": "right-choices-maze",
+        "image": "assets/pages/right_choices_maze.png", "speed": 40, "start": "q1",
+        "questions": [
+          {
+            "id": "q1",
+            "hub": [9.55, 7.9],
+            "answers": [
               {
-                "lead": "Zebra mussel",
-                "text": "got their name because they have dark and light stripes. A zebra mussel is usually the size of your fingernail but can grow up to two inches long. Its young are too small for you to see and can be easily moved from one lake to another. A female zebra mussel releases up to one million eggs in a season!"
+                "label": "Go Alone", "correct": false,
+                "arrow": [
+                  [11.33, 24.29], [11.95, 22.83], [10.63, 22.42], [10.01, 23.88], [9.23, 23.63],
+                  [10.15, 25.32], [12.11, 24.54]
+                ],
+                "route": [
+                  [10.2, 25.74], [9.24, 26.79], [6.36, 26.79], [5.49, 27.39], [5.4, 34.3], [6.01, 34.97],
+                  [7.58, 34.97], [8.28, 34.37], [8.45, 30.09], [9.15, 29.57], [12.72, 29.42], [13.42, 28.74],
+                  [13.59, 27.39], [14.64, 26.79], [20.22, 26.79], [21.18, 27.62], [21.18, 31.74],
+                  [20.22, 32.27], [15.51, 32.42], [15.08, 32.8], [15.08, 34.45], [16.03, 34.97],
+                  [26.14, 34.82], [26.67, 34.37], [26.93, 32.65], [26.75, 30.24], [27.45, 29.57],
+                  [32.68, 29.57], [34.07, 30.09], [36.69, 32.2], [48.8, 32.27], [49.5, 32.87]
+                ]
               },
-              "First found in the Great Lakes in 1988, zebra mussels have spread quickly. They damage boat engines, threaten native wildlife by eating available food, and clog water pipes that cost millions of dollars to replace. Learn if zebra mussels are in your area, and, if they are, help stop the spread by cleaning your boat and gear when boating or fishing."
-            ]
-          },
-          {
-            "type": "text-with-image",
-            "image": "assets/illustrations/invasive_hydrilla.png",
-            "imagePosition": "left",
-            "imageWidth": 62,
-            "paragraphs": [
               {
-                "lead": "Hydrilla",
-                "text": "came into the United States in the 1950s. Stems of hydrilla are thin and can grow an inch per day, and up to 30 feet long. As it nears the water surface, the stems branch out horizontally, often forming dense mats of vegetation."
-              },
-              "Thick growths of hydrilla can crowd out native plants, block boat routes, and reduce fishing and swimming areas, limit flow in irrigation canals, and clog water pipes. Today it is spread mostly by human activities. Small pieces of hydrilla can travel from one water body to another on boats, trailers, and recreational gear."
+                "label": "With Adult", "correct": true, "next": "q2",
+                "arrow": [
+                  [35.47, 23.84], [34.88, 22.38], [33.56, 22.77], [34.14, 24.23], [33.36, 24.47],
+                  [35.31, 25.28], [36.26, 23.6]
+                ],
+                "route": [
+                  [35.21, 25.74], [35.21, 26.19], [36.17, 26.79], [51.85, 26.79], [52.9, 26.19],
+                  [52.98, 18.61], [52.37, 18.09], [50.63, 18.01], [49.85, 18.61], [49.76, 23.49],
+                  [48.98, 24.09], [47.41, 24.09], [46.62, 23.49], [46.62, 7.05], [47.23, 6.45], [51.85, 6.3],
+                  [52.9, 6.9], [52.9, 9.98], [52.37, 10.43], [50.46, 10.43], [49.85, 11.03], [49.85, 14.63],
+                  [50.98, 15.38], [54.12, 15.38]
+                ]
+              }
             ]
-          }
-        ],
-        [
-          {
-            "type": "image",
-            "src": "assets/illustrations/invasive_zebra_cartoon.png"
           },
           {
-            "type": "image",
-            "src": "assets/illustrations/invasive_clean_drain_dry.png"
-          }
-        ]
-      ]
-    },
-    {
-  "type": "float-wrap",
-  "image": "assets/illustrations/invasive_ash_borer_bark.png",
-  "imageWidth": 30,
-  "children": [
-    {
-      "type": "columns",
-      "weights": [1, 3],
-      "align": "center",
-      "columns": [
-        [
+            "id": "q2",
+            "hub": [57.6, 15.38],
+            "answers": [
+              {
+                "label": "Hit With Stick", "correct": false,
+                "arrow": [
+                  [63.26, 24.14], [63.88, 22.68], [62.56, 22.27], [61.95, 23.73], [61.16, 23.48],
+                  [62.08, 25.17], [64.05, 24.38]
+                ],
+                "route": [
+                  [62.05, 25.74], [62.05, 26.27], [63.09, 26.79], [77.12, 26.87], [77.82, 27.54],
+                  [77.82, 34.22], [77.12, 34.9], [69.89, 34.97], [68.93, 34.37], [68.85, 33.02],
+                  [69.54, 32.35], [73.73, 32.27], [74.68, 31.67], [74.77, 30.32], [73.99, 29.57],
+                  [66.58, 29.57], [65.19, 30.09], [62.57, 32.2], [51.42, 32.2], [50.11, 32.35], [49.5, 32.87]
+                ]
+              },
+              {
+                "label": "Leave It Alone", "correct": true, "next": "q4",
+                "arrow": [
+                  [91.79, 23.84], [91.2, 22.38], [89.87, 22.77], [90.46, 24.23], [89.68, 24.47],
+                  [91.63, 25.28], [92.58, 23.6]
+                ],
+                "route": [
+                  [91.68, 25.74], [91.68, 26.19], [90.72, 26.79], [81.66, 26.87], [80.96, 27.54],
+                  [80.96, 28.74], [81.74, 29.49], [93.16, 29.57], [93.94, 30.32], [93.94, 31.52],
+                  [93.25, 32.2], [82, 32.27], [80.96, 33.02], [80.96, 34.22], [82, 34.97], [93.16, 34.97],
+                  [94.12, 35.5], [94.12, 36.02]
+                ]
+              }
+            ]
+          },
           {
-            "type": "image",
-            "src": "assets/illustrations/invasive_ash_borer_beetle.png"
-          }
-        ],
-        [
+            "id": "q4",
+            "hub": [94.12, 39.02],
+            "answers": [
+              {
+                "label": "Leave It", "correct": false,
+                "arrow": [
+                  [56.38, 49.28], [57.64, 50.39], [58.64, 49.55], [57.39, 48.44], [57.98, 47.94],
+                  [55.81, 47.92], [55.79, 49.79]
+                ],
+                "route": [
+                  [54.2, 47.58], [53.07, 48.03], [52.98, 51.86], [52.37, 52.38], [47.41, 52.46],
+                  [46.62, 51.86], [46.71, 45.55], [47.76, 44.95], [52.03, 44.95], [53.07, 44.2], [53.07, 43],
+                  [52.37, 42.25], [47.76, 42.25], [46.62, 41.5], [46.62, 38.05], [47.76, 37.45],
+                  [49.15, 37.45], [49.67, 37], [49.5, 32.87]
+                ]
+              },
+              {
+                "label": "Pick It Up", "correct": true, "next": "q3",
+                "arrow": [
+                  [91.08, 57.58], [90.49, 56.12], [89.17, 56.51], [89.76, 57.98], [88.97, 58.21],
+                  [90.92, 59.03], [91.87, 57.35]
+                ],
+                "route": [
+                  [90.81, 59.51], [90.81, 62.66], [90.28, 63.11], [88.28, 63.11], [87.76, 62.66],
+                  [87.67, 61.09], [87.06, 60.49], [80.17, 60.49], [79.3, 61.09], [79.13, 65.29],
+                  [78.08, 65.89], [74.25, 65.89], [73.2, 65.14], [73.12, 61.16], [72.42, 60.49],
+                  [50.37, 60.26], [49.85, 59.74], [49.85, 58.39], [50.63, 57.79], [52.37, 57.64],
+                  [52.98, 57.04], [52.98, 55.83], [52.11, 55.16], [47.23, 55.23], [46.62, 55.83],
+                  [46.54, 59.66], [45.75, 60.34], [39.74, 60.34], [39.22, 59.36]
+                ]
+              }
+            ]
+          },
           {
-            "type": "letter-fill",
-            "activityId": "invasive-species-steps",
-            "size": 1.4,
-            "prompt": "What simple steps can help stop zebra mussels and hydrilla from spreading?",
-            "words": [
-              { "pattern": "C_E__,", "answer": "CLEAN" },
-              { "pattern": "_R_I_,", "answer": "DRAIN" },
-              { "pattern": "D__", "answer": "DRY" }
+            "id": "q3",
+            "hub": [39.22, 56.36],
+            "answers": [
+              {
+                "label": "Leave It", "correct": false,
+                "arrow": [
+                  [32.31, 57.43], [31.72, 55.97], [30.39, 56.36], [30.98, 57.83], [30.2, 58.06],
+                  [32.15, 58.88], [33.09, 57.19]
+                ],
+                "route": [
+                  [32.24, 59.36], [32.24, 59.89], [31.2, 60.41], [21.09, 60.56], [20.48, 61.39],
+                  [20.48, 65.07], [21.26, 65.89], [23.01, 65.82], [23.53, 65.37], [23.7, 63.86],
+                  [24.49, 63.19], [28.58, 63.19], [29.28, 63.86], [29.37, 65.44], [30.33, 65.97],
+                  [48.8, 65.97], [49.5, 66.57]
+                ]
+              },
+              {
+                "label": "Put Out", "correct": true, "next": "q5",
+                "arrow": [
+                  [9.4, 57.88], [10.02, 56.43], [8.7, 56.02], [8.08, 57.47], [7.3, 57.22], [8.22, 58.92],
+                  [10.18, 58.13]
+                ],
+                "route": [
+                  [8.37, 59.44], [7.76, 60.41], [6.36, 60.49], [5.58, 61.16], [5.66, 65.29], [6.71, 65.89],
+                  [10.81, 65.82], [11.5, 64.92], [11.5, 60.94], [12.37, 60.41], [16.56, 60.49], [17.34, 61.39],
+                  [17.43, 67.99], [16.38, 68.59], [9.24, 68.59], [8.28, 69.19], [8.28, 69.64]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "q5",
+            "hub": [8.28, 72.65],
+            "answers": [
+              {
+                "label": "Run Free", "correct": false,
+                "arrow": [
+                  [37.4, 90.97], [36.81, 89.51], [35.49, 89.91], [36.07, 91.37], [35.29, 91.6], [37.24, 92.42],
+                  [38.19, 90.74]
+                ],
+                "route": [
+                  [37.12, 93.06], [37.73, 94.03], [48.89, 94.03], [49.85, 93.36], [49.76, 91.78],
+                  [49.24, 91.33], [47.32, 91.26], [46.62, 90.43], [46.62, 79.47], [47.58, 78.57],
+                  [52.37, 78.42], [52.98, 77.82], [52.98, 74.22], [52.03, 73.62], [50.54, 73.7],
+                  [49.85, 74.22], [49.76, 75.35], [48.98, 75.95], [47.41, 75.95], [46.62, 75.35],
+                  [46.62, 71.82], [47.41, 71.22], [48.98, 71.07], [49.67, 70.54], [49.5, 66.57]
+                ]
+              },
+              {
+                "label": "On Leash", "correct": true, "next": "q6",
+                "arrow": [
+                  [8.7, 91.43], [9.32, 89.97], [8, 89.55], [7.38, 91.01], [6.6, 90.77], [7.52, 92.46],
+                  [9.48, 91.67]
+                ],
+                "route": [
+                  [7.41, 93.06], [7.41, 96.06], [8.54, 96.74], [12.98, 96.59], [13.42, 96.21], [13.42, 94.56],
+                  [14.38, 94.03], [20.04, 94.11], [20.65, 94.56], [20.65, 96.21], [21.61, 96.74],
+                  [24.92, 96.59], [25.53, 95.98], [25.71, 94.63], [26.75, 94.03], [33.38, 94.11],
+                  [34.07, 94.78], [34.07, 96.06], [35.21, 96.74], [52.2, 96.66], [52.98, 95.98],
+                  [52.98, 86.98], [52.37, 86.38], [50.72, 86.23], [49.93, 85.63], [49.85, 82.1], [50.72, 81.2],
+                  [54.2, 81.2]
+                ]
+              }
+            ]
+          },
+          {
+            "id": "q6",
+            "hub": [57.69, 81.2],
+            "answers": [
+              {
+                "label": "Wear Inflatable Floaties", "correct": false,
+                "arrow": [
+                  [90.09, 71.37], [89.97, 72.92], [91.36, 73], [91.49, 71.45], [92.32, 71.5], [90.89, 70.09],
+                  [89.25, 71.32]
+                ],
+                "route": [
+                  [90.98, 69.57], [90.89, 66.42], [90.2, 65.89], [85.23, 65.97], [84.71, 66.42],
+                  [84.62, 67.99], [83.66, 68.59], [71.2, 68.59], [70.15, 67.84], [69.98, 66.34],
+                  [69.02, 65.82], [50.28, 65.89], [49.5, 66.57]
+                ]
+              },
+              {
+                "label": "Wear a Life Jacket", "correct": true, "next": "finish",
+                "arrow": [
+                  [61.83, 91.32], [62.43, 89.86], [61.1, 89.46], [60.51, 90.92], [59.72, 90.68],
+                  [60.66, 92.36], [62.61, 91.56]
+                ],
+                "route": [
+                  [60.57, 93.06], [59.96, 94.03], [57.08, 94.03], [56.21, 94.63], [56.21, 96.14],
+                  [57.08, 96.74], [62.57, 96.74], [65.27, 95.38], [73.03, 95.38], [73.38, 95.08]
+                ]
+              }
             ]
           }
         ]
-      ]
-    },
-    {
-      "type": "paragraph",
-      "lead": "Emerald Ash Borer",
-      "text": "is an invasive insect from Asia that kills ash trees. It was first found in the United States in 2002. Adult beetles are metallic green and about 1/2-inch long. Emerald Ash Borer larvae can survive hidden in the bark of firewood. You can help stop their spread by not moving firewood. Remember to: buy local firewood, burn local firewood."
-    },
-    {
-      "type": "paragraph",
-      "text": "To learn more about the invasive species in your area, download the free mobile app “Outsmart Invasive Species”. "
-    }
-  ]
-}
-  ]
-},
-
-{
-  "page": 19,
-  "textScale": 1.4,
-  "blocks": [
-    { "type": "heading", "text": "Doing Your Part" },
-    { "type": "paragraph", "text": "Here are some things that you can do to help make your visit more enjoyable, and to help parks so that others may enjoy them too." },
-    {
-      "type": "columns",
-      "weights": [3, 2],
-      "columns": [
-        [
-          { "type": "subheading", "text": "Follow the Rules" },
-          { "type": "paragraph", "text": "Know the rules and learn about the area you are visiting. Stop by a visitor center, office, or campground entrance station to get a copy of the rules and regulations. Ask someone like a park ranger if there is anything you should be aware of during your visit." },
-          { "type": "subheading", "text": "Leave It Better Than You Found It" },
-          { "type": "paragraph", "text": "Whether it's at your campsite, along a trail, at a beach, or boat ramp, if you see trash, even if it's not yours, please pick it up and dispose of it." }
-        ],
-        [ { "type": "image", "src": "assets/illustrations/doing_part_visitor_center.png" } ]
-      ]
-    },
-    {
-      "type": "columns",
-      "weights": [2, 3],
-      "align": "center",
-      "columns": [
-        [ { "type": "image", "src": "assets/illustrations/doing_part_campfire.png" } ],
-        [
-          { "type": "subheading", "text": "Be Careful With Fire" },
-          { "type": "paragraph", "text": "Where fires are allowed, use fire rings and grills that are already there and keep your fires small. Be sure to put out campfires and grill fires completely. Adults should always be involved in building, burning, and putting out fires at your campsite or picnic site." },
-          { "type": "subheading", "text": "Remember Your Best Friend" },
-          { "type": "paragraph", "text": "If you bring your dog along on your visit, remember that they might not act the same as they do at home because they are in a new environment. While in the parks, your dog must be on a leash and is not allowed on the sand portion of a swimming beach. Remember to pick up after your pet and dispose of it properly. Not all dogs are natural swimmers. They need a life jacket too." }
-        ]
-      ]
-    },
-    {
-      "type": "columns",
-      "weights": [3, 2],
-      "align": "center",
-      "columns": [
-        [
-          { "type": "subheading", "text": "Be Kind to Others" },
-          { "type": "paragraph", "text": "Be kind and respectful to other visitors and remember that they are in the parks to enjoy the outdoors too." },
-          { "type": "subheading", "text": "Have Fun and Play It Safe" },
-          { "type": "paragraph", "text": "When on, in, or near the water having fun, make sure an adult is watching you. Remember to wear a properly fitted life jacket and encourage others to do so too." }
-        ],
-        [ { "type": "image", "src": "assets/illustrations/doing_part_lifejacket.png" } ]
-      ]
-    },
-    { "type": "heading", "text": "Want to Volunteer?" },
-    {
-      "type": "paragraph",
-      "text": "If you would like to volunteer at a U.S. Army Corps of Engineers lake or river, visit www.volunteer.gov.",
-      "links": [{ "text": "www.volunteer.gov", "url": "https://www.volunteer.gov" }]
-    },
-    { "type": "text-input", "id": "doing-your-part-plans", "prompt": "What would you like to do at this lake or river?", "rows": 2 }
-  ]
-},
-
-{
-  "page": 20,
-  "blocks": [
-    {
-      "type": "heading",
-      "text": "Make the Right Choices Maze"
-    },
-    {
-      "type": "paragraph",
-      "text": "Junior Rangers are role models that set good examples for others by playing it safe and respecting the parks, wildlife, and other visitors. Complete the maze by choosing examples that are good behaviors."
-    },
-    {
-      "type": "route-maze",
-      "activityId": "right-choices-maze",
-      "image": "assets/pages/right_choices_maze.png",
-      "speed": 40,
-      "start": "q1",
-      "questions": [
-    {
-      "id": "q1",
-      "hub": [9.55, 7.9],
-      "answers": [
-        {
-          "label": "Go Alone",
-          "correct": false,
-          "arrow": [[11.33, 24.29], [11.95, 22.83], [10.63, 22.42], [10.01, 23.88], [9.23, 23.63], [10.15, 25.32], [12.11, 24.54]],
-          "route": [
-            [10.2, 25.74], [9.24, 26.79], [6.36, 26.79], [5.49, 27.39], [5.4, 34.3], [6.01, 34.97],
-            [7.58, 34.97], [8.28, 34.37], [8.45, 30.09], [9.15, 29.57], [12.72, 29.42], [13.42, 28.74],
-            [13.59, 27.39], [14.64, 26.79], [20.22, 26.79], [21.18, 27.62], [21.18, 31.74], [20.22, 32.27],
-            [15.51, 32.42], [15.08, 32.8], [15.08, 34.45], [16.03, 34.97], [26.14, 34.82], [26.67, 34.37],
-            [26.93, 32.65], [26.75, 30.24], [27.45, 29.57], [32.68, 29.57], [34.07, 30.09], [36.69, 32.2],
-            [48.8, 32.27], [49.5, 32.87]
-          ]
-        },
-        {
-          "label": "With Adult",
-          "correct": true,
-          "next": "q2",
-          "arrow": [[35.47, 23.84], [34.88, 22.38], [33.56, 22.77], [34.14, 24.23], [33.36, 24.47], [35.31, 25.28], [36.26, 23.6]],
-          "route": [
-            [35.21, 25.74], [35.21, 26.19], [36.17, 26.79], [51.85, 26.79], [52.9, 26.19], [52.98, 18.61],
-            [52.37, 18.09], [50.63, 18.01], [49.85, 18.61], [49.76, 23.49], [48.98, 24.09], [47.41, 24.09],
-            [46.62, 23.49], [46.62, 7.05], [47.23, 6.45], [51.85, 6.3], [52.9, 6.9], [52.9, 9.98],
-            [52.37, 10.43], [50.46, 10.43], [49.85, 11.03], [49.85, 14.63], [50.98, 15.38], [54.12, 15.38]
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q2",
-      "hub": [57.6, 15.38],
-      "answers": [
-        {
-          "label": "Hit With Stick",
-          "correct": false,
-          "arrow": [[63.26, 24.14], [63.88, 22.68], [62.56, 22.27], [61.95, 23.73], [61.16, 23.48], [62.08, 25.17], [64.05, 24.38]],
-          "route": [
-            [62.05, 25.74], [62.05, 26.27], [63.09, 26.79], [77.12, 26.87], [77.82, 27.54], [77.82, 34.22],
-            [77.12, 34.9], [69.89, 34.97], [68.93, 34.37], [68.85, 33.02], [69.54, 32.35], [73.73, 32.27],
-            [74.68, 31.67], [74.77, 30.32], [73.99, 29.57], [66.58, 29.57], [65.19, 30.09], [62.57, 32.2],
-            [51.42, 32.2], [50.11, 32.35], [49.5, 32.87]
-          ]
-        },
-        {
-          "label": "Leave It Alone",
-          "correct": true,
-          "next": "q4",
-          "arrow": [[91.79, 23.84], [91.2, 22.38], [89.87, 22.77], [90.46, 24.23], [89.68, 24.47], [91.63, 25.28], [92.58, 23.6]],
-          "route": [
-            [91.68, 25.74], [91.68, 26.19], [90.72, 26.79], [81.66, 26.87], [80.96, 27.54], [80.96, 28.74],
-            [81.74, 29.49], [93.16, 29.57], [93.94, 30.32], [93.94, 31.52], [93.25, 32.2], [82, 32.27],
-            [80.96, 33.02], [80.96, 34.22], [82, 34.97], [93.16, 34.97], [94.12, 35.5], [94.12, 36.02]
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q4",
-      "hub": [94.12, 39.02],
-      "answers": [
-        {
-          "label": "Leave It",
-          "correct": false,
-          "arrow": [[56.38, 49.28], [57.64, 50.39], [58.64, 49.55], [57.39, 48.44], [57.98, 47.94], [55.81, 47.92], [55.79, 49.79]],
-          "route": [
-            [54.2, 47.58], [53.07, 48.03], [52.98, 51.86], [52.37, 52.38], [47.41, 52.46], [46.62, 51.86],
-            [46.71, 45.55], [47.76, 44.95], [52.03, 44.95], [53.07, 44.2], [53.07, 43], [52.37, 42.25],
-            [47.76, 42.25], [46.62, 41.5], [46.62, 38.05], [47.76, 37.45], [49.15, 37.45], [49.67, 37],
-            [49.5, 32.87]
-          ]
-        },
-        {
-          "label": "Pick It Up",
-          "correct": true,
-          "next": "q3",
-          "arrow": [[91.08, 57.58], [90.49, 56.12], [89.17, 56.51], [89.76, 57.98], [88.97, 58.21], [90.92, 59.03], [91.87, 57.35]],
-          "route": [
-            [90.81, 59.51], [90.81, 62.66], [90.28, 63.11], [88.28, 63.11], [87.76, 62.66], [87.67, 61.09],
-            [87.06, 60.49], [80.17, 60.49], [79.3, 61.09], [79.13, 65.29], [78.08, 65.89], [74.25, 65.89],
-            [73.2, 65.14], [73.12, 61.16], [72.42, 60.49], [50.37, 60.26], [49.85, 59.74], [49.85, 58.39],
-            [50.63, 57.79], [52.37, 57.64], [52.98, 57.04], [52.98, 55.83], [52.11, 55.16], [47.23, 55.23],
-            [46.62, 55.83], [46.54, 59.66], [45.75, 60.34], [39.74, 60.34], [39.22, 59.36]
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q3",
-      "hub": [39.22, 56.36],
-      "answers": [
-        {
-          "label": "Leave It",
-          "correct": false,
-          "arrow": [[32.31, 57.43], [31.72, 55.97], [30.39, 56.36], [30.98, 57.83], [30.2, 58.06], [32.15, 58.88], [33.09, 57.19]],
-          "route": [
-            [32.24, 59.36], [32.24, 59.89], [31.2, 60.41], [21.09, 60.56], [20.48, 61.39], [20.48, 65.07],
-            [21.26, 65.89], [23.01, 65.82], [23.53, 65.37], [23.7, 63.86], [24.49, 63.19], [28.58, 63.19],
-            [29.28, 63.86], [29.37, 65.44], [30.33, 65.97], [48.8, 65.97], [49.5, 66.57]
-          ]
-        },
-        {
-          "label": "Put Out",
-          "correct": true,
-          "next": "q5",
-          "arrow": [[9.4, 57.88], [10.02, 56.43], [8.7, 56.02], [8.08, 57.47], [7.3, 57.22], [8.22, 58.92], [10.18, 58.13]],
-          "route": [
-            [8.37, 59.44], [7.76, 60.41], [6.36, 60.49], [5.58, 61.16], [5.66, 65.29], [6.71, 65.89],
-            [10.81, 65.82], [11.5, 64.92], [11.5, 60.94], [12.37, 60.41], [16.56, 60.49], [17.34, 61.39],
-            [17.43, 67.99], [16.38, 68.59], [9.24, 68.59], [8.28, 69.19], [8.28, 69.64]
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q5",
-      "hub": [8.28, 72.65],
-      "answers": [
-        {
-          "label": "Run Free",
-          "correct": false,
-          "arrow": [[37.4, 90.97], [36.81, 89.51], [35.49, 89.91], [36.07, 91.37], [35.29, 91.6], [37.24, 92.42], [38.19, 90.74]],
-          "route": [
-            [37.12, 93.06], [37.73, 94.03], [48.89, 94.03], [49.85, 93.36], [49.76, 91.78], [49.24, 91.33],
-            [47.32, 91.26], [46.62, 90.43], [46.62, 79.47], [47.58, 78.57], [52.37, 78.42], [52.98, 77.82],
-            [52.98, 74.22], [52.03, 73.62], [50.54, 73.7], [49.85, 74.22], [49.76, 75.35], [48.98, 75.95],
-            [47.41, 75.95], [46.62, 75.35], [46.62, 71.82], [47.41, 71.22], [48.98, 71.07], [49.67, 70.54],
-            [49.5, 66.57]
-          ]
-        },
-        {
-          "label": "On Leash",
-          "correct": true,
-          "next": "q6",
-          "arrow": [[8.7, 91.43], [9.32, 89.97], [8, 89.55], [7.38, 91.01], [6.6, 90.77], [7.52, 92.46], [9.48, 91.67]],
-          "route": [
-            [7.41, 93.06], [7.41, 96.06], [8.54, 96.74], [12.98, 96.59], [13.42, 96.21], [13.42, 94.56],
-            [14.38, 94.03], [20.04, 94.11], [20.65, 94.56], [20.65, 96.21], [21.61, 96.74], [24.92, 96.59],
-            [25.53, 95.98], [25.71, 94.63], [26.75, 94.03], [33.38, 94.11], [34.07, 94.78], [34.07, 96.06],
-            [35.21, 96.74], [52.2, 96.66], [52.98, 95.98], [52.98, 86.98], [52.37, 86.38], [50.72, 86.23],
-            [49.93, 85.63], [49.85, 82.1], [50.72, 81.2], [54.2, 81.2]
-          ]
-        }
-      ]
-    },
-    {
-      "id": "q6",
-      "hub": [57.69, 81.2],
-      "answers": [
-        {
-          "label": "Wear Inflatable Floaties",
-          "correct": false,
-          "arrow": [[90.09, 71.37], [89.97, 72.92], [91.36, 73], [91.49, 71.45], [92.32, 71.5], [90.89, 70.09], [89.25, 71.32]],
-          "route": [
-            [90.98, 69.57], [90.89, 66.42], [90.2, 65.89], [85.23, 65.97], [84.71, 66.42], [84.62, 67.99],
-            [83.66, 68.59], [71.2, 68.59], [70.15, 67.84], [69.98, 66.34], [69.02, 65.82], [50.28, 65.89],
-            [49.5, 66.57]
-          ]
-        },
-        {
-          "label": "Wear a Life Jacket",
-          "correct": true,
-          "next": "finish",
-          "arrow": [[61.83, 91.32], [62.43, 89.86], [61.1, 89.46], [60.51, 90.92], [59.72, 90.68], [60.66, 92.36], [62.61, 91.56]],
-          "route": [
-            [60.57, 93.06], [59.96, 94.03], [57.08, 94.03], [56.21, 94.63], [56.21, 96.14], [57.08, 96.74],
-            [62.57, 96.74], [65.27, 95.38], [73.03, 95.38], [73.38, 95.08]
-          ]
-        }
-      ]
-    }
-  ]
-}
-]
-}
+      }
+    ]
+  },
+  {
+    "page": 21,
+    "id": "certificate",
+    "textScale": 1.5,
+    "blocks": [
+      {
+        "type": "heading",
+        "text": "Your Junior Ranger Certificate"
+      },
+      {
+        "type": "paragraph",
+        "text": "Type your name and the date, then download your certificate. Show it to a U.S. Army Corps of Engineers Park Ranger so they can sign it. Your name is not saved anywhere."
+      },
+      {
+        "type": "certificate",
+        "pdf": "assets/pages/junior_ranger_certificate.pdf",
+        "image": "assets/pages/certificate_preview.jpg",
+        "fileName": "junior_ranger_certificate.pdf"
+      },
+      {
+        "type": "heading",
+        "text": "Congratulations, Junior Ranger!"
+      },
+      {
+        "type": "paragraph",
+        "align": "center",
+        "text": "You did your part to keep our parks and waters safe and clean. Keep playing it safe, wear your life jacket, and keep exploring America's lakes and rivers!"
+      }
+    ]
+  }
 ]

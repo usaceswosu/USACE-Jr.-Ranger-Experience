@@ -1,13 +1,16 @@
 const PROGRESS_SETTINGS = {
-  required: 7,
-  lockCertificate: false,
-  certificatePageId: 'certificate'
+  required: 17,
+  lockCertificate: true,
+  certificatePageId: 'certificate',
+  unlockCode: 'ranger'
 };
 
 const progress = {
   completed: new Set(),
   parts: new Map()
 };
+
+const unlockOverride = new URLSearchParams(location.search).get('ranger') === PROGRESS_SETTINGS.unlockCode;
 
 function isActivityComplete(id) {
   return id !== undefined && progress.completed.has(id);
@@ -16,12 +19,6 @@ function isActivityComplete(id) {
 function completeActivity(id) {
   if (id === undefined || progress.completed.has(id)) return;
   progress.completed.add(id);
-  updateProgressUI();
-}
-
-function uncompleteActivity(id) {
-  if (id === undefined || !progress.completed.has(id)) return;
-  progress.completed.delete(id);
   updateProgressUI();
 }
 
@@ -37,16 +34,16 @@ function completePart(id, part, total) {
 }
 
 function certificateUnlocked() {
-  return progress.completed.size >= PROGRESS_SETTINGS.required;
+  return unlockOverride || progress.completed.size >= PROGRESS_SETTINGS.required;
 }
 
-function findCertificatePageIndex() {
-  return pagesJsonData.findIndex(page => page.id === PROGRESS_SETTINGS.certificatePageId);
+function findPageIndex(id) {
+  return pagesJsonData.findIndex(page => page.id === id);
 }
 
 function canVisitPage(index) {
   if (!PROGRESS_SETTINGS.lockCertificate) return true;
-  if (index !== findCertificatePageIndex()) return true;
+  if (index !== findPageIndex(PROGRESS_SETTINGS.certificatePageId)) return true;
   return certificateUnlocked();
 }
 
@@ -64,13 +61,13 @@ function showLockedNotice() {
 }
 
 function updateProgressUI() {
-  const counter = document.getElementById('progress-counter');
-  if (counter) {
-    counter.textContent = 'Activities: ' + progress.completed.size + ' / ' + PROGRESS_SETTINGS.required;
+  const checklistButton = document.getElementById('checklist-btn');
+  if (checklistButton) {
+    checklistButton.textContent = 'Checklist ' + progress.completed.size + ' / ' + PROGRESS_SETTINGS.required;
   }
-  const button = document.getElementById('certificate-btn');
-  if (button) {
-    button.hidden = !(certificateUnlocked() && findCertificatePageIndex() !== -1);
+  const certificateButton = document.getElementById('certificate-btn');
+  if (certificateButton) {
+    certificateButton.hidden = !(certificateUnlocked() && findPageIndex(PROGRESS_SETTINGS.certificatePageId) !== -1);
   }
 }
 

@@ -1298,28 +1298,20 @@ function renderChecklistBlock(block) {
 
   const summary = document.createElement('p');
   summary.className = 'cl-summary';
+  const done = block.items.filter(item => isActivityComplete(item.activityId)).length;
+  summary.textContent = done + ' of ' + block.items.length + ' complete';
   wrapper.appendChild(summary);
 
-  const rows = [];
-
-  function updateSummary() {
-    const done = rows.filter(row => isActivityComplete(row.item.activityId)).length;
-    summary.textContent = done + ' of ' + rows.length + ' complete';
-  }
-
-  function paint(row) {
-    const done = isActivityComplete(row.item.activityId);
-    row.box.classList.toggle('cl-checked', done);
-    row.el.setAttribute('aria-checked', done ? 'true' : 'false');
-  }
-
   block.items.forEach(item => {
+    const checked = isActivityComplete(item.activityId);
+
     const el = document.createElement('div');
     el.className = 'cl-item';
     el.setAttribute('role', 'checkbox');
+    el.setAttribute('aria-checked', checked ? 'true' : 'false');
 
     const box = document.createElement('span');
-    box.className = 'cl-box';
+    box.className = 'cl-box' + (checked ? ' cl-checked' : '');
     el.appendChild(box);
 
     const label = document.createElement('span');
@@ -1327,27 +1319,11 @@ function renderChecklistBlock(block) {
     label.textContent = item.label;
     el.appendChild(label);
 
-    const row = { el, box, item };
-    rows.push(row);
+    el.addEventListener('click', () => goToPage(findPageIndex(item.pageId)));
 
-    if (item.manual) {
-      el.classList.add('cl-manual');
-      el.addEventListener('click', () => {
-        if (isActivityComplete(item.activityId)) {
-          uncompleteActivity(item.activityId);
-        } else {
-          completeActivity(item.activityId);
-        }
-        paint(row);
-        updateSummary();
-      });
-    }
-
-    paint(row);
     wrapper.appendChild(el);
   });
 
-  updateSummary();
   return wrapper;
 }
 
@@ -1428,6 +1404,116 @@ function renderFactNestBlock(block) {
     });
     showWin();
   }
+
+  return wrapper;
+}
+
+function renderCertificateBlock(block) {
+  const wrapper = document.createElement('div');
+  wrapper.className = 'block-certificate';
+
+  const controls = document.createElement('div');
+  controls.className = 'cert-controls';
+
+  function makeField(labelText, placeholder, extraClass) {
+    const label = document.createElement('label');
+    label.className = 'cert-field ' + extraClass;
+    const span = document.createElement('span');
+    span.textContent = labelText;
+    const input = document.createElement('input');
+    input.type = 'text';
+    input.placeholder = placeholder;
+    input.autocomplete = 'off';
+    input.maxLength = 40;
+    label.appendChild(span);
+    label.appendChild(input);
+    controls.appendChild(label);
+    return input;
+  }
+
+  const nameInput = makeField('Your Name', 'First and last name', 'cert-name');
+  const dateInput = makeField('Date', 'Month Day, Year', 'cert-date');
+
+  const button = document.createElement('button');
+  button.type = 'button';
+  button.className = 'cert-button';
+  button.textContent = 'Download Certificate';
+  controls.appendChild(button);
+  wrapper.appendChild(controls);
+
+  const preview = document.createElement('div');
+  preview.className = 'cert-preview';
+
+  const img = document.createElement('img');
+  img.src = block.image;
+  img.className = 'cert-image';
+  preview.appendChild(img);
+
+  const nameText = document.createElement('div');
+  nameText.className = 'cert-overlay cert-overlay-name';
+  preview.appendChild(nameText);
+
+  const dateText = document.createElement('div');
+  dateText.className = 'cert-overlay cert-overlay-date';
+  preview.appendChild(dateText);
+  wrapper.appendChild(preview);
+
+  nameInput.addEventListener('input', () => { nameText.textContent = nameInput.value; });
+  dateInput.addEventListener('input', () => { dateText.textContent = dateInput.value; });
+
+  function drawLine(page, font, text, line, maxSize) {
+    const width = font.widthOfTextAtSize(text, maxSize);
+    const size = width > line.length ? maxSize * line.length / width : maxSize;
+    const offset = (line.length - font.widthOfTextAtSize(text, size)) / 2;
+    page.drawText(text, {
+      x: line.x,
+      y: line.y + offset,
+      size: size,
+      font: font,
+      color: PDFLib.rgb(0.1, 0.1, 0.25),
+      rotate: PDFLib.degrees(90)
+    });
+  }
+
+  async function download() {
+    const name = nameInput.value.trim();
+    if (!name) {
+      nameInput.focus();
+      showNotice('Type your name first.');
+      return;
+    }
+
+    button.disabled = true;
+    try {
+      const bytes = await fetch(block.pdf).then(r => r.arrayBuffer());
+      const doc = await PDFLib.PDFDocument.load(bytes);
+      const page = doc.getPage(0);
+      const font = await doc.embedFont(PDFLib.StandardFonts.TimesRomanItalic);
+
+      drawLine(page, font, name, { x: 417.5, y: 228.5, length: 160 }, 18);
+      if (dateInput.value.trim()) {
+        drawLine(page, font, dateInput.value.trim(), { x: 552.5, y: 217.5, length: 125 }, 12);
+      }
+      page.setRotation(PDFLib.degrees(90));
+
+      const blob = new Blob([await doc.save()], { type: 'application/pdf' });
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = block.fileName || 'Junior-Ranger-Certificate.pdf';
+      link.click();
+      setTimeout(() => URL.revokeObjectURL(link.href), 1000);
+
+      nameInput.value = '';
+      dateInput.value = '';
+      nameText.textContent = '';
+      dateText.textContent = '';
+    } catch (error) {
+      showNotice('Please use letters, numbers, and basic punctuation only.');
+    }
+    button.disabled = false;
+  }
+
+  button.addEventListener('click', download);
 
   return wrapper;
 }

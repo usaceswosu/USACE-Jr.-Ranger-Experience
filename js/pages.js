@@ -15,6 +15,8 @@ function renderPage() {
   container.className = 'page-blocks';
   container.style.setProperty('--text-scale', page.textScale ?? 1);
 
+  if (page.autoTick) completeActivity(page.autoTick);
+
   page.blocks.forEach(block => {
     const el = renderBlock(block);
     if (el) container.appendChild(el);
@@ -67,6 +69,7 @@ function renderBlock(block) {
 
 document.getElementById('prev-btn').addEventListener('click', () => goToPage(currentPageIndex - 1));
 document.getElementById('next-btn').addEventListener('click', () => goToPage(currentPageIndex + 1));
-document.getElementById('certificate-btn').addEventListener('click', () => goToPage(findCertificatePageIndex()));
+document.getElementById('checklist-btn').addEventListener('click', () => goToPage(findPageIndex('checklist')));
+document.getElementById('certificate-btn').addEventListener('click', () => goToPage(findPageIndex(PROGRESS_SETTINGS.certificatePageId)));
 
 loadPages();
