@@ -2,6 +2,9 @@ let pagesJsonData = [];
 let currentPageIndex = 0;
 let pageFlip = null;
 let certificateOpen = false;
+let lastCompletedCount = -1;
+let lastCertificateState = null;
+
 
 const pageContents = [];
 const pageSheets = [];
@@ -49,6 +52,12 @@ function fillPage(index) {
 }
 
 function refreshDynamicPages() {
+  const completed = progress.completed.size;
+  const unlocked = certificateUnlocked();
+  if (completed === lastCompletedCount && unlocked === lastCertificateState) return;
+  lastCompletedCount = completed;
+  lastCertificateState = unlocked;
+
   pagesJsonData.forEach((page, index) => {
     if (!pageContents[index]) return;
     if (findBlockOfType(page.blocks, 'checklist')) {
