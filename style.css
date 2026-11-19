@@ -304,11 +304,14 @@ textarea.ti-field {
 .maze-token {
   position: absolute;
   width: 1.75%;
-  aspect-ratio: 1;
+  height: 0;
+  padding-bottom: 1.75%;
   background-color: #2b7cd3;
   border: 2px solid white;
   border-radius: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate3d(-50%, -50%, 0);
+  will-change: left, top;
+  backface-visibility: hidden;
   z-index: 3;
 }
 

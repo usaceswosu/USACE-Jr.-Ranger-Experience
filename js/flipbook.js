@@ -161,7 +161,7 @@ function buildFlipbook() {
     showCover: true,
     useMouseEvents: false,
     showPageCorners: false,
-    disableFlipByClick: true,
+    disableFlipByClick: false,
     flippingTime: 800
   });
 
